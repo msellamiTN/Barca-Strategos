@@ -1,12 +1,5 @@
-pub mod core;
-pub mod runtime;
-pub mod collaboration;
-pub mod ai;
-pub mod gamification;
-
-// Re-export main components
-pub use core::*;
-pub use runtime::*;
-pub use collaboration::*;
-pub use ai::*;
-pub use gamification::*;
+// Barca-Strategos Phoenix Library
+pub mod gui;
+pub mod security;
+pub mod compliance;
+pub mod monitoring;
