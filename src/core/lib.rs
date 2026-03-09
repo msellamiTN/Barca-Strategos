@@ -2,9 +2,12 @@ pub mod agent;
 pub mod security;
 pub mod communication;
 pub mod storage;
-pub mod analytics;
-pub mod orchestration;
-pub mod config;
+pub mod compliance;
+pub mod collaboration;
+pub mod ai;
+pub mod gui;
+pub mod monitoring;
+pub mod runtime;
 
 pub use agent::*;
 pub use security::*;
@@ -13,6 +16,11 @@ pub use storage::*;
 pub use analytics::*;
 pub use orchestration::*;
 pub use config::*;
+pub use monitoring::*;
+pub use compliance::*;
+pub use collaboration::*;
+pub use ai::*;
+pub use gui::*;
 
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
@@ -138,8 +146,9 @@ impl Default for PhoenixConfig {
             security: SecurityConfig {
                 enable_sandbox: true,
                 enable_encryption: true,
-                jwt_secret: "default-secret-change-in-production".to_string(),
-                certificate_path: None,
+                jwt_secret: std::env::var("PHOENIX_JWT_SECRET")
+                    .expect("PHOENIX_JWT_SECRET must be set in environment variables"),
+                certificate_path: std::env::var("PHOENIX_CERT_PATH").ok(),
             },
             agents: AgentConfig {
                 default_memory_limit_mb: 10,
@@ -151,10 +160,18 @@ impl Default for PhoenixConfig {
                 enable_cross_platform_sync: true,
             },
             ai: AIConfig {
-                model_provider: "openai".to_string(),
-                api_key: "".to_string(),
-                max_tokens: 1000,
-                temperature: 0.7,
+                model_provider: std::env::var("PHOENIX_MODEL_PROVIDER")
+                    .unwrap_or_else(|_| "openai".to_string()),
+                api_key: std::env::var("PHOENIX_API_KEY")
+                    .expect("PHOENIX_API_KEY must be set in environment variables"),
+                max_tokens: std::env::var("PHOENIX_MAX_TOKENS")
+                    .ok()
+                    .and_then(|s| s.parse().ok())
+                    .unwrap_or(1000),
+                temperature: std::env::var("PHOENIX_TEMPERATURE")
+                    .ok()
+                    .and_then(|s| s.parse().ok())
+                    .unwrap_or(0.7),
             },
         }
     }

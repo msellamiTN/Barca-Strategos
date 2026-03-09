@@ -4,6 +4,7 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use tokio::sync::{RwLock, Mutex};
 use uuid::Uuid;
+use regex::Regex;
 
 /// Core agent trait - where tactical excellence meets technological revolution
 #[async_trait]
@@ -70,24 +71,94 @@ impl SecureAgent {
     }
     
     async fn scan_for_prompt_injection(&self, task: &Task) -> Result<(), AgentError> {
-        // Advanced prompt injection detection
+        // Advanced prompt injection detection with regex patterns
         let injection_patterns = vec![
-            "ignore previous instructions",
-            "system prompt",
-            "jailbreak",
-            "act as",
-            "pretend you are",
-            "forget everything",
+            // System prompt override attempts
+            Regex::new(r"(?i)ignore\s+(?:previous|all)\s+instructions").unwrap(),
+            Regex::new(r"(?i)system\s+prompt").unwrap(),
+            Regex::new(r"(?i)override\s+system").unwrap(),
+            
+            // Jailbreak attempts
+            Regex::new(r"(?i)jailbreak").unwrap(),
+            Regex::new(r"(?i)act\s+as").unwrap(),
+            Regex::new(r"(?i)pretend\s+you\s+are").unwrap(),
+            Regex::new(r"(?i)roleplay").unwrap(),
+            
+            // Memory manipulation
+            Regex::new(r"(?i)forget\s+(?:everything|all)").unwrap(),
+            Regex::new(r"(?i)clear\s+(?:memory|history)").unwrap(),
+            Regex::new(r"(?i)reset\s+(?:context|conversation)").unwrap(),
+            
+            // DAN (Do Anything Now) attacks
+            Regex::new(r"(?i)dan\s+(?:mode|prompt)").unwrap(),
+            Regex::new(r"(?i)do\s+anything\s+now").unwrap(),
+            Regex::new(r"(?i)unrestricted\s+mode").unwrap(),
+            
+            // Instruction bypass
+            Regex::new(r"(?i)disregard\s+(?:previous|above|all)").unwrap(),
+            Regex::new(r"(?i)ignore\s+(?:rules|guidelines|constraints)").unwrap(),
+            Regex::new(r"(?i)bypass\s+(?:filter|restriction|safety)").unwrap(),
+            
+            // Encoding attacks
+            Regex::new(r"(?i)base64\s+(?:decode|encode)").unwrap(),
+            Regex::new(r"(?i)unicode\s+(?:escape|encode)").unwrap(),
+            Regex::new(r"(?i)hex\s+(?:decode|encode)").unwrap(),
         ];
         
-        let task_content = format!("{:?}", task);
-        for pattern in injection_patterns {
-            if task_content.to_lowercase().contains(pattern) {
-                return Err(AgentError::PromptInjectionDetected(pattern.to_string()));
+        // Check task description
+        let task_content = format!("{} {}", task.description, serde_json::to_string(&task.parameters).unwrap_or_default());
+        let normalized_content = task_content.to_lowercase();
+        
+        for pattern in &injection_patterns {
+            if pattern.is_match(&normalized_content) {
+                return Err(AgentError::PromptInjectionDetected(
+                    format!("Pattern detected: {}", pattern.as_str())
+                ));
             }
         }
         
+        // Check for suspicious character patterns
+        if self.contains_suspicious_encoding(&task_content) {
+            return Err(AgentError::PromptInjectionDetected(
+                "Suspicious encoding detected".to_string()
+            ));
+        }
+        
+        // Check for excessive length (potential buffer overflow)
+        if task_content.len() > 10000 {
+            return Err(AgentError::PromptInjectionDetected(
+                "Input too long".to_string()
+            ));
+        }
+        
         Ok(())
+    }
+    
+    fn contains_suspicious_encoding(&self, content: &str) -> bool {
+        // Check for excessive special characters
+        let special_char_count = content.chars()
+            .filter(|c| !c.is_alphanumeric() && !c.is_whitespace())
+            .count();
+        
+        let total_chars = content.chars().count();
+        if total_chars > 0 && (special_char_count as f64 / total_chars as f64) > 0.3 {
+            return true;
+        }
+        
+        // Check for repeated patterns (potential encoding)
+        let mut char_counts = HashMap::new();
+        for ch in content.chars() {
+            *char_counts.entry(ch).or_insert(0) += 1;
+        }
+        
+        // If any character appears more than 50% of the time, it's suspicious
+        for count in char_counts.values() {
+            if *count as f64 / total_chars as f64 > 0.5 {
+                return true;
+            }
+        }
+        
+        false
     }
     
     async fn validate_result(&self, result: &TaskResult) -> Result<(), AgentError> {
@@ -333,12 +404,74 @@ pub struct TaskResult {
 
 impl TaskResult {
     pub fn contains_sensitive_data(&self) -> bool {
-        // Simple implementation - in production, use more sophisticated detection
+        // Advanced sensitive data detection with regex patterns
         let data_str = format!("{:?}", self.data);
-        data_str.contains("password") || 
-        data_str.contains("api_key") || 
-        data_str.contains("secret") ||
-        data_str.contains("token")
+        
+        // Define sensitive data patterns
+        let sensitive_patterns = vec![
+            // Authentication credentials
+            Regex::new(r"(?i)password\s*[:=]\s*\S+").unwrap(),
+            Regex::new(r"(?i)api[_-]?key\s*[:=]\s*\S+").unwrap(),
+            Regex::new(r"(?i)secret\s*[:=]\s*\S+").unwrap(),
+            Regex::new(r"(?i)token\s*[:=]\s*\S+").unwrap(),
+            Regex::new(r"(?i)auth\s*[:=]\s*\S+").unwrap(),
+            
+            // Financial information
+            Regex::new(r"\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b").unwrap(), // Credit card
+            Regex::new(r"\b\d{3}-\d{2}-\d{4}\b").unwrap(), // SSN
+            Regex::new(r"\b[A-Z]{2}\d{2}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{2}\b").unwrap(), // IBAN
+            
+            // Personal information
+            Regex::new(r"\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b").unwrap(), // Phone number
+            Regex::new(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b").unwrap(), // Email
+            
+            // Medical/Health information
+            Regex::new(r"(?i)medical\s+record").unwrap(),
+            Regex::new(r"(?i)health\s+information").unwrap(),
+            Regex::new(r"(?i)patient\s+data").unwrap(),
+            
+            // Legal/Confidential information
+            Regex::new(r"(?i)confidential").unwrap(),
+            Regex::new(r"(?i)proprietary").unwrap(),
+            Regex::new(r"(?i)trade\s+secret").unwrap(),
+            Regex::new(r"(?i)internal\s+only").unwrap(),
+        ];
+        
+        // Check for any sensitive patterns
+        for pattern in &sensitive_patterns {
+            if pattern.is_match(&data_str) {
+                return true;
+            }
+        }
+        
+        // Check for potential keys/secrets (even without labels)
+        self.detect_unlabeled_secrets(&data_str)
+    }
+    
+    fn detect_unlabeled_secrets(&self, content: &str) -> bool {
+        // Look for patterns that might be secrets without explicit labels
+        
+        // JWT tokens (typical format)
+        let jwt_pattern = Regex::new(r"eyJ[A-Za-z0-9_-]*\.eyJ[A-Za-z0-9_-]*\.[A-Za-z0-9_-]*").unwrap();
+        if jwt_pattern.is_match(content) {
+            return true;
+        }
+        
+        // API keys (common patterns)
+        let api_key_patterns = vec![
+            Regex::new(r"[A-Za-z0-9]{32,}").unwrap(), // Long alphanumeric strings
+            Regex::new(r"sk_[A-Za-z0-9]{24,}").unwrap(), // Stripe-style
+            Regex::new(r"ghp_[A-Za-z0-9]{36}").unwrap(), // GitHub-style
+            Regex::new(r"xox[bap]-[A-Za-z0-9-]{10,48}").unwrap(), // Slack-style
+        ];
+        
+        for pattern in &api_key_patterns {
+            if pattern.is_match(content) {
+                return true;
+            }
+        }
+        
+        false
     }
     
     pub fn size_bytes(&self) -> usize {

@@ -1,0 +1,68 @@
+# Telegram Bot for Phoenix Platform
+# Lightweight, scalable bot for Telegram integration
+
+FROM rust:1.75-slim as builder
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y \
+    pkg-config \
+    libssl-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy Cargo files
+COPY Cargo.toml Cargo.lock ./
+
+# Create dummy main.rs to cache dependencies
+RUN mkdir src && echo "fn main() {}" > src/main.rs
+
+# Build dependencies
+RUN cargo build --release --bin telegram-bot && rm -rf src
+
+# Copy the actual source code
+COPY src ./src
+
+# Build the telegram bot
+RUN cargo build --release --bin telegram-bot
+
+# Runtime stage
+FROM debian:bookworm-slim
+
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    libssl3 \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create non-root user
+RUN useradd -r -s /bin/false telegram
+
+WORKDIR /app
+
+# Copy the binary from builder stage
+COPY --from=builder /app/target/release/telegram-bot ./bin/telegram-bot
+
+# Create necessary directories
+RUN mkdir -p /app/logs /app/data && \
+    chown -R telegram:telegram /app
+
+# Switch to non-root user
+USER telegram
+
+# Expose port for webhook
+EXPOSE 8443
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8443/health || exit 1
+
+# Environment variables
+ENV RUST_LOG=info
+ENV TELEGRAM_WEBHOOK_PORT=8443
+ENV TELEGRAM_WEBHOOK_PATH=/webhook
+
+# Start the telegram bot
+CMD ["./bin/telegram-bot"]

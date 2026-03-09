@@ -1,0 +1,365 @@
+version: '3.8'
+
+services:
+  # Load Balancer for High Availability
+  nginx-lb:
+    image: nginx:alpine
+    container_name: phoenix-lb
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx-lb.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - phoenix-gui
+    restart: unless-stopped
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.2'
+
+  # Scalable Phoenix GUI Application
+  phoenix-gui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - RUST_LOG=info
+      - PHOENIX_HOST=0.0.0.0
+      - PHOENIX_PORT=8080
+      - PHOENIX_STATIC_PATH=/app/static
+      - PHOENIX_MAX_CONNECTIONS=2000
+      - PHOENIX_CORS_ENABLED=true
+      - PHOENIX_DATABASE_URL=postgresql://phoenix:password@postgres:5432/phoenix
+      - PHOENIX_REDIS_URL=redis://redis:6379
+      - PHOENIX_ENABLE_TELEGRAM=true
+      - PHOENIX_ENABLE_DISCORD=true
+      - PHOENIX_ENABLE_SLACK=true
+      - PHOENIX_ENABLE_TEAMS=true
+      - PHOENIX_CLUSTER_MODE=true
+      - PHOENIX_NODE_ID=${NODE_ID:-phoenix-1}
+    volumes:
+      - phoenix_logs:/app/logs
+      - phoenix_data:/app/data
+      - phoenix_config:/app/config
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - phoenix-network
+    deploy:
+      replicas: 3  # Horizontal scaling
+      resources:
+        limits:
+          memory: 512M
+          cpus: '2.0'
+        reservations:
+          memory: 256M
+          cpus: '1.0'
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: rollback
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/system/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Enhanced PostgreSQL with Replication
+  postgres-master:
+    image: postgres:15-alpine
+    container_name: postgres-master
+    environment:
+      - POSTGRES_DB=phoenix
+      - POSTGRES_USER=phoenix
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_REPLICATION_USER=replicator
+      - POSTGRES_REPLICATION_PASSWORD=repl_password
+    volumes:
+      - postgres_master_data:/var/lib/postgresql/data
+      - ./postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./postgres/pg_hba.conf:/etc/postgresql/pg_hba.conf
+    command: >
+      postgres
+      -c config_file=/etc/postgresql/postgresql.conf
+      -c hba_file=/etc/postgresql/pg_hba.conf
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '1.0'
+        reservations:
+          memory: 256M
+          cpus: '0.5'
+
+  # PostgreSQL Replica for Read Scaling
+  postgres-replica:
+    image: postgres:15-alpine
+    container_name: postgres-replica
+    environment:
+      - PGUSER=phoenix
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_MASTER_SERVICE=postgres-master
+      - POSTGRES_REPLICATION_USER=replicator
+      - POSTGRES_REPLICATION_PASSWORD=repl_password
+    volumes:
+      - postgres_replica_data:/var/lib/postgresql/data
+    command: >
+      bash -c "
+      until pg_basebackup -h postgres-master -D /var/lib/postgresql/data -U replicator -W -v -P; do
+        echo 'Waiting for primary to connect...'
+        sleep 1s
+      done
+      echo 'standby_mode = on' >> /var/lib/postgresql/data/recovery.conf
+      echo 'primary_conninfo = ''host=postgres-master port=5432 user=repicator''' >> /var/lib/postgresql/data/recovery.conf
+      postgres
+      "
+    depends_on:
+      - postgres-master
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+
+  # Redis Cluster for High Availability
+  redis-master:
+    image: redis:7-alpine
+    container_name: redis-master
+    command: >
+      redis-server
+      --appendonly yes
+      --requirepass redis_password
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_master_data:/data
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.3'
+
+  redis-replica:
+    image: redis:7-alpine
+    container_name: redis-replica
+    command: >
+      redis-server
+      --appendonly yes
+      --requirepass redis_password
+      --masterauth redis_password
+      --replicaof redis-master 6379
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_replica_data:/data
+    depends_on:
+      - redis-master
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.3'
+
+  # Telegram Bot with Auto-scaling
+  telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.telegram
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - PHOENIX_API_URL=http://nginx-lb:80
+      - REDIS_URL=redis://redis-master:6379
+      - ENABLE_COMMANDS=/start,/help,/dashboard,/security,/compliance,/risk,/agents,/scale,/status
+      - ENABLE_NOTIFICATIONS=true
+      - ENABLE_INTERACTIVE_DASHBOARD=true
+      - ENABLE_SCALING_COMMANDS=true
+    depends_on:
+      - nginx-lb
+      - redis-master
+    networks:
+      - phoenix-network
+    deploy:
+      replicas: 2  # Bot scalability
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.3'
+        reservations:
+          memory: 32M
+          cpus: '0.1'
+
+  # Discord Bot
+  discord-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.discord
+    restart: unless-stopped
+    environment:
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - PHOENIX_API_URL=http://nginx-lb:80
+      - REDIS_URL=redis://redis-master:6379
+      - ENABLE_SLASH_COMMANDS=true
+      - ENABLE_RICH_EMBEDS=true
+    depends_on:
+      - nginx-lb
+      - redis-master
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.3'
+
+  # Slack Bot
+  slack-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.slack
+    restart: unless-stopped
+    environment:
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - SLACK_SIGNING_SECRET=${SLACK_SIGNING_SECRET}
+      - PHOENIX_API_URL=http://nginx-lb:80
+      - REDIS_URL=redis://redis-master:6379
+      - ENABLE_SHORTCUTS=true
+      - ENABLE_MODALS=true
+    depends_on:
+      - nginx-lb
+      - redis-master
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.3'
+
+  # Auto-scaling Monitor
+  autoscaler:
+    image: docker/swarm:latest
+    container_name: phoenix-autoscaler
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: >
+      sh -c "
+      while true; do
+        # Monitor CPU and Memory usage
+        CPU_USAGE=$$(docker stats --no-stream --format \"table {{.CPUPerc}}\" | grep phoenix-gui | awk '{print $$1}' | sed 's/%//')
+        MEM_USAGE=$$(docker stats --no-stream --format \"table {{.MemPerc}}\" | grep phoenix-gui | awk '{print $$1}' | sed 's/%//')
+        
+        # Scale up if needed
+        if (( $$(echo \"$${CPU_USAGE} > 70\" | bc -l) )); then
+          docker service scale phoenix-gui=5
+        elif (( $$(echo \"$${CPU_USAGE} < 30\" | bc -l) )); then
+          docker service scale phoenix-gui=2
+        fi
+        
+        sleep 30
+      done
+      "
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 32M
+          cpus: '0.1'
+
+  # Monitoring Stack
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: phoenix-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: phoenix-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.3'
+
+# Volumes for scalable setup
+volumes:
+  phoenix_logs:
+    driver: local
+  phoenix_data:
+    driver: local
+  phoenix_config:
+    driver: local
+  postgres_master_data:
+    driver: local
+  postgres_replica_data:
+    driver: local
+  redis_master_data:
+    driver: local
+  redis_replica_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+networks:
+  phoenix-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

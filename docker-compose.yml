@@ -1,24 +1,37 @@
 version: '3.8'
 
 services:
-  # Ultra-lightweight core agent
-  phoenix-core:
-    image: barca-strategos/phoenix-core:latest
-    container_name: phoenix-core
+  # Phoenix GUI Web Application with Cognitive Collaboration
+  phoenix-gui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: phoenix-gui
     restart: unless-stopped
     ports:
-      - "8080:8080"
-      - "8443:8443"
+      - "8080:8080"  # HTTP Web Interface
+      - "8443:8443"  # HTTPS (future)
     environment:
       - RUST_LOG=info
+      - PHOENIX_HOST=0.0.0.0
+      - PHOENIX_PORT=8080
+      - PHOENIX_STATIC_PATH=/app/static
+      - PHOENIX_MAX_CONNECTIONS=1000
+      - PHOENIX_CORS_ENABLED=true
+      - PHOENIX_DATABASE_URL=postgresql://phoenix:password@postgres:5432/phoenix
+      - PHOENIX_REDIS_URL=redis://redis:6379
+      - PHOENIX_ENABLE_TELEGRAM=true
+      - PHOENIX_ENABLE_DISCORD=true
+      - PHOENIX_ENABLE_SLACK=true
+      - PHOENIX_ENABLE_TEAMS=true
       - AGENT_MEMORY_LIMIT=10MB
       - SANDBOX_ENABLED=true
       - SECURE_EXECUTION=true
       - JWT_SECRET=${JWT_SECRET}
-      - DATABASE_URL=postgresql://barca:${DB_PASSWORD}@postgres:5432/barca_db
-      - REDIS_URL=redis://redis:6379
-      - KAFKA_BROKERS=kafka:9092
     volumes:
+      - phoenix_logs:/app/logs
+      - phoenix_data:/app/data
+      - phoenix_config:/app/config
       - ./data/phoenix:/app/data
       - ./config/security:/app/security
     depends_on:
@@ -26,23 +39,138 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
-      kafka:
-        condition: service_started
+    networks:
+      - phoenix-network
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 200M     # Optimized for GUI
+          cpus: '1.0'      # Sufficient CPU for web interface
+        reservations:
+          memory: 100M
+          cpus: '0.5'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/system/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Enhanced Telegram Bot Integration
+  telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.telegram
+    container_name: phoenix-telegram
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - PHOENIX_API_URL=http://phoenix-gui:8080
+      - AI_API_URL=http://ai-assistant:8080
+      - REDIS_URL=redis://redis:6379
+      - ENABLE_COMMANDS=/start,/help,/dashboard,/security,/compliance,/risk,/agents
+      - ENABLE_NOTIFICATIONS=true
+      - ENABLE_INTERACTIVE_DASHBOARD=true
+    ports:
+      - "8444:8443"
+    depends_on:
+      - phoenix-gui
+      - redis
     networks:
       - phoenix-network
     deploy:
       resources:
         limits:
-          memory: 50M      # Ultra-lightweight
-          cpus: '0.5'      # Minimal CPU
+          memory: 64M
+          cpus: '0.3'
         reservations:
-          memory: 20M
+          memory: 32M
           cpus: '0.1'
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
-      interval: 10s
-      timeout: 3s
-      retries: 3
+
+  # Discord Bot Integration
+  discord-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.discord
+    container_name: phoenix-discord
+    restart: unless-stopped
+    environment:
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - PHOENIX_API_URL=http://phoenix-gui:8080
+      - REDIS_URL=redis://redis:6379
+      - ENABLE_SLASH_COMMANDS=true
+      - ENABLE_RICH_EMBEDS=true
+    depends_on:
+      - phoenix-gui
+      - redis
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.3'
+        reservations:
+          memory: 32M
+          cpus: '0.1'
+
+  # Slack Bot Integration
+  slack-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.slack
+    container_name: phoenix-slack
+    restart: unless-stopped
+    environment:
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - SLACK_SIGNING_SECRET=${SLACK_SIGNING_SECRET}
+      - PHOENIX_API_URL=http://phoenix-gui:8080
+      - REDIS_URL=redis://redis:6379
+      - ENABLE_SHORTCUTS=true
+      - ENABLE_MODALS=true
+    depends_on:
+      - phoenix-gui
+      - redis
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.3'
+        reservations:
+          memory: 32M
+          cpus: '0.1'
+
+  # Microsoft Teams Integration
+  teams-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.teams
+    container_name: phoenix-teams
+    restart: unless-stopped
+    environment:
+      - TEAMS_APP_ID=${TEAMS_APP_ID}
+      - TEAMS_APP_PASSWORD=${TEAMS_APP_PASSWORD}
+      - PHOENIX_API_URL=http://phoenix-gui:8080
+      - REDIS_URL=redis://redis:6379
+      - ENABLE_ADAPTIVE_CARDS=true
+      - ENABLE_TASKS=true
+    depends_on:
+      - phoenix-gui
+      - redis
+    networks:
+      - phoenix-network
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+          cpus: '0.3'
+        reservations:
+          memory: 32M
+          cpus: '0.1'
 
   # Secure agent runtime
   agent-runtime:
@@ -140,11 +268,13 @@ services:
     container_name: phoenix-postgres
     restart: unless-stopped
     environment:
-      - POSTGRES_DB=barca_db
-      - POSTGRES_USER=barca
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=phoenix
+      - POSTGRES_USER=phoenix
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./init-scripts:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
@@ -159,7 +289,7 @@ services:
           memory: 128M
           cpus: '0.2'
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U barca -d barca_db"]
+      test: ["CMD-SHELL", "pg_isready -U phoenix -d phoenix"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -169,7 +299,7 @@ services:
     image: redis:7-alpine
     container_name: phoenix-redis
     restart: unless-stopped
-    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+    command: redis-server --appendonly yes --requirepass redis_password
     volumes:
       - redis_data:/data
     ports:
@@ -244,32 +374,6 @@ services:
       timeout: 10s
       retries: 3
 
-  # Telegram Bot
-  telegram-bot:
-    image: barca-strategos/telegram-bot:latest
-    container_name: phoenix-telegram
-    restart: unless-stopped
-    environment:
-      - BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-      - WEBHOOK_URL=${WEBHOOK_URL}
-      - CORE_API_URL=http://phoenix-core:8080
-      - AI_API_URL=http://ai-assistant:8080
-    ports:
-      - "8444:8443"
-    depends_on:
-      - phoenix-core
-      - ai-assistant
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 30M
-          cpus: '0.2'
-        reservations:
-          memory: 15M
-          cpus: '0.1'
-
   # Web UI
   web-ui:
     image: barca-strategos/web-ui:latest
@@ -282,7 +386,7 @@ services:
       - REACT_APP_WS_URL=ws://localhost:8080
       - REACT_APP_TELEGRAM_BOT=${TELEGRAM_BOT_TOKEN}
     depends_on:
-      - phoenix-core
+      - phoenix-gui
       - collab-hub
     networks:
       - phoenix-network
@@ -322,6 +426,12 @@ services:
           cpus: '0.1'
 
 volumes:
+  phoenix_logs:
+    driver: local
+  phoenix_data:
+    driver: local
+  phoenix_config:
+    driver: local
   postgres_data:
     driver: local
   redis_data:
