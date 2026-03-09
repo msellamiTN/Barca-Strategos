@@ -1,6 +1,6 @@
 #!/bin/bash
 # Phoenix Deployment Script - Ultra-efficient AI Security Framework
-# Inspired by PicoClaw's simplicity with enterprise security
+# Where Tactical Excellence Meets Technological Revolution
 
 set -e
 
@@ -29,7 +29,7 @@ print_banner() {
     echo "╔══════════════════════════════════════════════════════════════╗"
     echo "║                    BARCA-STRATEGOS PHOENIX                   ║"
     echo "║                Ultra-Efficient AI Security Framework              ║"
-    echo "║                     🔥 Inspired by PicoClaw 🔥              ║"
+    echo "║                     🔥 Tactical Excellence 🔥              ║"
     echo "║                                                              ║"
     echo "║  • <10MB agents  • 1-second boot  • Enterprise security     ║"
     echo "║  • Multi-platform  • AI personality  • Zero-trust           ║"

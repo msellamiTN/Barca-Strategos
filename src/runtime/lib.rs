@@ -16,7 +16,7 @@ use std::collections::HashMap;
 use tokio::sync::RwLock;
 use uuid::Uuid;
 
-/// Ultra-lightweight Phoenix runtime - inspired by PicoClaw's efficiency
+/// Ultra-lightweight Phoenix runtime - where tactical excellence meets speed
 pub struct PhoenixRuntime {
     memory_limiter: MemoryLimiter,
     fast_boot: FastBootManager,

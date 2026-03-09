@@ -130,7 +130,7 @@ impl Default for PhoenixConfig {
     fn default() -> Self {
         Self {
             framework: FrameworkConfig {
-                max_memory_mb: 10, // Ultra-lightweight like PicoClaw
+                max_memory_mb: 10, // Ultra-lightweight by design
                 max_agents: 10,
                 boot_timeout_seconds: 1, // 1-second boot target
                 log_level: "info".to_string(),

@@ -1,5 +1,5 @@
 # Multi-stage build for Phoenix Core - Ultra-efficient AI Security Framework
-# Inspired by PicoClaw's minimal footprint with enterprise security
+# Where Tactical Excellence Meets Technological Revolution
 
 # Build stage
 FROM rust:1.75-alpine AS builder

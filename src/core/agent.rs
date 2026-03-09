@@ -5,7 +5,7 @@ use std::collections::HashMap;
 use tokio::sync::{RwLock, Mutex};
 use uuid::Uuid;
 
-/// Core agent trait - inspired by PicoClaw's efficiency with enterprise security
+/// Core agent trait - where tactical excellence meets technological revolution
 #[async_trait]
 pub trait Agent: Send + Sync {
     fn id(&self) -> AgentId;
