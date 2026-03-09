@@ -26,9 +26,11 @@ RUN mkdir src && echo "fn main() {}" > src/main.rs
 RUN cargo build --release && rm -rf src
 
 # Copy the actual source code
-COPY src ./src
-COPY examples ./examples
-COPY static ./static
+COPY src ./src/
+# Only copy examples if they exist (will fail silently if not present)
+RUN mkdir -p ./examples
+COPY examples ./examples/ 2>/dev/null || true
+COPY static ./static/
 
 # Build the application
 RUN cargo build --release

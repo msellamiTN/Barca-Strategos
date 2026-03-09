@@ -25,7 +25,7 @@ services:
       - AGENT_MEMORY_LIMIT=10MB
       - SANDBOX_ENABLED=true
       - SECURE_EXECUTION=true
-      - JWT_SECRET=${JWT_SECRET}
+      - JWT_SECRET=${PHOENIX_JWT_SECRET}
     volumes:
       - phoenix_logs:/app/logs
       - phoenix_data:/app/data
@@ -55,210 +55,210 @@ services:
       retries: 3
       start_period: 40s
 
-  # Enhanced Telegram Bot Integration
-  telegram-bot:
-    build:
-      context: .
-      dockerfile: Dockerfile.telegram
-    container_name: phoenix-telegram
-    restart: unless-stopped
-    environment:
-      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-      - WEBHOOK_URL=${WEBHOOK_URL}
-      - PHOENIX_API_URL=http://phoenix-gui:8080
-      - AI_API_URL=http://ai-assistant:8080
-      - REDIS_URL=redis://redis:6379
-      - ENABLE_COMMANDS=/start,/help,/dashboard,/security,/compliance,/risk,/agents
-      - ENABLE_NOTIFICATIONS=true
-      - ENABLE_INTERACTIVE_DASHBOARD=true
-    ports:
-      - "8444:8443"
-    depends_on:
-      - phoenix-gui
-      - redis
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 64M
-          cpus: '0.3'
-        reservations:
-          memory: 32M
-          cpus: '0.1'
+  # Enhanced Telegram Bot Integration - DISABLED (Dockerfile.telegram not available)
+  # telegram-bot:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.telegram
+  #   container_name: phoenix-telegram
+  #   restart: unless-stopped
+  #   environment:
+  #     - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+  #     - WEBHOOK_URL=${WEBHOOK_URL}
+  #     - PHOENIX_API_URL=http://phoenix-gui:8080
+  #     - AI_API_URL=http://ai-assistant:8080
+  #     - REDIS_URL=redis://redis:6379
+  #     - ENABLE_COMMANDS=/start,/help,/dashboard,/security,/compliance,/risk,/agents
+  #     - ENABLE_NOTIFICATIONS=true
+  #     - ENABLE_INTERACTIVE_DASHBOARD=true
+  #   ports:
+  #     - "8444:8443"
+  #   depends_on:
+  #     - phoenix-gui
+  #     - redis
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 64M
+  #         cpus: '0.3'
+  #       reservations:
+  #         memory: 32M
+  #         cpus: '0.1'
 
-  # Discord Bot Integration
-  discord-bot:
-    build:
-      context: .
-      dockerfile: Dockerfile.discord
-    container_name: phoenix-discord
-    restart: unless-stopped
-    environment:
-      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
-      - PHOENIX_API_URL=http://phoenix-gui:8080
-      - REDIS_URL=redis://redis:6379
-      - ENABLE_SLASH_COMMANDS=true
-      - ENABLE_RICH_EMBEDS=true
-    depends_on:
-      - phoenix-gui
-      - redis
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 64M
-          cpus: '0.3'
-        reservations:
-          memory: 32M
-          cpus: '0.1'
+  # Discord Bot Integration - DISABLED (Dockerfile.discord not available)
+  # discord-bot:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.discord
+  #   container_name: phoenix-discord
+  #   restart: unless-stopped
+  #   environment:
+  #     - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+  #     - PHOENIX_API_URL=http://phoenix-gui:8080
+  #     - REDIS_URL=redis://redis:6379
+  #     - ENABLE_SLASH_COMMANDS=true
+  #     - ENABLE_RICH_EMBEDS=true
+  #   depends_on:
+  #     - phoenix-gui
+  #     - redis
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 64M
+  #         cpus: '0.3'
+  #       reservations:
+  #         memory: 32M
+  #         cpus: '0.1'
 
-  # Slack Bot Integration
-  slack-bot:
-    build:
-      context: .
-      dockerfile: Dockerfile.slack
-    container_name: phoenix-slack
-    restart: unless-stopped
-    environment:
-      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
-      - SLACK_SIGNING_SECRET=${SLACK_SIGNING_SECRET}
-      - PHOENIX_API_URL=http://phoenix-gui:8080
-      - REDIS_URL=redis://redis:6379
-      - ENABLE_SHORTCUTS=true
-      - ENABLE_MODALS=true
-    depends_on:
-      - phoenix-gui
-      - redis
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 64M
-          cpus: '0.3'
-        reservations:
-          memory: 32M
-          cpus: '0.1'
+  # Slack Bot Integration - DISABLED (Dockerfile.slack not available)
+  # slack-bot:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.slack
+  #   container_name: phoenix-slack
+  #   restart: unless-stopped
+  #   environment:
+  #     - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+  #     - SLACK_SIGNING_SECRET=${SLACK_SIGNING_SECRET}
+  #     - PHOENIX_API_URL=http://phoenix-gui:8080
+  #     - REDIS_URL=redis://redis:6379
+  #     - ENABLE_SHORTCUTS=true
+  #     - ENABLE_MODALS=true
+  #   depends_on:
+  #     - phoenix-gui
+  #     - redis
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 64M
+  #         cpus: '0.3'
+  #       reservations:
+  #         memory: 32M
+  #         cpus: '0.1'
 
-  # Microsoft Teams Integration
-  teams-bot:
-    build:
-      context: .
-      dockerfile: Dockerfile.teams
-    container_name: phoenix-teams
-    restart: unless-stopped
-    environment:
-      - TEAMS_APP_ID=${TEAMS_APP_ID}
-      - TEAMS_APP_PASSWORD=${TEAMS_APP_PASSWORD}
-      - PHOENIX_API_URL=http://phoenix-gui:8080
-      - REDIS_URL=redis://redis:6379
-      - ENABLE_ADAPTIVE_CARDS=true
-      - ENABLE_TASKS=true
-    depends_on:
-      - phoenix-gui
-      - redis
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 64M
-          cpus: '0.3'
-        reservations:
-          memory: 32M
-          cpus: '0.1'
+  # Microsoft Teams Integration - DISABLED (Dockerfile.teams not available)
+  # teams-bot:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.teams
+  #   container_name: phoenix-teams
+  #   restart: unless-stopped
+  #   environment:
+  #     - TEAMS_APP_ID=${TEAMS_APP_ID}
+  #     - TEAMS_APP_PASSWORD=${TEAMS_APP_PASSWORD}
+  #     - PHOENIX_API_URL=http://phoenix-gui:8080
+  #     - REDIS_URL=redis://redis:6379
+  #     - ENABLE_ADAPTIVE_CARDS=true
+  #     - ENABLE_TASKS=true
+  #   depends_on:
+  #     - phoenix-gui
+  #     - redis
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 64M
+  #         cpus: '0.3'
+  #       reservations:
+  #         memory: 32M
+  #         cpus: '0.1'
 
-  # Secure agent runtime
-  agent-runtime:
-    image: barca-strategos/agent-runtime:latest
-    container_name: phoenix-runtime
-    restart: unless-stopped
-    environment:
-      - MAX_AGENTS=10
-      - AGENT_MEMORY_LIMIT=10MB
-      - SANDBOX_TYPE=chroot
-      - BOOT_TIMEOUT_SECONDS=1
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./agents:/app/agents
-      - ./data/runtime:/app/data
-    depends_on:
-      - phoenix-gui
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 30M
-          cpus: '0.3'
-        reservations:
-          memory: 15M
-          cpus: '0.1'
-    privileged: false  # Security: no privileged containers
+  # Secure agent runtime - DISABLED (no image available)
+  # agent-runtime:
+  #   image: barca-strategos/agent-runtime:latest
+  #   container_name: phoenix-runtime
+  #   restart: unless-stopped
+  #   environment:
+  #     - MAX_AGENTS=10
+  #     - AGENT_MEMORY_LIMIT=10MB
+  #     - SANDBOX_TYPE=chroot
+  #     - BOOT_TIMEOUT_SECONDS=1
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #     - ./agents:/app/agents
+  #     - ./data/runtime:/app/data
+  #   depends_on:
+  #     - phoenix-gui
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 30M
+  #         cpus: '0.3'
+  #       reservations:
+  #         memory: 15M
+  #         cpus: '0.1'
+  #   privileged: false
 
-  # AI Assistant with personality
-  ai-assistant:
-    image: barca-strategos/ai-assistant:latest
-    container_name: phoenix-ai
-    restart: unless-stopped
-    environment:
-      - PERSONALITY=security-expert
-      - LEARNING_ENABLED=true
-      - CONTEXT_RETENTION=24h
-      - MODEL_PROVIDER=${MODEL_PROVIDER:-openai}
-      - API_KEY=${API_KEY}
-      - MAX_TOKENS=1000
-      - TEMPERATURE=0.7
-    volumes:
-      - ./data/ai:/app/data
-      - ./models:/app/models
-    depends_on:
-      - phoenix-gui
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 100M
-          cpus: '0.5'
-        reservations:
-          memory: 50M
-          cpus: '0.2'
+  # AI Assistant with personality - DISABLED (no image available)
+  # ai-assistant:
+  #   image: barca-strategos/ai-assistant:latest
+  #   container_name: phoenix-ai
+  #   restart: unless-stopped
+  #   environment:
+  #     - PERSONALITY=security-expert
+  #     - LEARNING_ENABLED=true
+  #     - CONTEXT_RETENTION=24h
+  #     - MODEL_PROVIDER=${MODEL_PROVIDER:-openai}
+  #     - API_KEY=${API_KEY}
+  #     - MAX_TOKENS=1000
+  #     - TEMPERATURE=0.7
+  #   volumes:
+  #     - ./data/ai:/app/data
+  #     - ./models:/app/models
+  #   depends_on:
+  #     - phoenix-gui
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 100M
+  #         cpus: '0.5'
+  #       reservations:
+  #         memory: 50M
+  #         cpus: '0.2'
 
-  # Collaboration hub
-  collab-hub:
-    image: barca-strategos/collab-hub:latest
-    container_name: phoenix-hub
-    restart: unless-stopped
-    ports:
-      - "8080:8080"
-      - "8443:8443"
-    environment:
-      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
-      - TEAMS_WEBHOOK=${TEAMS_WEBHOOK}
-      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
-      - WEBHOOK_URL=${WEBHOOK_URL}
-      - CORE_API_URL=http://phoenix-gui:8080
-      - AI_API_URL=http://ai-assistant:8080
-    volumes:
-      - ./config/platforms:/app/config
-      - ./data/collaboration:/app/data
-    depends_on:
-      - phoenix-gui
-      - ai-assistant
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 80M
-          cpus: '0.4'
-        reservations:
-          memory: 40M
-          cpus: '0.2'
+  # Collaboration hub - DISABLED (no image available)
+  # collab-hub:
+  #   image: barca-strategos/collab-hub:latest
+  #   container_name: phoenix-hub
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8080:8080"
+  #     - "8443:8443"
+  #   environment:
+  #     - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+  #     - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+  #     - TEAMS_WEBHOOK=${TEAMS_WEBHOOK}
+  #     - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+  #     - WEBHOOK_URL=${WEBHOOK_URL}
+  #     - CORE_API_URL=http://phoenix-gui:8080
+  #     - AI_API_URL=http://ai-assistant:8080
+  #   volumes:
+  #     - ./config/platforms:/app/config
+  #     - ./data/collaboration:/app/data
+  #   depends_on:
+  #     - phoenix-gui
+  #     - ai-assistant
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 80M
+  #         cpus: '0.4'
+  #       reservations:
+  #         memory: 40M
+  #         cpus: '0.2'
 
   # PostgreSQL Database
   postgres:
@@ -372,30 +372,30 @@ services:
       timeout: 10s
       retries: 3
 
-  # Web UI
-  web-ui:
-    image: barca-strategos/web-ui:latest
-    container_name: phoenix-web
-    restart: unless-stopped
-    ports:
-      - "3000:80"
-    environment:
-      - REACT_APP_API_URL=http://localhost:8080
-      - REACT_APP_WS_URL=ws://localhost:8080
-      - REACT_APP_TELEGRAM_BOT=${TELEGRAM_BOT_TOKEN}
-    depends_on:
-      - phoenix-gui
-      - collab-hub
-    networks:
-      - phoenix-network
-    deploy:
-      resources:
-        limits:
-          memory: 50M
-          cpus: '0.3'
-        reservations:
-          memory: 25M
-          cpus: '0.1'
+  # Web UI - DISABLED (depends on collab-hub which is disabled)
+  # web-ui:
+  #   image: barca-strategos/web-ui:latest
+  #   container_name: phoenix-web
+  #   restart: unless-stopped
+  #   ports:
+  #     - "3000:80"
+  #   environment:
+  #     - REACT_APP_API_URL=http://localhost:8080
+  #     - REACT_APP_WS_URL=ws://localhost:8080
+  #     - REACT_APP_TELEGRAM_BOT=${TELEGRAM_BOT_TOKEN}
+  #   depends_on:
+  #     - phoenix-gui
+  #     # - collab-hub
+  #   networks:
+  #     - phoenix-network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 50M
+  #         cpus: '0.3'
+  #       reservations:
+  #         memory: 25M
+  #         cpus: '0.1'
 
   # Nginx Reverse Proxy
   nginx:
@@ -410,8 +410,8 @@ services:
       - ./nginx/ssl:/etc/nginx/ssl:ro
     depends_on:
       - phoenix-gui
-      - web-ui
-      - collab-hub
+      # - web-ui
+      # - collab-hub
     networks:
       - phoenix-network
     deploy:

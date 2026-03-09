@@ -1,6 +1,6 @@
 # Rust build artifacts
 target/
-Cargo.lock
+# Note: Cargo.lock is needed for Docker builds
 
 # IDE and editor files
 .vscode/
@@ -75,9 +75,8 @@ benches/
 **/*.benches.rs
 **/*_bench.rs
 
-# Examples (except the web GUI example)
-examples/
-!examples/start_web_gui.rs
+# Examples (allow for Docker build)
+# examples/
 
 # Backup files
 *.bak
