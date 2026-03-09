@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified icon for small sizes -->
+  <path d="M 16 32
+           C 16 19, 10 19, 10 32
+           C 10 45, 16 45, 16 32"
+        fill="#CD7F32"/>
+  
+  <path d="M 48 32
+           C 48 19, 54 19, 54 32
+           C 54 45, 48 45, 48 32"
+        fill="#CD7F32"/>
+  
+  <circle cx="32" cy="32" r="3" fill="#E2725B"/>
+</svg>
