@@ -125,8 +125,11 @@ build_phoenix() {
     cp -r . /opt/phoenix/src/
     chown -R phoenix:phoenix /opt/phoenix
     
-    # Build as Phoenix user
-    sudo -u phoenix bash -c "cd /opt/phoenix/src && source ~/.cargo/env && cargo build --release"
+    # Set up Rust environment for phoenix user
+    sudo -u phoenix bash -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
+    
+    # Build as Phoenix user with proper environment
+    sudo -u phoenix bash -c "cd /opt/phoenix/src && source /opt/phoenix/.cargo/env && cargo build --release"
     
     # Copy binaries
     cp /opt/phoenix/src/target/release/phoenix-core /opt/phoenix/bin/
