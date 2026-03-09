@@ -313,10 +313,10 @@ show_deployment_info() {
 # Show service status
 show_status() {
     print_info "📊 Phoenix Service Status:"
-    docker-compose ps
+    $DOCKER_COMPOSE ps
     echo
     print_info "📈 Resource Usage:"
-    docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}\t{{.CPUPerc}}"
+    $DOCKER_SUDO docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}\t{{.CPUPerc}}"
 }
 
 # Show logs
@@ -324,40 +324,40 @@ show_logs() {
     local service=${1:-""}
     if [ -n "$service" ]; then
         print_info "📋 Showing logs for: $service"
-        docker-compose logs -f "$service"
+        $DOCKER_COMPOSE logs -f "$service"
     else
         print_info "📋 Showing logs for all services"
-        docker-compose logs -f
+        $DOCKER_COMPOSE logs -f
     fi
 }
 
 # Stop services
 stop_services() {
     print_info "🛑 Stopping Phoenix services..."
-    docker-compose down
+    $DOCKER_COMPOSE down
     print_status "✅ Phoenix services stopped"
 }
 
 # Restart services
 restart_services() {
     print_info "🔄 Restarting Phoenix services..."
-    docker-compose restart
+    $DOCKER_COMPOSE restart
     print_status "✅ Phoenix services restarted"
 }
 
 # Scale services
 scale_services() {
     local count=${1:-3}
-    print_info "📈 Scaling Phoenix agents to: $count"
-    docker-compose up -d --scale phoenix-core="$count"
-    print_status "✅ Services scaled"
+    print_info "📈 Scaling Phoenix services to $count instances..."
+    $DOCKER_COMPOSE up -d --scale phoenix-gui="$count"
+    print_status "✅ Services scaled to $count instances"
 }
 
 # Update services
 update_services() {
     print_info "🔄 Updating Phoenix..."
-    docker-compose pull
-    docker-compose up -d
+    $DOCKER_COMPOSE pull
+    $DOCKER_COMPOSE up -d
     print_status "✅ Phoenix updated"
 }
 
