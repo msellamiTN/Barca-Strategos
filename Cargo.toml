@@ -1,0 +1,93 @@
+[package]
+name = "barca-strategos"
+version = "0.1.0"
+edition = "2021"
+authors = ["Barca-Strategos Team"]
+description = "Phoenix AI Security Framework - Ultra-efficient secure AI agents for cybersecurity operations"
+license = "MIT"
+repository = "https://github.com/barca-strategos/phoenix"
+
+[dependencies]
+# Core dependencies
+tokio = { version = "1.35", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.6", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Web framework
+axum = "0.7"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+hyper = "1.0"
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+redis = { version = "0.24", features = ["tokio-comp"] }
+
+# Security
+ring = "0.17"
+jsonwebtoken = "9.2"
+argon2 = "0.5"
+
+# AI/ML
+openai-api-rs = "4.0"
+tiktoken-rs = "0.5"
+
+# Communication
+teloxide = { version = "0.12", features = ["macros"] }
+slack-messaging = "0.2"
+
+# Monitoring
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Configuration
+config = "0.14"
+dotenvy = "0.15"
+
+# Async utilities
+futures = "0.3"
+async-trait = "0.1"
+
+# Serialization
+bincode = "1.3"
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json"] }
+
+# WebSocket
+tokio-tungstenite = "0.21"
+
+# File system
+notify = "6.1"
+
+# Compression
+flate2 = "1.0"
+
+[dev-dependencies]
+tempfile = "3.8"
+mockall = "0.12"
+
+[[bin]]
+name = "phoenix-core"
+path = "src/bin/phoenix-core.rs"
+
+[[bin]]
+name = "phoenix-agent"
+path = "src/bin/phoenix-agent.rs"
+
+[[bin]]
+name = "phoenix-deploy"
+path = "src/bin/phoenix-deploy.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.release.package."*"]
+opt-level = "z"

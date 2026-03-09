@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for context -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#1A1A1A" stroke-width="1" opacity="0.1"/>
+  
+  <!-- Left crescent (Numidian cavalry wing) -->
+  <path d="M 50 100 
+           C 50 60, 30 60, 30 100
+           C 30 140, 50 140, 50 100"
+        fill="#CD7F32" 
+        stroke="#CD7F32" 
+        stroke-width="2"/>
+  
+  <!-- Right crescent (Numidian cavalry wing) -->
+  <path d="M 150 100
+           C 150 60, 170 60, 170 100
+           C 170 140, 150 140, 150 100"
+        fill="#CD7F32" 
+        stroke="#CD7F32" 
+        stroke-width="2"/>
+  
+  <!-- Center point (Critical asset) -->
+  <circle cx="100" cy="100" r="8" fill="#E2725B"/>
+  
+  <!-- Subtle elephant tusk curves -->
+  <path d="M 35 85 Q 25 75, 35 100"
+        fill="none" 
+        stroke="#CD7F32" 
+        stroke-width="1" 
+        opacity="0.3"/>
+  
+  <path d="M 165 85 Q 175 75, 165 100"
+        fill="none" 
+        stroke="#CD7F32" 
+        stroke-width="1" 
+        opacity="0.3"/>
+  
+  <!-- Strategic dots representing battlefield positions -->
+  <circle cx="100" cy="100" r="2" fill="#E2725B" opacity="0.6"/>
+  <circle cx="80" cy="80" r="1.5" fill="#CD7F32" opacity="0.4"/>
+  <circle cx="120" cy="80" r="1.5" fill="#CD7F32" opacity="0.4"/>
+  <circle cx="80" cy="120" r="1.5" fill="#CD7F32" opacity="0.4"/>
+  <circle cx="120" cy="120" r="1.5" fill="#CD7F32" opacity="0.4"/>
+</svg>
