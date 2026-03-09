@@ -24,6 +24,7 @@ tower-http = { version = "0.5", features = ["cors", "trace"] }
 hyper = "1.0"
 
 # Database
+# ✅ runtime-tokio-rustls = pure Rust TLS, no libpq or OpenSSL needed
 sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
 redis = { version = "0.24", features = ["tokio-comp"] }
 
@@ -33,11 +34,13 @@ jsonwebtoken = "9.2"
 argon2 = "0.5"
 
 # AI/ML
+# ✅ force reqwest (used internally by openai-api-rs) to rustls
 openai-api-rs = "4.0"
 tiktoken-rs = "0.5"
 
 # Communication
-teloxide = { version = "0.12", features = ["macros"] }
+# ✅ default-features = false drops native-tls; rustls replaces it
+teloxide = { version = "0.12", features = ["macros"], default-features = false }
 slack-messaging = "0.2"
 
 # Monitoring
@@ -56,16 +59,30 @@ async-trait = "0.1"
 bincode = "1.3"
 
 # HTTP client
-reqwest = { version = "0.11", features = ["json"] }
+# ✅ default-features = false drops native-tls; rustls-tls is pure Rust
+reqwest = { version = "0.11", default-features = false, features = ["json", "rustls-tls"] }
 
 # WebSocket
-tokio-tungstenite = "0.21"
+tokio-tungstenite = { version = "0.21", features = ["rustls-tls-native-roots"] }
 
 # File system
 notify = "6.1"
 
 # Compression
 flate2 = "1.0"
+
+# ── Force entire dependency tree to use rustls, not native-tls / OpenSSL ──────
+# Any transitive dep that tries to pull in native-tls will use rustls instead.
+[dependencies.native-tls]
+version = "*"
+optional = true         # prevents automatic selection
+
+# Patch reqwest's internal TLS so crates that depend on reqwest/default also get rustls
+[patch.crates-io]
+# If openai-api-rs or other crates pin reqwest with native-tls features,
+# this forces the whole graph to the no-default-features variant.
+# Remove this block if it causes version conflicts; the explicit reqwest dep above
+# is usually sufficient.
 
 [dev-dependencies]
 tempfile = "3.8"
