@@ -1,35 +1,29 @@
 # ─── Barca-Strategos Phoenix GUI ──────────────────────────────────────────────
-# Fully offline build — all crates vendored locally, zero network calls.
-# Prerequisites on HOST before building:
-#   cargo vendor && mkdir -p .cargo && cargo vendor >> .cargo/config.toml
+# Standard online build with Rust 1.85 and pure Rust dependencies
 
 # ─── Stage 1: Build ───────────────────────────────────────────────────────────
 FROM rust:1.85 AS builder
 
 WORKDIR /app
 
-# Copy cargo config (tells cargo to use vendor/ instead of crates.io)
-COPY .cargo .cargo/
-
-# Copy manifests + vendored crates
+# Copy manifests first for better caching
 COPY Cargo.toml Cargo.lock ./
-COPY vendor ./vendor/
 
-# Dummy binaries to cache the dependency compile layer
+# Create dummy binaries to cache dependency compile layer
 RUN mkdir -p src/bin && \
     echo "fn main() {}" > src/bin/phoenix-core.rs && \
     echo "fn main() {}" > src/bin/phoenix-agent.rs && \
     echo "fn main() {}" > src/bin/phoenix-deploy.rs
 
-# Build deps from vendor — no network needed
-RUN cargo build --release --offline
+# Build dependencies (will use rustls, no native-tls)
+RUN cargo build --release
 RUN rm -rf src
 
 # Build real source
 COPY src ./src/
 COPY static ./static/
 RUN touch src/bin/phoenix-core.rs src/bin/phoenix-agent.rs src/bin/phoenix-deploy.rs
-RUN cargo build --release --offline
+RUN cargo build --release
 
 # ─── Stage 2: Runtime ─────────────────────────────────────────────────────────
 FROM debian:bookworm-slim
