@@ -92,14 +92,6 @@ mockall = "0.12"
 name = "phoenix-core"
 path = "src/bin/phoenix-core.rs"
 
-[[bin]]
-name = "phoenix-agent"
-path = "src/bin/phoenix-agent.rs"
-
-[[bin]]
-name = "phoenix-deploy"
-path = "src/bin/phoenix-deploy.rs"
-
 [profile.release]
 lto = true
 codegen-units = 1
