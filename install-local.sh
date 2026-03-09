@@ -128,7 +128,7 @@ build_phoenix() {
     # Set up Rust environment for phoenix user
     sudo -u phoenix bash -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
     
-    # Build as Phoenix user with proper environment
+    # Build as Phoenix user with proper environment (online build)
     sudo -u phoenix bash -c "cd /opt/phoenix/src && source /opt/phoenix/.cargo/env && cargo build --release"
     
     # Copy binaries
