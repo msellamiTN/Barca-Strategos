@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     libpq-dev \
     build-essential \
-    curl-dev \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -35,11 +35,11 @@ RUN cargo build --release
 # Stage 2: Runtime image
 FROM debian:bookworm-slim
 
-# Install runtime dependencies
+# Install runtime dependencies only
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     libssl3 \
-    libpq-dev \
+    libpq5 \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
@@ -51,7 +51,6 @@ WORKDIR /app
 
 # Copy the binary from builder stage
 COPY --from=builder /app/target/release/phoenix-core ./bin/phoenix-core
-COPY --from=builder /app/target/release/start_web_gui ./bin/start_web_gui
 
 # Copy static files for web interface
 COPY --from=builder /app/static ./static
@@ -63,14 +62,15 @@ RUN mkdir -p /app/logs /app/data /app/config && \
 # Switch to non-root user
 USER phoenix
 
-# Expose ports
-EXPOSE 8080 8443
-
 # Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
     CMD curl -f http://localhost:8080/api/system/health || exit 1
 
-# Environment variables
+# Expose port
+EXPOSE 8080
+
+# Start the application
+CMD ["./bin/phoenix-core"]
 ENV RUST_LOG=info
 ENV PHOENIX_HOST=0.0.0.0
 ENV PHOENIX_PORT=8080
