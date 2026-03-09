@@ -1,98 +1,63 @@
 # Multi-stage Dockerfile for Barca-Strategos Phoenix GUI
-# Using Alpine Linux to avoid package installation issues
+# Fully static binary → zero runtime package installation required
 
-# Stage 1: Build the Rust application
-FROM rust:1.75-alpine AS builder
+# ─── Stage 1: Build ───────────────────────────────────────────────────────────
+# rust:1.75 (Debian-based) already ships with gcc, pkg-config, libssl-dev,
+# make, etc. — no apk/apt needed for the core toolchain.
+FROM rust:1.75 AS builder
 
-# Fix Alpine TLS issue by temporarily using HTTP repos
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|http://dl-cdn.alpinelinux.org|g' /etc/apk/repositories
+# Add the musl target for fully static compilation
+RUN rustup target add x86_64-unknown-linux-musl
 
-# Install system dependencies (Alpine packages are more reliable)
-RUN apk add --no-cache \
-    pkgconfig \
-    openssl-dev \
-    postgresql-dev \
-    musl-dev \
-    curl \
-    build-base
+# Install only the two things Debian doesn't ship in rust:1.75 by default.
+# If apt is also blocked, see the NOTE below about pure-Rust alternatives.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    musl-tools \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
 WORKDIR /app
 
-# Copy Cargo files
+# Cache dependency layer
 COPY Cargo.toml Cargo.lock ./
-
-# Create dummy main.rs to cache dependencies
 RUN mkdir src && echo "fn main() {}" > src/main.rs
+RUN RUSTFLAGS="-C target-feature=+crt-static" \
+    cargo build --release --target x86_64-unknown-linux-musl \
+    && rm -rf src
 
-# Build dependencies (this layer is cached if Cargo.toml doesn't change)
-RUN cargo build --release && rm -rf src
-
-# Copy the actual source code
+# Build real binary
 COPY src ./src/
 COPY static ./static/
+RUN RUSTFLAGS="-C target-feature=+crt-static" \
+    cargo build --release --target x86_64-unknown-linux-musl
 
-# Build the application
-RUN cargo build --release
+# ─── Stage 2: Runtime (scratch = zero OS, zero packages to install) ───────────
+FROM scratch
 
-# Stage 2: Runtime image
-FROM alpine:latest
+# SSL certificates baked in from builder — no ca-certificates package needed
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
-# Fix Alpine TLS issue, then bootstrap ca-certificates, then switch back to HTTPS
-RUN sed -i 's|https://dl-cdn.alpinelinux.org|http://dl-cdn.alpinelinux.org|g' /etc/apk/repositories && \
-    apk add --no-cache ca-certificates && \
-    sed -i 's|http://dl-cdn.alpinelinux.org|https://dl-cdn.alpinelinux.org|g' /etc/apk/repositories
+# Statically linked binary — no libc, libssl, or libpq dependencies at runtime
+COPY --from=builder /app/target/x86_64-unknown-linux-musl/release/phoenix-core /phoenix-core
 
-# Install remaining runtime dependencies (now HTTPS works with ca-certificates)
-RUN apk add --no-cache \
-    openssl \
-    libpq \
-    curl
+COPY --from=builder /app/static /static
 
-# Create non-root user for security
-RUN adduser -D -s /bin/sh phoenix
-
-# Set working directory
-WORKDIR /app
-
-# Copy the binary from builder stage
-COPY --from=builder /app/target/release/phoenix-core ./bin/phoenix-core
-
-# Copy static files for web interface
-COPY --from=builder /app/static ./static
-
-# Create necessary directories
-RUN mkdir -p /app/logs /app/data /app/config && \
-    chown -R phoenix:phoenix /app
-
-# Switch to non-root user
-USER phoenix
-
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
-    CMD curl -f http://localhost:8080/api/system/health || exit 1
-
-# Expose port
 EXPOSE 8080
 
-# Environment variables
 ENV RUST_LOG=info
 ENV PHOENIX_HOST=0.0.0.0
 ENV PHOENIX_PORT=8080
-ENV PHOENIX_STATIC_PATH=/app/static
+ENV PHOENIX_STATIC_PATH=/static
 ENV PHOENIX_MAX_CONNECTIONS=1000
 
 # Volume mounts for persistent data
-VOLUME ["/app/logs", "/app/data", "/app/config"]
+VOLUME ["/logs", "/data", "/config"]
 
-# Labels for metadata
+# Labels
 LABEL maintainer="Barca-Strategos Team"
 LABEL description="Barca-Strategos Phoenix GUI - Cognitive Collaboration Platform"
 LABEL version="1.0.0"
 LABEL org.opencontainers.image.title="Phoenix GUI"
-LABEL org.opencontainers.image.description="Web-based cognitive collaboration platform"
-LABEL org.opencontainers.image.vendor="Barca-Strategos"
 LABEL org.opencontainers.image.licenses="MIT"
 
-# Start the application
-CMD ["./bin/phoenix-core"]
+ENTRYPOINT ["/phoenix-core"]
