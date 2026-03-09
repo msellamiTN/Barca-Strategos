@@ -20,9 +20,8 @@ WORKDIR /app
 RUN mkdir -p /app/logs /app/data /app/config /app/static && \
     chown -R phoenix:phoenix /app
 
-# Copy pre-built binaries (will be built locally first)
+# Copy pre-built binary (only phoenix-core exists)
 COPY target/release/phoenix-core   /usr/local/bin/phoenix-core
-COPY target/release/phoenix-agent  /usr/local/bin/phoenix-agent
 
 # Copy static files
 COPY static /app/static
