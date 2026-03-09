@@ -1,17 +1,17 @@
 # Multi-stage Dockerfile for Barca-Strategos Phoenix GUI
-# Optimized for production deployment with web interface
+# Using Alpine Linux to avoid package installation issues
 
 # Stage 1: Build the Rust application
-FROM rust:1.75-slim as builder
+FROM rust:1.75-alpine as builder
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    pkg-config \
-    libssl-dev \
-    libpq-dev \
-    build-essential \
+# Install system dependencies (Alpine packages are more reliable)
+RUN apk add --no-cache \
+    pkgconfig \
+    openssl-dev \
+    postgresql-dev \
+    musl-dev \
     curl \
-    && rm -rf /var/lib/apt/lists/*
+    build-base
 
 # Set working directory
 WORKDIR /app
@@ -33,18 +33,17 @@ COPY static ./static/
 RUN cargo build --release
 
 # Stage 2: Runtime image
-FROM debian:bookworm-slim
+FROM alpine:latest
 
 # Install runtime dependencies only
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     ca-certificates \
-    libssl3 \
-    libpq5 \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+    openssl \
+    postgresql \
+    curl
 
 # Create non-root user for security
-RUN useradd -r -s /bin/false phoenix
+RUN adduser -D -s /bin/sh phoenix
 
 # Set working directory
 WORKDIR /app
@@ -69,8 +68,7 @@ HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
 # Expose port
 EXPOSE 8080
 
-# Start the application
-CMD ["./bin/phoenix-core"]
+# Environment variables
 ENV RUST_LOG=info
 ENV PHOENIX_HOST=0.0.0.0
 ENV PHOENIX_PORT=8080
@@ -82,12 +80,12 @@ VOLUME ["/app/logs", "/app/data", "/app/config"]
 
 # Labels for metadata
 LABEL maintainer="Barca-Strategos Team"
+LABEL description="Barca-Strategos Phoenix GUI - Cognitive Collaboration Platform"
 LABEL version="1.0.0"
-LABEL description="Barca-Strategos Phoenix - Cognitive Collaboration Platform with Web GUI"
 LABEL org.opencontainers.image.title="Phoenix GUI"
 LABEL org.opencontainers.image.description="Web-based cognitive collaboration platform"
 LABEL org.opencontainers.image.vendor="Barca-Strategos"
 LABEL org.opencontainers.image.licenses="MIT"
 
-# Start the web GUI application
-CMD ["./bin/start_web_gui"]
+# Start the application
+CMD ["./bin/phoenix-core"]
