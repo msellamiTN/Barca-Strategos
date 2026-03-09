@@ -234,7 +234,7 @@ wait_for_services() {
     
     if [ $wait_time -ge $max_wait ]; then
         print_error "❌ Phoenix Core failed to start within ${max_wait}s"
-        docker-compose logs phoenix-core
+        $DOCKER_COMPOSE logs phoenix-gui
         exit 1
     fi
     
@@ -243,11 +243,11 @@ wait_for_services() {
     sleep 5
     
     # Get service status
-    if docker-compose ps | grep -q "Up"; then
+    if $DOCKER_COMPOSE ps | grep -q "Up"; then
         print_status "✅ All services are running"
     else
         print_warning "⚠️  Some services may not be ready yet"
-        docker-compose ps
+        $DOCKER_COMPOSE ps
     fi
 }
 
@@ -260,7 +260,7 @@ init_database() {
     local wait_time=0
     
     while [ $wait_time -lt $max_wait ]; do
-        if docker-compose exec -T postgres pg_isready -U barca -d barca_db >/dev/null 2>&1; then
+        if $DOCKER_COMPOSE exec -T postgres pg_isready -U phoenix -d phoenix >/dev/null 2>&1; then
             break
         fi
         sleep 2
@@ -268,7 +268,7 @@ init_database() {
     done
     
     # Run migrations (if migration script exists)
-    if docker-compose exec -T phoenix-core /app/barca-strategos migrate >/dev/null 2>&1; then
+    if $DOCKER_COMPOSE exec -T phoenix-gui /app/phoenix migrate >/dev/null 2>&1; then
         print_status "✅ Database initialized"
     else
         print_warning "⚠️  Database initialization may be needed manually"
@@ -280,15 +280,16 @@ show_deployment_info() {
     echo
     print_phoenix "🎉 Phoenix deployed successfully!"
     echo
-    echo -e "${CYAN}🔥 Barca-Strategos Phoenix Services:${NC}"
-    echo "  • Web UI:        http://localhost:3000"
-    echo "  • API:           http://localhost:8080"
-    echo "  • API Docs:      http://localhost:8080/docs"
-    echo "  • AI Assistant:  http://localhost:8080/ai"
-    echo "  • Metrics:       http://localhost:9090/metrics"
+    echo -e "${CYAN}� Barca-Strategos Phoenix Services:${NC}"
+    echo "  • Web GUI:       http://localhost:8080"
+    echo "  • Monitoring:    http://localhost:3000 (Grafana: admin/admin)"
+    echo "  • Metrics:       http://localhost:9090 (Prometheus)"
+    echo "  • Tracing:       http://localhost:16686 (Jaeger)"
+    echo "  • API:           http://localhost:8080/api"
+    echo "  • Telegram Bot:  Configure token in .env"
     echo
     echo -e "${CYAN}📊 Resource Usage:${NC}"
-    docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}\t{{.CPUPerc}}"
+    $DOCKER_SUDO docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}\t{{.CPUPerc}}"
     echo
     echo -e "${CYAN}🔧 Management Commands:${NC}"
     echo "  • Status:        ./phoenix-deploy.sh status"
