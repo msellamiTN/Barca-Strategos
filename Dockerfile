@@ -2,7 +2,10 @@
 # Using Alpine Linux to avoid package installation issues
 
 # Stage 1: Build the Rust application
-FROM rust:1.75-alpine as builder
+FROM rust:1.75-alpine AS builder
+
+# Fix Alpine TLS issue by temporarily using HTTP repos
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|http://dl-cdn.alpinelinux.org|g' /etc/apk/repositories
 
 # Install system dependencies (Alpine packages are more reliable)
 RUN apk add --no-cache \
@@ -35,11 +38,15 @@ RUN cargo build --release
 # Stage 2: Runtime image
 FROM alpine:latest
 
-# Install runtime dependencies only
+# Fix Alpine TLS issue, then bootstrap ca-certificates, then switch back to HTTPS
+RUN sed -i 's|https://dl-cdn.alpinelinux.org|http://dl-cdn.alpinelinux.org|g' /etc/apk/repositories && \
+    apk add --no-cache ca-certificates && \
+    sed -i 's|http://dl-cdn.alpinelinux.org|https://dl-cdn.alpinelinux.org|g' /etc/apk/repositories
+
+# Install remaining runtime dependencies (now HTTPS works with ca-certificates)
 RUN apk add --no-cache \
-    ca-certificates \
     openssl \
-    postgresql \
+    libpq \
     curl
 
 # Create non-root user for security
