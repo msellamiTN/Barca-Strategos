@@ -86,7 +86,7 @@ impl GDPRCompliance {
             recommendations: self.generate_gdpr_recommendations(&findings),
             next_assessment_date: Utc::now() + Duration::days(90),
             data_subject_requests: self.get_data_subject_request_stats().await?,
-        }
+        })
     }
     
     /// Get GDPR compliance status for specific control
