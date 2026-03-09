@@ -39,7 +39,7 @@ FROM debian:bookworm-slim
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     libssl3 \
-    libpq5 \
+    libpq-dev \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
