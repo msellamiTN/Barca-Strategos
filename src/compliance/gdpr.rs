@@ -1129,7 +1129,7 @@ pub struct BreachConfig {
     pub notification_timeframe_hours: u32,
     notification_authorities: Vec<String>,
     breach_response_procedures: Vec<String>,
-    post-mortem_analysis_required: bool,
+    pub post_mortem_analysis_required: bool,
     regulatory_notification_requirements: Vec<String>,
     breach_notification_templates: Vec<String>,
 }
