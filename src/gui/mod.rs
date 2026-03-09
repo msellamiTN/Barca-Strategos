@@ -5,8 +5,6 @@ pub mod security_operations;
 pub mod risk_management;
 pub mod agent_interaction;
 pub mod real_time_monitoring;
-pub mod analytics_intelligence;
-pub mod settings_configuration;
 
 pub use dashboard::*;
 pub use cognitive_collaboration::*;
@@ -15,8 +13,6 @@ pub use security_operations::*;
 pub use risk_management::*;
 pub use agent_interaction::*;
 pub use real_time_monitoring::*;
-pub use analytics_intelligence::*;
-pub use settings_configuration::*;
 
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -110,6 +106,7 @@ impl PhoenixGUISystem {
             monitoring_metrics: self.monitoring_center.get_metrics(user_id).await?,
             analytics_insights: self.analytics_engine.get_insights(user_id).await?,
             system_health: self.get_system_health().await?,
+            vulnerabilities_patched_today: self.get_vulnerabilities_patched_today().await?,
         };
 
         Ok(dashboard)

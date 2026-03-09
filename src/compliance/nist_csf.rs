@@ -265,12 +265,12 @@ impl NISTCSF {
                 subcategories: vec![
                     "RS.RP-1: Response planning".to_string(),
                     "RS.RP-2: Communications".to_string(),
-                    "RS.RP-3": Analysis".to_string(),
+                    "RS.RP-3: Analysis".to_string(),
                     "RS.RP-4: Mitigation".to_string(),
                     "RS.RP-5: Improvements".to_string(),
-                    "RS.RP-6": Incident management".to_string(),
-                    "RS.RP-7": Coordination".to_string(),
-                    "RS.RP-8": Reporting".to_string(),
+                    "RS.RP-6: Incident management".to_string(),
+                    "RS.RP-7: Coordination".to_string(),
+                    "RS.RP-8: Reporting".to_string(),
                 ],
                 objective: "Execute response actions and plans, manage communications during and following a cybersecurity incident".to_string(),
                 implementation_status: CSFFunctionStatus::Implemented,
@@ -817,7 +817,6 @@ impl CSFFramework {
                     function.controls.iter_mut().for_each(|c| c.evidence.extend(update.evidence.clone()));
                 },
             }
-        }
         }
         
         Ok(())

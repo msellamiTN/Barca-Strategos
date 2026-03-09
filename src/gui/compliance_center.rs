@@ -10,7 +10,7 @@ use chrono::{DateTime, Utc, Duration};
 use uuid::Uuid;
 
 /// Compliance Management Center GUI
- Provides intuitive interface for all compliance frameworks with real-time monitoring and intelligent automation
+/// Provides intuitive interface for all compliance frameworks with real-time monitoring and intelligent automation
 
 pub struct ComplianceManagementCenter {
     compliance_config: ComplianceGUIConfig,
