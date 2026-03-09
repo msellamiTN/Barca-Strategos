@@ -28,11 +28,11 @@ print_banner() {
     echo -e "${PURPLE}"
     echo "╔══════════════════════════════════════════════════════════════╗"
     echo "║                    BARCA-STRATEGOS PHOENIX                   ║"
-    echo "║                Ultra-Efficient AI Security Framework              ║"
-    echo "║                     🔥 Tactical Excellence 🔥              ║"
+    echo "║              Cognitive Collaboration Platform               ║"
+    echo "║                     � Human-AI Teamwork �              ║"
     echo "║                                                              ║"
-    echo "║  • <10MB agents  • 1-second boot  • Enterprise security     ║"
-    echo "║  • Multi-platform  • AI personality  • Zero-trust           ║"
+    echo "║  • Web GUI Interface  • Multi-Agent System  • Chat Bots     ║"
+    echo "║  • Auto-Scaling  • Enterprise Security  • Real-time       ║"
     echo "╚══════════════════════════════════════════════════════════════╝"
     echo -e "${NC}"
 }
@@ -47,8 +47,20 @@ check_requirements() {
         exit 1
     fi
     
-    # Check Docker Compose
-    if ! command -v docker-compose &> /dev/null; then
+    # Check Docker permissions
+    if ! docker info &> /dev/null; then
+        print_warning "⚠️  Docker requires sudo permissions. Using sudo for Docker commands."
+        DOCKER_SUDO="sudo"
+    else
+        DOCKER_SUDO=""
+    fi
+    
+    # Check Docker Compose (v2 syntax: "docker compose", v1: "docker-compose")
+    if $DOCKER_SUDO docker compose version &> /dev/null; then
+        DOCKER_COMPOSE="$DOCKER_SUDO docker compose"
+    elif command -v docker-compose &> /dev/null; then
+        DOCKER_COMPOSE="$DOCKER_SUDO docker-compose"
+    else
         print_error "❌ Docker Compose is not installed. Please install Docker Compose first."
         exit 1
     fi
@@ -75,6 +87,7 @@ check_requirements() {
     fi
     
     print_status "✅ System requirements met (${AVAILABLE_MEMORY}MB RAM, ${AVAILABLE_DISK}KB disk)"
+    print_status "✅ Docker Compose command: $DOCKER_COMPOSE"
 }
 
 # Create directory structure
@@ -146,17 +159,17 @@ generate_secure_config() {
 pull_images() {
     print_info "📦 Pulling Phoenix Docker images..."
     
-    # Check if images exist locally first
-    if docker images | grep -q "barca-strategos"; then
-        print_info "🏠 Local images found, checking for updates..."
+    # Check if images already exist locally
+    if $DOCKER_SUDO docker images | grep -q "barca-strategos"; then
+        print_info "�️  Some Phoenix images already exist locally"
     fi
     
-    # Pull images with progress
-    if docker-compose pull; then
+    # Pull images using docker-compose
+    if $DOCKER_COMPOSE pull; then
         print_status "✅ Docker images pulled successfully"
     else
-        print_warning "⚠️  Some images failed to pull, will build locally"
-        return 1
+        print_warning "⚠️  Failed to pull some images, will build locally"
+        build_images
     fi
 }
 
@@ -166,15 +179,15 @@ build_images() {
     
     # Build core image
     if [ -f "Dockerfile" ]; then
-        print_info "🏗️  Building phoenix-core image..."
-        docker build -t barca-strategos/phoenix-core:latest .
+        print_info "🏗️  Building phoenix-gui image..."
+        $DOCKER_SUDO docker build -t barca-strategos/phoenix-gui:latest .
     fi
     
     # Build other images (if Dockerfiles exist)
     for service in agent-runtime ai-assistant collab-hub telegram-bot web-ui; do
         if [ -f "${service}/Dockerfile" ]; then
             print_info "🏗️  Building ${service} image..."
-            docker build -t "barca-strategos/${service}:latest" "./${service}"
+            $DOCKER_SUDO docker build -t "barca-strategos/${service}:latest" "./${service}"
         fi
     done
     
@@ -186,11 +199,11 @@ start_services() {
     print_phoenix "🚀 Starting Phoenix services..."
     
     # Start with ultra-fast boot optimization
-    if docker-compose up -d --remove-orphans; then
+    if $DOCKER_COMPOSE up -d --remove-orphans; then
         print_status "✅ Phoenix services started"
     else
         print_error "❌ Failed to start Phoenix services"
-        docker-compose logs
+        $DOCKER_COMPOSE logs
         exit 1
     fi
 }
