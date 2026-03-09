@@ -801,7 +801,7 @@ pub struct ValidationResult {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum DataSubjectRequestStats {
+pub struct DataSubjectRequestStats {
     pub total_requests: u64,
     pub approved_requests: u64,
     pub denied_requests: u64,
