@@ -125,6 +125,9 @@ build_phoenix() {
     cp -r . /opt/phoenix/src/
     chown -R phoenix:phoenix /opt/phoenix
     
+    # Remove any existing cargo config that might cause vendor issues
+    rm -rf /opt/phoenix/.cargo
+    
     # Set up Rust environment for phoenix user
     sudo -u phoenix bash -c "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
     
