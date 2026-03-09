@@ -23,7 +23,6 @@ RUN mkdir -p /app/logs /app/data /app/config /app/static && \
 # Copy pre-built binaries (will be built locally first)
 COPY target/release/phoenix-core   /usr/local/bin/phoenix-core
 COPY target/release/phoenix-agent  /usr/local/bin/phoenix-agent
-COPY target/release/phoenix-deploy /usr/local/bin/phoenix-deploy
 
 # Copy static files
 COPY static /app/static
