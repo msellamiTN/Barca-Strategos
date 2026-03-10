@@ -630,7 +630,7 @@ pub struct VendorCategory {
     pub assessment_frequency_days: u32,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum VendorStatus {
     Active,
     UnderReview,

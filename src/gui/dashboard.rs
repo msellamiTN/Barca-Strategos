@@ -609,13 +609,22 @@ pub enum WidgetType {
     Notifications,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct WidgetConfig {
+    #[serde(default = "default_refresh_interval")]
     pub refresh_interval: Duration,
+    #[serde(default)]
     pub data_source: String,
+    #[serde(default)]
     pub display_options: HashMap<String, serde_json::Value>,
+    #[serde(default)]
     pub interaction_enabled: bool,
+    #[serde(default)]
     pub real_time_updates: bool,
+}
+
+fn default_refresh_interval() -> Duration {
+    Duration::seconds(30)
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
@@ -891,7 +900,7 @@ impl AccessibilityManager {
 
 // Placeholder configuration structures
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct DashboardConfig {
     pub layout: LayoutConfig,
     pub widgets: WidgetConfig,
@@ -900,11 +909,11 @@ pub struct DashboardConfig {
     pub accessibility: AccessibilityConfig,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct LayoutConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct PersonalizationConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct PerformanceConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AccessibilityConfig;

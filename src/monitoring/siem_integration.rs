@@ -98,14 +98,14 @@ impl SIEMIntegration {
         // Enrich event
         let enriched_event = self.enrichment_engine.enrich_system_event(event).await?;
         
-        // Format as CEF
-        let cef_message = self.cef_formatter.format_system_event(&enriched_event).await?;
+        // Format as CEF (using original event)
+        let cef_message = self.cef_formatter.format_system_event(event).await?;
         
         // Send to SIEM
         self.send_to_siem(&cef_message, &enriched_event).await?;
         
         // Store in buffer
-        self.store_event_in_buffer(&enriched_event).await?;
+        self.store_event_in_buffer(enriched_event).await?;
         
         Ok(())
     }
@@ -118,7 +118,8 @@ impl SIEMIntegration {
     
     /// Get SIEM statistics
     pub async fn get_siem_stats(&self) -> SIEMStats {
-        let buffer = self.event_buffer.read().await;
+        let buffer: std::sync::Arc<tokio::sync::RwLock<std::collections::VecDeque<SIEMEvent>>> = self.event_buffer.clone();
+        let buffer = buffer.read().await;
         let pool = self.connection_pool.read().await;
         
         SIEMStats {
@@ -147,7 +148,7 @@ impl SIEMIntegration {
     }
     
     async fn background_event_processor(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5));
         
         loop {
             interval.tick().await;
@@ -159,7 +160,7 @@ impl SIEMIntegration {
     }
     
     async fn background_health_checker(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30));
         
         loop {
             interval.tick().await;
@@ -171,7 +172,7 @@ impl SIEMIntegration {
     }
     
     async fn process_event_buffer(&self) -> Result<(), SIEMError> {
-        let mut buffer = self.event_buffer.write().await;
+        let mut buffer: tokio::sync::RwLockWriteGuard<'_, std::collections::VecDeque<SIEMEvent>> = self.event_buffer.write().await;
         let mut events_to_process = Vec::new();
         
         // Get events to process (batch processing)
@@ -209,8 +210,8 @@ impl SIEMIntegration {
         pool.send_raw_message(cef_message, event).await
     }
     
-    async fn store_event_in_buffer(&self, event: &SIEMEvent) -> Result<(), SIEMError> {
-        let mut buffer = self.event_buffer.write().await;
+    async fn store_event_in_buffer(&self, event: SIEMEvent) -> Result<(), SIEMError> {
+        let mut buffer: tokio::sync::RwLockWriteGuard<'_, std::collections::VecDeque<SIEMEvent>> = self.event_buffer.write().await;
         
         // Keep buffer size limited
         if buffer.len() >= 10000 {

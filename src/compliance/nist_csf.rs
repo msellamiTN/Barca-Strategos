@@ -91,7 +91,7 @@ impl NISTCSF {
         let functions = self.csf_framework.get_all_functions().await?;
         Ok(functions.iter()
             .find(|f| f.id == function_id)
-            .map(|f| f.status.clone()))
+            .map(|f| f.implementation_status.clone()))
     }
     
     /// Update CSF function implementation
@@ -670,6 +670,8 @@ pub struct CSFFunction {
     pub controls: Vec<CSFControl>,
     pub implementation_status: CSFFunctionStatus,
     pub risk_level: RiskLevel,
+    pub implementation_date: Option<DateTime<Utc>>,
+    pub last_review_date: Option<DateTime<Utc>>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

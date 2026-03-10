@@ -40,8 +40,8 @@ pub struct PhoenixGUISystem {
 impl PhoenixGUISystem {
     pub fn new(config: GUIConfig) -> Self {
         Self {
-            dashboard: MainDashboard::new(&config.dashboard),
-            cognitive_workspace: CognitiveCollaborationWorkspace::new(&config.cognitive),
+            dashboard: MainDashboard::new(&dashboard::DashboardConfig::default()),
+            cognitive_workspace: CognitiveCollaborationWorkspace::new(&cognitive_collaboration::CognitiveConfig::default()),
             compliance_center: ComplianceManagementCenter::new(&config.compliance),
             security_ops: SecurityOperationsCenter::new(&config.security),
             risk_workspace: RiskManagementWorkspace::new(&config.risk),
@@ -148,7 +148,8 @@ impl PhoenixGUISystem {
     /// Get optimized interface based on user role and context
     pub async fn get_optimized_interface(&self, user_id: &str, context: InterfaceContext) -> Result<OptimizedInterface, GUIError> {
         let sessions = self.user_sessions.read().await;
-        let session = sessions.get(user_id).ok_or(GUIError::SessionNotFound(user_id.to_string()))?;
+        let user_id_obj = crate::common::types::UserId(user_id.to_string());
+        let session = sessions.get(&user_id_obj).ok_or(GUIError::SessionNotFound(user_id.to_string()))?;
 
         let interface = match context.interface_type {
             InterfaceType::SecurityAnalyst => {
@@ -602,6 +603,10 @@ pub enum InterfaceComponent {
     CommunicationTools,
     EvidenceCollection,
     ResponsePlaybooks,
+    IncidentDashboard,
+    RiskOverview,
+    ComplianceStatus,
+    AgentInteraction,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

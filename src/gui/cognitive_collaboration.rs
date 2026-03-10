@@ -829,19 +829,23 @@ impl InteractionOptimizer {
 
 // Placeholder configuration structures
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CognitiveConfig {
+    #[serde(default)]
     pub collaboration: CollaborationConfig,
+    #[serde(default)]
     pub visualization: VisualizationConfig,
+    #[serde(default)]
     pub cognitive_load: CognitiveLoadConfig,
+    #[serde(default)]
     pub interaction: InteractionConfig,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CollaborationConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct VisualizationConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CognitiveLoadConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct InteractionConfig;

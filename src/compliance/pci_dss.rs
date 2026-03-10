@@ -79,7 +79,7 @@ impl PCIDSSCompliance {
     
     /// Get PCI DSS status for specific requirement
     pub async fn get_requirement_status(&self, requirement_id: &str) -> Result<Option<PCIControlStatus>, ComplianceError> {
-        let requirements = self.pci_framework.get_all_requirements().await?;
+        let requirements: Vec<PCIControl> = self.pci_framework.get_all_requirements().await?;
         Ok(requirements.iter()
             .find(|r| r.id == requirement_id)
             .map(|r| r.status.clone()))

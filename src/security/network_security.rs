@@ -385,12 +385,11 @@ impl NetworkSecurity {
     
     fn ip_in_subnet(&self, ip: &IpAddr, subnet: &str) -> bool {
         // Simple subnet check - in production, use proper IP network libraries
-        if let Some(subnet_parts) = subnet.split('/') {
-            if let Some(network_ip) = subnet_parts.next() {
-                if let Some(mask) = subnet_parts.next() {
-                    // This is a simplified implementation
-                    return ip.to_string().starts_with(network_ip);
-                }
+        let mut subnet_parts = subnet.split('/');
+        if let Some(network_ip) = subnet_parts.next() {
+            if let Some(mask) = subnet_parts.next() {
+                // This is a simplified implementation
+                return ip.to_string().starts_with(network_ip);
             }
         }
         false
@@ -497,11 +496,10 @@ impl FirewallRule {
     fn check_port_range(&self, port: u16) -> bool {
         // Check if port is in the allowed range
         if self.port_range.contains('-') {
-            if let Some(parts) = self.port_range.split('-').collect::<Vec<&str>>() {
-                if parts.len() == 2 {
-                    if let (Ok(start), Ok(end)) = (parts[0].parse::<u16>(), parts[1].parse::<u16>()) {
-                        return port >= start && port <= end;
-                    }
+            let parts: Vec<&str> = self.port_range.split('-').collect();
+            if parts.len() == 2 {
+                if let (Ok(start), Ok(end)) = (parts[0].parse::<u16>(), parts[1].parse::<u16>()) {
+                    return port >= start && port <= end;
                 }
             }
         } else {

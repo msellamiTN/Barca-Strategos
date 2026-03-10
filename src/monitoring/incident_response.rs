@@ -177,7 +177,7 @@ impl IncidentResponse {
     }
     
     async fn background_evidence_processor(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30));
         
         loop {
             interval.tick().await;
@@ -189,7 +189,7 @@ impl IncidentResponse {
     }
     
     async fn background_workflow_monitor(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(2));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(120));
         
         loop {
             interval.tick().await;
@@ -460,6 +460,7 @@ impl IncidentResponse {
             IncidentSeverity::High => BusinessImpact::High,
             IncidentSeverity::Medium => BusinessImpact::Medium,
             IncidentSeverity::Low => BusinessImpact::Low,
+            IncidentSeverity::Info => BusinessImpact::Low,
         }
     }
     
@@ -519,6 +520,7 @@ impl IncidentResponse {
             IncidentSeverity::High => 24,
             IncidentSeverity::Medium => 8,
             IncidentSeverity::Low => 2,
+            IncidentSeverity::Info => 1,
         }
     }
 }
@@ -778,6 +780,7 @@ impl WorkflowEngine {
             status: WorkflowStatus::Active,
             steps_completed: Vec::new(),
             estimated_completion: Utc::now() + Duration::hours(4),
+            completed_at: None,
         };
         
         let mut workflows = self.active_workflows.write().await;
@@ -975,14 +978,26 @@ pub struct ResponsePlaybook;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum IncidentType {
     SecurityBreach,
-    DDoSAttack,
-    DataLeakage,
-    MalwareInfection,
-    PhishingAttack,
-    InsiderThreat,
+    DataLeak,
+    ServiceOutage,
+    PerformanceIssue,
     SystemOutage,
     FalsePositive,
     TestIncident,
+}
+
+impl std::fmt::Display for IncidentType {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            IncidentType::SecurityBreach => write!(f, "Security Breach"),
+            IncidentType::DataLeak => write!(f, "Data Leak"),
+            IncidentType::ServiceOutage => write!(f, "Service Outage"),
+            IncidentType::PerformanceIssue => write!(f, "Performance Issue"),
+            IncidentType::SystemOutage => write!(f, "System Outage"),
+            IncidentType::FalsePositive => write!(f, "False Positive"),
+            IncidentType::TestIncident => write!(f, "Test Incident"),
+        }
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -992,6 +1007,18 @@ pub enum IncidentSeverity {
     Medium,
     Low,
     Info,
+}
+
+impl std::fmt::Display for IncidentSeverity {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            IncidentSeverity::Critical => write!(f, "Critical"),
+            IncidentSeverity::High => write!(f, "High"),
+            IncidentSeverity::Medium => write!(f, "Medium"),
+            IncidentSeverity::Low => write!(f, "Low"),
+            IncidentSeverity::Info => write!(f, "Info"),
+        }
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -1020,7 +1047,7 @@ pub enum ResolutionType {
     FalsePositive,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
 pub enum EvidenceType {
     LogFile,
     Screenshot,
@@ -1047,6 +1074,13 @@ pub enum BusinessImpact {
     Medium,
     Low,
     Minimal,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum ServiceDisruption {
+    Minimal,
+    Partial,
+    Complete,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -1112,6 +1146,17 @@ pub enum WorkflowActionType {
     Escalation,
     Timeout,
     ManualIntervention,
+}
+
+impl std::fmt::Display for WorkflowActionType {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            WorkflowActionType::StepCompleted => write!(f, "Step Completed"),
+            WorkflowActionType::Escalation => write!(f, "Escalation"),
+            WorkflowActionType::Timeout => write!(f, "Timeout"),
+            WorkflowActionType::ManualIntervention => write!(f, "Manual Intervention"),
+        }
+    }
 }
 
 // Database
@@ -1199,13 +1244,13 @@ impl IncidentDatabase {
     
     fn matches_filter(&self, incident: &Incident, filter: &IncidentFilter) -> bool {
         if let Some(severity) = &filter.severity {
-            if !matches!(incident.severity, severity) {
+            if !matches!(&incident.severity, severity) {
                 return false;
             }
         }
         
         if let Some(status) = &filter.status {
-            if !matches!(incident.status, status) {
+            if !matches!(&incident.status, status) {
                 return false;
             }
         }

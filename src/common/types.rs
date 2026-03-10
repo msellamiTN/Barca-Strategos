@@ -27,12 +27,27 @@ pub enum UserRole {
     Viewer,
 }
 
+impl UserRole {
+    pub fn has_system_access(&self) -> bool {
+        matches!(self, UserRole::Admin | UserRole::SecurityAnalyst)
+    }
+    
+    pub fn has_security_access(&self) -> bool {
+        matches!(self, UserRole::Admin | UserRole::SecurityAnalyst)
+    }
+    
+    pub fn has_compliance_access(&self) -> bool {
+        matches!(self, UserRole::Admin | UserRole::ComplianceOfficer | UserRole::RiskManager)
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct UserPreferences {
     pub theme: String,
     pub language: String,
     pub notifications_enabled: bool,
     pub dashboard_layout: DashboardLayout,
+    pub interface_complexity: InterfaceComplexity,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -217,9 +232,18 @@ pub enum InsightType {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MonitoringConfig {
     pub check_interval_seconds: u64,
+    pub enable_real_time: bool,
+    pub alert_threshold: f64,
     pub alert_thresholds: HashMap<String, f64>,
     pub retention_days: u32,
     pub enabled_monitors: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RiskConfig {
+    pub assessment_interval_hours: u64,
+    pub risk_threshold: f64,
+    pub enable_automated_assessment: bool,
 }
 
 // Compliance types
@@ -229,6 +253,29 @@ pub struct ComplianceMonitor {
     pub framework: String,
     pub status: MonitorStatus,
     pub last_check: DateTime<Utc>,
+}
+
+impl ComplianceMonitor {
+    pub fn new(_config: &MonitoringConfig) -> Self {
+        Self {
+            monitor_id: "default".to_string(),
+            framework: "multi".to_string(),
+            status: MonitorStatus::Active,
+            last_check: Utc::now(),
+        }
+    }
+    
+    pub async fn initialize(&mut self) -> Result<(), String> {
+        // Initialize the monitor
+        self.last_check = Utc::now();
+        Ok(())
+    }
+    
+    pub async fn log_function_update(&mut self, _function_id: &str, _update: &str) -> Result<(), String> {
+        // Log function update
+        self.last_check = Utc::now();
+        Ok(())
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -245,6 +292,16 @@ pub struct RiskAssessmentEngine {
     pub risk_model: String,
 }
 
+impl RiskAssessmentEngine {
+    pub fn new(_config: &RiskConfig) -> Self {
+        Self {
+            engine_id: "default".to_string(),
+            assessment_methods: vec!["quantitative".to_string(), "qualitative".to_string()],
+            risk_model: "standard".to_string(),
+        }
+    }
+}
+
 // Cryptography constants
 pub const BASE64: base64::engine::GeneralPurpose = base64::engine::general_purpose::STANDARD;
 
@@ -256,12 +313,93 @@ pub struct AnalyticsIntelligenceEngine {
     pub capabilities: Vec<String>,
 }
 
+impl AnalyticsIntelligenceEngine {
+    pub fn new(_config: &AnalyticsConfig) -> Self {
+        Self {
+            engine_id: "analytics_default".to_string(),
+            model_version: "1.0".to_string(),
+            capabilities: vec!["threat_detection".to_string(), "anomaly_detection".to_string()],
+        }
+    }
+    
+    pub async fn handle_analytics_update(&mut self, _data: serde_json::Value) -> Result<(), String> {
+        // Handle analytics update
+        Ok(())
+    }
+    
+    pub async fn process_all_data(&self) -> Result<AnalyticsData, String> {
+        Ok(AnalyticsData {
+            insights: Vec::new(),
+            recommendations: Vec::new(),
+            trends: Vec::new(),
+        })
+    }
+    
+    pub async fn get_interface_adaptation(&self, _user_id: &str) -> Result<InterfaceAdaptation, String> {
+        Ok(InterfaceAdaptation {
+            complexity: InterfaceComplexity::Standard,
+            layout: LayoutType::Default,
+            theme: ThemeType::Light,
+        })
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AnalyticsData {
+    pub insights: Vec<Insight>,
+    pub recommendations: Vec<String>,
+    pub trends: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct InterfaceAdaptation {
+    pub complexity: InterfaceComplexity,
+    pub layout: LayoutType,
+    pub theme: ThemeType,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum InterfaceComplexity {
+    Simplified,
+    Standard,
+    Advanced,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum LayoutType {
+    Default,
+    Compact,
+    Detailed,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum ThemeType {
+    Light,
+    Dark,
+    Auto,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SettingsConfigurationManager {
     pub manager_id: String,
     pub configuration_version: String,
     pub settings: HashMap<String, String>,
 }
+
+impl SettingsConfigurationManager {
+    pub fn new(_config: &SettingsConfig) -> Self {
+        Self {
+            manager_id: "settings_default".to_string(),
+            configuration_version: "1.0".to_string(),
+            settings: HashMap::new(),
+        }
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AnalyticsConfig;
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SettingsConfig;
 
 // Additional common types for GUI components
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
