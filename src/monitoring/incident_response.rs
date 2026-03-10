@@ -1050,11 +1050,11 @@ pub enum BusinessImpact {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum TechnicalImpact {
-    systems_affected: u32,
-    data_compromised: bool,
-    service_disruption: ServiceDisruption,
-    recovery_time_hours: u32,
+pub struct TechnicalImpact {
+    pub systems_affected: u32,
+    pub data_compromised: bool,
+    pub service_disruption: ServiceDisruption,
+    pub recovery_time_hours: u32,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

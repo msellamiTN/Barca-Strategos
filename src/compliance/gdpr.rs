@@ -1,6 +1,6 @@
-use crate::core::*;
-use crate::security::*;
-use crate::monitoring::*;
+// use crate::core::*;
+// use crate::security::*;
+// use crate::monitoring::*;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -623,7 +623,7 @@ impl GDPRCompliance {
     fn contains_sensitive_data(&self, request: &DataSubjectRequest) -> bool {
         // Check if request contains sensitive data
         let sensitive_keywords = vec!["password", "credit card", "social security number", "health record"];
-        let request_text = format!("{} {}", request.purpose);
+        let request_text = format!("{} {}", request.purpose, request.request_type);
         
         sensitive_keywords.iter().any(|keyword| request_text.to_lowercase().contains(keyword))
     }
@@ -1058,19 +1058,6 @@ impl GDPRDatabase {
             last_breach_date: None,
         }
     }
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
-pub struct GDPRStats {
-    pub total_controls: usize,
-    pub compliant_controls: usize,
-    pub implemented_controls: usize,
-    pub partially_implemented_controls: usize,
-    pub not_implemented_controls: usize,
-    pub average_compliance_score: f64,
-    pub total_data_subject_requests: u64,
-    pub data_breaches: u64,
-    pub last_breach_date: Option<DateTime<Utc>>,
 }
 
 // Configuration structures

@@ -757,31 +757,6 @@ impl CognitiveRiskAssistant {
     }
 }
 
-#[derive(Debug, Clone)]
-pub struct RiskDashboard {
-    config: RiskDashboardConfig,
-}
-
-impl RiskDashboard {
-    pub fn new(config: &RiskDashboardConfig) -> Self {
-        Self {
-            config: config.clone(),
-        }
-    }
-
-    pub async fn initialize(&mut self) -> Result<(), GUIError> {
-        Ok(())
-    }
-
-    pub async fn handle_risk_update(&mut self, _update: RiskUpdate) -> Result<(), GUIError> {
-        Ok(())
-    }
-
-    pub async fn update_with_analytics(&mut self, _analytics_data: ComplianceAnalyticsData) -> Result<(), GUIError> {
-        Ok(())
-    }
-}
-
 // Supporting types (placeholders from risk management module)
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

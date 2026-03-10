@@ -902,8 +902,6 @@ pub struct DashboardConfig {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LayoutConfig;
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct WidgetConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PersonalizationConfig;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PerformanceConfig;
