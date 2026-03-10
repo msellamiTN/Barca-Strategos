@@ -695,7 +695,7 @@ pub enum GDPRControlType {
     Operational,
 }
 
-#[derive(Debug, Clone, Record, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum GDPRControlStatus {
     NotImplemented,
     PartiallyImplemented,

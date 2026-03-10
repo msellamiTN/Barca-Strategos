@@ -1,6 +1,6 @@
-use crate::core::*;
-use crate::security::*;
-use crate::monitoring::*;
+// use crate::core::*;
+// use crate::security::*;
+// use crate::monitoring::*;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -335,7 +335,7 @@ impl IncidentResponse {
     
     async fn generate_executive_summary(&self, incident: &Incident) -> Result<String, IncidentError> {
         Ok(format!(
-            "Incident {} of type {} with severity {} occurred on {}. {}",
+            "Incident {} of type {} with severity {} occurred on {}.",
             incident.id,
             incident.incident_type,
             incident.severity,
@@ -1120,7 +1120,7 @@ pub enum WorkflowActionType {
 pub struct IncidentDatabase {
     incidents: Arc<RwLock<HashMap<String, Incident>>>,
     evidence: Arc<RwLock<HashMap<String, Vec<Evidence>>>>,
-    reports: Arc<RwLock<HashMap<String, ForensicReport>>>>,
+    reports: Arc<RwLock<HashMap<String, ForensicReport>>>,
 }
 
 impl IncidentDatabase {

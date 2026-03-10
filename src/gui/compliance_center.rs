@@ -1,6 +1,7 @@
-use crate::core::*;
+// use crate::core::*;
 use crate::gui::*;
 use crate::compliance::*;
+use crate::monitoring::alerting::AlertSeverity;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -573,15 +574,6 @@ pub struct ComplianceAlert {
     pub description: String,
     pub created_at: DateTime<Utc>,
     pub acknowledged: bool,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum AlertSeverity {
-    Info,
-    Low,
-    Medium,
-    High,
-    Critical,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
