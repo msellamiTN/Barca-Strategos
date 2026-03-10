@@ -896,7 +896,7 @@ impl SOC2Framework {
     fn is_control_in_scope(&self, control: &SOC2Scope) -> bool {
         scope.departments.iter().any(|dept| control.owner.contains(dept)) ||
         scope.systems.iter().any(|sys| control.title.contains(sys)) ||
-        scope.processes.iter().any(|proc| control.title.contains(proc)))
+        scope.processes.iter().any(|proc| control.title.contains(proc))
     }
 }
 
