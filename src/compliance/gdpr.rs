@@ -179,7 +179,7 @@ impl GDPRCompliance {
             
             // Article 7: Accuracy of personal data
             GDPRControl {
-                id: "A5.1".to_string(),
+                id: "A5.1d".to_string(),
                 title: "Accuracy of personal data".to_string(),
                 description: "Personal data shall be accurate and kept up-to-date".to_string(),
                 category: GDPRControlCategory::DataQuality,
@@ -195,7 +195,7 @@ impl GDPRCompliance {
             
             // Article 8: Limitation of storage
             GDPRControl {
-                id: "A5.1".to_string(),
+                id: "A5.1e".to_string(),
                 title: "Limitation of storage".to_string(),
                 description: "Personal data shall not be retained longer than necessary".to_string(),
                 category: GDPRControlCategory::DataProtection,
@@ -211,7 +211,7 @@ impl GDPRCompliance {
             
             // Article 9: Rights of the data subject
             GDPRControl {
-                id: "A5.1".to_string(),
+                id: "A5.1f".to_string(),
                 title: "Rights of the data subject".to_string(),
                 description: "Data subjects have rights regarding their personal data".to_string(),
                 category: GDPRControlCategory::Rights,
@@ -817,10 +817,10 @@ pub struct GDPRReport {
     pub framework: String,
     pub version: String,
     pub assessment_summary: String,
-    detailed_findings: Vec<GDPRFinding>,
-    recommendations: Vec<GDPRRecommendation>,
-    evidence_summary: String,
-    next_steps: Vec<String>,
+    pub detailed_findings: Vec<GDPRFinding>,
+    pub recommendations: Vec<GDPRRecommendation>,
+    pub evidence_summary: String,
+    pub next_steps: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

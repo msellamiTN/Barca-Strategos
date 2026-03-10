@@ -884,9 +884,8 @@ impl SOC2Framework {
                     control.last_review_date = Some(update.timestamp);
                 },
                 UpdateType::Evidence => {
-                    control.controls.iter_mut().for_each(|c| c.id == control_id).for_each(|c| c.evidence.extend(update.evidence.clone()));
+                    control.evidence.extend(update.evidence.clone());
                 },
-            }
             }
         }
         
@@ -953,16 +952,6 @@ impl MetricsCollector {
             total_incidents: 0,
             last_incident_date: None,
         })
-    }
-    
-    pub async fn collect_metrics(&self) -> Result<SOC2Metrics, ComplianceError> {
-        let metrics = self.metrics_collector.collect_metrics().await?;
-        
-        // Store metrics
-        let mut metrics_store = self.metrics_collector.metrics_store.write().await;
-        *metrics_store = metrics;
-        
-        Ok(())
     }
 }
 

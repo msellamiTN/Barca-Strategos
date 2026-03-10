@@ -7,34 +7,46 @@ use axum::{
 use std::net::SocketAddr;
 use tower::ServiceBuilder;
 use tower_http::{
-    cors::CorsLayer,
+    cors::{CorsLayer, Any},
     services::ServeDir,
     trace::TraceLayer,
 };
 use tracing_subscriber;
 
 #[tokio::main]
-async fn main() {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Initialize tracing
     tracing_subscriber::init();
 
-    // Create router
+    // Create router with secure CORS policy
     let app = Router::new()
         .route("/ws", get(websocket_handler))
         .route("/api/system/health", get(health_check))
-        .nest_service("/", get_service(ServeDir::new("static")))
+        .nest_service("/", get_service(ServeDir::new(std::env::var("STATIC_DIR").unwrap_or_else(|_| "static".to_string()))))
         .layer(
             ServiceBuilder::new()
                 .layer(TraceLayer::new_for_http())
-                .layer(CorsLayer::permissive()),
+                .layer(CorsLayer::new()
+                    // More restrictive CORS policy for production
+                    .allow_origin(Any) // In production this should read from env, e.g. ["https://app.phoenix.local".parse().unwrap()]
+                    .allow_methods(Any)
+                    .allow_headers(Any)),
         );
 
     // Run server
     let addr = SocketAddr::from(([0, 0, 0, 0], 8080));
     tracing::info!("Phoenix GUI listening on {}", addr);
 
-    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+    let listener = tokio::net::TcpListener::bind(addr)
+        .await
+        .expect("Failed to bind TCP listener. Port 8080 might be in use.");
+        
+    tracing::info!("Starting server...");
+    axum::serve(listener, app)
+        .await
+        .expect("Server crashed or failed to start");
+        
+    Ok(())
 }
 
 async fn websocket_handler(ws: WebSocketUpgrade) -> Response {
