@@ -1,106 +1,791 @@
+    Updating crates.io index
+     Locking 431 packages to latest compatible versions
+      Adding adler2 v2.0.1
+      Adding ahash v0.8.12
+      Adding aho-corasick v1.1.4
+      Adding allocator-api2 v0.2.21
+      Adding android_system_properties v0.1.5
+      Adding anstyle v1.0.13
+      Adding anyhow v1.0.102
+      Adding aquamarine v0.1.12
+      Adding argon2 v0.5.3
+      Adding arraydeque v0.5.1
+      Adding async-trait v0.1.89
+      Adding atoi v2.0.0
+      Adding atomic-waker v1.1.2
+      Adding autocfg v1.5.0
+      Adding axum v0.7.9 (available: v0.8.8)
+      Adding axum-core v0.4.5
+      Adding base64 v0.21.7
+      Adding base64 v0.22.1
+      Adding base64ct v1.8.3
+      Adding bincode v1.3.3 (available: v3.0.0)
+      Adding bit-set v0.5.3
+      Adding bit-vec v0.6.3
+      Adding bitflags v1.3.2
+      Adding bitflags v2.11.0
+      Adding blake2 v0.10.6
+      Adding block-buffer v0.10.4
+      Adding bstr v1.12.1
+      Adding bumpalo v3.20.2
+      Adding byteorder v1.5.0
+      Adding bytes v1.11.1
+      Adding cc v1.2.56
+      Adding cfg-if v1.0.4
+      Adding chrono v0.4.44
+      Adding combine v4.6.7
+      Adding config v0.14.1 (available: v0.15.19)
+      Adding const-oid v0.9.6
+      Adding const-random v0.1.18
+      Adding const-random-macro v0.1.16
+      Adding convert_case v0.4.0
+      Adding convert_case v0.6.0
+      Adding core-foundation v0.9.4
+      Adding core-foundation v0.10.1
+      Adding core-foundation-sys v0.8.7
+      Adding cpufeatures v0.2.17
+      Adding crc v3.4.0
+      Adding crc-catalog v2.4.0
+      Adding crc32fast v1.5.0
+      Adding crossbeam-channel v0.5.15
+      Adding crossbeam-queue v0.3.12
+      Adding crossbeam-utils v0.8.21
+      Adding crunchy v0.2.4
+      Adding crypto-common v0.1.7
+      Adding darling v0.13.4
+      Adding darling_core v0.13.4
+      Adding darling_macro v0.13.4
+      Adding data-encoding v2.10.0
+      Adding der v0.7.10
+      Adding deranged v0.5.8
+      Adding derive_more v0.99.20
+      Adding digest v0.10.7
+      Adding displaydoc v0.2.5
+      Adding dlv-list v0.5.2
+      Adding dotenvy v0.15.7
+      Adding downcast v0.11.0
+      Adding dptree v0.3.0
+      Adding either v1.15.0
+      Adding encoding_rs v0.8.35
+      Adding equivalent v1.0.2
+      Adding erasable v1.3.0
+      Adding errno v0.3.14
+      Adding etcetera v0.8.0
+      Adding event-listener v2.5.3
+      Adding fancy-regex v0.12.0
+      Adding fastrand v2.3.0
+      Adding filetime v0.2.27
+      Adding find-msvc-tools v0.1.9
+      Adding flate2 v1.1.9
+      Adding flume v0.11.1
+      Adding fnv v1.0.7
+      Adding foldhash v0.1.5
+      Adding foreign-types v0.3.2
+      Adding foreign-types-shared v0.1.1
+      Adding form_urlencoded v1.2.2
+      Adding fragile v2.0.1
+      Adding fsevent-sys v4.1.0
+      Adding futures v0.3.32
+      Adding futures-channel v0.3.32
+      Adding futures-core v0.3.32
+      Adding futures-executor v0.3.32
+      Adding futures-intrusive v0.5.0
+      Adding futures-io v0.3.32
+      Adding futures-macro v0.3.32
+      Adding futures-sink v0.3.32
+      Adding futures-task v0.3.32
+      Adding futures-util v0.3.32
+      Adding generic-array v0.14.7 (available: v0.14.9)
+      Adding getrandom v0.2.17
+      Adding getrandom v0.3.4
+      Adding getrandom v0.4.2
+      Adding h2 v0.3.27
+      Adding hashbrown v0.14.5
+      Adding hashbrown v0.15.5
+      Adding hashbrown v0.16.1
+      Adding hashlink v0.8.4
+      Adding heck v0.4.1
+      Adding heck v0.5.0
+      Adding hex v0.4.3
+      Adding hkdf v0.12.4
+      Adding hmac v0.12.1
+      Adding home v0.5.12
+      Adding http v0.2.12
+      Adding http v1.4.0
+      Adding http-body v0.4.6
+      Adding http-body v1.0.1
+      Adding http-body-util v0.1.3
+      Adding httparse v1.10.1
+      Adding httpdate v1.0.3
+      Adding hyper v0.14.32
+      Adding hyper v1.8.1
+      Adding hyper-rustls v0.24.2
+      Adding hyper-util v0.1.20
+      Adding iana-time-zone v0.1.65
+      Adding iana-time-zone-haiku v0.1.2
+      Adding icu_collections v2.1.1
+      Adding icu_locale_core v2.1.1
+      Adding icu_normalizer v2.1.1
+      Adding icu_normalizer_data v2.1.1
+      Adding icu_properties v2.1.2
+      Adding icu_properties_data v2.1.2
+      Adding icu_provider v2.1.1
+      Adding id-arena v2.3.0
+      Adding ident_case v1.0.1
+      Adding idna v1.1.0
+      Adding idna_adapter v1.2.1
+      Adding indexmap v2.13.0
+      Adding inotify v0.9.6
+      Adding inotify-sys v0.1.5
+      Adding ipnet v2.12.0
+      Adding itertools v0.9.0
+      Adding itoa v1.0.17
+      Adding js-sys v0.3.91
+      Adding json5 v0.4.1
+      Adding jsonwebtoken v9.3.1 (available: v10.3.0)
+      Adding kqueue v1.1.1
+      Adding kqueue-sys v1.0.4
+      Adding lazy_static v1.5.0
+      Adding leb128fmt v0.1.0
+      Adding libc v0.2.183
+      Adding libm v0.2.16
+      Adding libredox v0.1.14
+      Adding libsqlite3-sys v0.27.0
+      Adding linux-raw-sys v0.12.1
+      Adding litemap v0.8.1
+      Adding lock_api v0.4.14
+      Adding log v0.4.29
+      Adding matchers v0.2.0
+      Adding matchit v0.7.3
+      Adding md-5 v0.10.6
+      Adding memchr v2.8.0
+      Adding mime v0.3.17
+      Adding mime_guess v2.0.5
+      Adding minimal-lexical v0.2.1
+      Adding miniz_oxide v0.8.9
+      Adding minreq v2.14.1
+      Adding mio v0.8.11
+      Adding mio v1.1.1
+      Adding mockall v0.12.1 (available: v0.14.0)
+      Adding mockall_derive v0.12.1
+      Adding native-tls v0.2.18
+      Adding never v0.1.0
+      Adding nom v7.1.3
+      Adding notify v6.1.1 (available: v8.2.0)
+      Adding nu-ansi-term v0.50.3
+      Adding num-bigint v0.4.6
+      Adding num-bigint-dig v0.8.6
+      Adding num-conv v0.2.0
+      Adding num-integer v0.1.46
+      Adding num-iter v0.1.45
+      Adding num-traits v0.2.19
+      Adding once_cell v1.21.3
+      Adding openai-api-rs v4.1.1 (available: v9.0.1)
+      Adding openssl v0.10.75
+      Adding openssl-macros v0.1.1
+      Adding openssl-probe v0.1.6
+      Adding openssl-probe v0.2.1
+      Adding openssl-sys v0.9.111
+      Adding ordered-multimap v0.7.3
+      Adding parking_lot v0.12.5
+      Adding parking_lot_core v0.9.12
+      Adding password-hash v0.5.0
+      Adding paste v1.0.15
+      Adding pathdiff v0.2.3
+      Adding pem v3.0.6
+      Adding pem-rfc7468 v0.7.0
+      Adding percent-encoding v2.3.2
+      Adding pest v2.8.6
+      Adding pest_derive v2.8.6
+      Adding pest_generator v2.8.6
+      Adding pest_meta v2.8.6
+      Adding pin-project v1.1.11
+      Adding pin-project-internal v1.1.11
+      Adding pin-project-lite v0.2.17
+      Adding pin-utils v0.1.0
+      Adding pkcs1 v0.7.5
+      Adding pkcs8 v0.10.2
+      Adding pkg-config v0.3.32
+      Adding plain v0.2.3
+      Adding potential_utf v0.1.4
+      Adding powerfmt v0.2.0
+      Adding ppv-lite86 v0.2.21
+      Adding predicates v3.1.4
+      Adding predicates-core v1.0.10
+      Adding predicates-tree v1.0.13
+      Adding prettyplease v0.2.37
+      Adding proc-macro-error v1.0.4
+      Adding proc-macro-error-attr v1.0.4
+      Adding proc-macro2 v1.0.106
+      Adding quote v1.0.45
+      Adding r-efi v5.3.0
+      Adding r-efi v6.0.0
+      Adding rand v0.8.5
+      Adding rand_chacha v0.3.1
+      Adding rand_core v0.6.4
+      Adding rc-box v1.3.0
+      Adding redis v0.24.0 (available: v1.0.5)
+      Adding redox_syscall v0.5.18
+      Adding redox_syscall v0.7.3
+      Adding regex v1.12.3
+      Adding regex-automata v0.4.14
+      Adding regex-syntax v0.8.10
+      Adding reqwest v0.11.27 (available: v0.13.2)
+      Adding ring v0.17.14
+      Adding ron v0.8.1
+      Adding rsa v0.9.10
+      Adding rust-ini v0.20.0
+      Adding rustc-hash v1.1.0
+      Adding rustc_version v0.4.1
+      Adding rustix v1.1.4
+      Adding rustls v0.21.12
+      Adding rustls v0.22.4
+      Adding rustls-native-certs v0.7.3
+      Adding rustls-pemfile v1.0.4
+      Adding rustls-pemfile v2.2.0
+      Adding rustls-pki-types v1.14.0
+      Adding rustls-webpki v0.101.7
+      Adding rustls-webpki v0.102.8
+      Adding rustversion v1.0.22
+      Adding ryu v1.0.23
+      Adding same-file v1.0.6
+      Adding schannel v0.1.29
+      Adding scopeguard v1.2.0
+      Adding sct v0.7.1
+      Adding security-framework v2.11.1
+      Adding security-framework v3.7.0
+      Adding security-framework-sys v2.17.0
+      Adding semver v1.0.27
+      Adding serde v1.0.228
+      Adding serde_core v1.0.228
+      Adding serde_derive v1.0.228
+      Adding serde_json v1.0.149
+      Adding serde_path_to_error v0.1.20
+      Adding serde_spanned v0.6.9
+      Adding serde_urlencoded v0.7.1
+      Adding serde_with_macros v1.5.2
+      Adding sha1 v0.10.6
+      Adding sha1_smol v1.0.1
+      Adding sha2 v0.10.9
+      Adding sharded-slab v0.1.7
+      Adding shlex v1.3.0
+      Adding signal-hook-registry v1.4.8
+      Adding signature v2.2.0
+      Adding simd-adler32 v0.3.8
+      Adding simple_asn1 v0.6.4
+      Adding slab v0.4.12
+      Adding slack-messaging v0.2.2 (available: v0.7.2)
+      Adding smallvec v1.15.1
+      Adding socket2 v0.4.10
+      Adding socket2 v0.5.10
+      Adding socket2 v0.6.3
+      Adding spin v0.9.8
+      Adding spki v0.7.3
+      Adding sqlformat v0.2.6
+      Adding sqlx v0.7.4 (available: v0.8.6)
+      Adding sqlx-core v0.7.4
+      Adding sqlx-macros v0.7.4
+      Adding sqlx-macros-core v0.7.4
+      Adding sqlx-mysql v0.7.4
+      Adding sqlx-postgres v0.7.4
+      Adding sqlx-sqlite v0.7.4
+      Adding stable_deref_trait v1.2.1
+      Adding stringprep v0.1.5
+      Adding strsim v0.10.0
+      Adding subtle v2.6.1
+      Adding syn v1.0.109
+      Adding syn v2.0.117
+      Adding sync_wrapper v0.1.2
+      Adding sync_wrapper v1.0.2
+      Adding synstructure v0.13.2
+      Adding system-configuration v0.5.1
+      Adding system-configuration-sys v0.5.0
+      Adding take_mut v0.2.2
+      Adding takecell v0.1.1
+      Adding teloxide v0.12.2 (available: v0.17.0)
+      Adding teloxide-core v0.9.1
+      Adding teloxide-macros v0.7.1
+      Adding tempfile v3.26.0
+      Adding termtree v0.5.1
+      Adding thiserror v1.0.69 (available: v2.0.18)
+      Adding thiserror v2.0.18
+      Adding thiserror-impl v1.0.69
+      Adding thiserror-impl v2.0.18
+      Adding thread_local v1.1.9
+      Adding tiktoken-rs v0.5.9 (available: v0.9.1)
+      Adding time v0.3.47
+      Adding time-core v0.1.8
+      Adding time-macros v0.2.27
+      Adding tiny-keccak v2.0.2
+      Adding tinystr v0.8.2
+      Adding tinyvec v1.10.0
+      Adding tinyvec_macros v0.1.1
+      Adding tokio v1.50.0
+      Adding tokio-macros v2.6.1
+      Adding tokio-rustls v0.24.1
+      Adding tokio-rustls v0.25.0
+      Adding tokio-stream v0.1.18
+      Adding tokio-tungstenite v0.21.0 (available: v0.28.0)
+      Adding tokio-util v0.7.18
+      Adding toml v0.8.23
+      Adding toml_datetime v0.6.11
+      Adding toml_edit v0.22.27
+      Adding toml_write v0.1.2
+      Adding tower v0.4.13 (available: v0.5.3)
+      Adding tower v0.5.3
+      Adding tower-http v0.5.2 (available: v0.6.8)
+      Adding tower-layer v0.3.3
+      Adding tower-service v0.3.3
+      Adding tracing v0.1.44
+      Adding tracing-attributes v0.1.31
+      Adding tracing-core v0.1.36
+      Adding tracing-log v0.2.0
+      Adding tracing-subscriber v0.3.22
+      Adding try-lock v0.2.5
+      Adding tungstenite v0.21.0
+      Adding typenum v1.19.0
+      Adding ucd-trie v0.1.7
+      Adding unicase v2.9.0
+      Adding unicode-bidi v0.3.18
+      Adding unicode-ident v1.0.24
+      Adding unicode-normalization v0.1.25
+      Adding unicode-properties v0.1.4
+      Adding unicode-segmentation v1.12.0
+      Adding unicode-xid v0.2.6
+      Adding unicode_categories v0.1.1
+      Adding untrusted v0.9.0
+      Adding url v2.5.8
+      Adding urlencoding v2.1.3
+      Adding utf-8 v0.7.6
+      Adding utf8_iter v1.0.4
+      Adding uuid v1.22.0
+      Adding valuable v0.1.1
+      Adding vcpkg v0.2.15
+      Adding version_check v0.9.5
+      Adding walkdir v2.5.0
+      Adding want v0.3.1
+      Adding wasi v0.11.1+wasi-snapshot-preview1
+      Adding wasip2 v1.0.2+wasi-0.2.9
+      Adding wasip3 v0.4.0+wasi-0.3.0-rc-2026-01-06
+      Adding wasite v0.1.0
+      Adding wasm-bindgen v0.2.114
+      Adding wasm-bindgen-futures v0.4.64
+      Adding wasm-bindgen-macro v0.2.114
+      Adding wasm-bindgen-macro-support v0.2.114
+      Adding wasm-bindgen-shared v0.2.114
+      Adding wasm-encoder v0.244.0
+      Adding wasm-metadata v0.244.0
+      Adding wasm-streams v0.4.2
+      Adding wasmparser v0.244.0
+      Adding web-sys v0.3.91
+      Adding webpki-roots v0.25.4
+      Adding whoami v1.6.1
+      Adding winapi v0.3.9
+      Adding winapi-i686-pc-windows-gnu v0.4.0
+      Adding winapi-util v0.1.11
+      Adding winapi-x86_64-pc-windows-gnu v0.4.0
+      Adding windows-core v0.62.2
+      Adding windows-implement v0.60.2
+      Adding windows-interface v0.59.3
+      Adding windows-link v0.2.1
+      Adding windows-result v0.4.1
+      Adding windows-strings v0.5.1
+      Adding windows-sys v0.48.0
+      Adding windows-sys v0.52.0
+      Adding windows-sys v0.61.2
+      Adding windows-targets v0.48.5
+      Adding windows-targets v0.52.6
+      Adding windows_aarch64_gnullvm v0.48.5
+      Adding windows_aarch64_gnullvm v0.52.6
+      Adding windows_aarch64_msvc v0.48.5
+      Adding windows_aarch64_msvc v0.52.6
+      Adding windows_i686_gnu v0.48.5
+      Adding windows_i686_gnu v0.52.6
+      Adding windows_i686_gnullvm v0.52.6
+      Adding windows_i686_msvc v0.48.5
+      Adding windows_i686_msvc v0.52.6
+      Adding windows_x86_64_gnu v0.48.5
+      Adding windows_x86_64_gnu v0.52.6
+      Adding windows_x86_64_gnullvm v0.48.5
+      Adding windows_x86_64_gnullvm v0.52.6
+      Adding windows_x86_64_msvc v0.48.5
+      Adding windows_x86_64_msvc v0.52.6
+      Adding winnow v0.7.15
+      Adding winreg v0.50.0
+      Adding wit-bindgen v0.51.0
+      Adding wit-bindgen-core v0.51.0
+      Adding wit-bindgen-rust v0.51.0
+      Adding wit-bindgen-rust-macro v0.51.0
+      Adding wit-component v0.244.0
+      Adding wit-parser v0.244.0
+      Adding writeable v0.6.2
+      Adding yaml-rust2 v0.8.1
+      Adding yoke v0.8.1
+      Adding yoke-derive v0.8.1
+      Adding zerocopy v0.8.42
+      Adding zerocopy-derive v0.8.42
+      Adding zerofrom v0.1.6
+      Adding zerofrom-derive v0.1.6
+      Adding zeroize v1.8.2
+      Adding zerotrie v0.2.3
+      Adding zerovec v0.11.5
+      Adding zerovec-derive v0.11.2
+      Adding zmij v1.0.21
+   Compiling proc-macro2 v1.0.106
+   Compiling quote v1.0.45
+   Compiling unicode-ident v1.0.24
+   Compiling libc v0.2.183
+    Checking cfg-if v1.0.4
+   Compiling version_check v0.9.5
+   Compiling serde_core v1.0.228
+   Compiling shlex v1.3.0
+   Compiling find-msvc-tools v0.1.9
+   Compiling syn v2.0.117
+    Checking memchr v2.8.0
+   Compiling serde v1.0.228
+   Compiling cc v1.2.56
+   Compiling parking_lot_core v0.9.12
+    Checking pin-project-lite v0.2.17
+    Checking itoa v1.0.17
+    Checking smallvec v1.15.1
+   Compiling typenum v1.19.0
+   Compiling generic-array v0.14.7
+    Checking bytes v1.11.1
+   Compiling zerocopy v0.8.42
+    Checking futures-core v0.3.32
+    Checking log v0.4.29
+   Compiling autocfg v1.5.0
+    Checking scopeguard v1.2.0
+    Checking getrandom v0.2.17
+    Checking once_cell v1.21.3
+    Checking lock_api v0.4.14
+   Compiling synstructure v0.13.2
+   Compiling icu_properties_data v2.1.2
+   Compiling icu_normalizer_data v2.1.1
+    Checking parking_lot v0.12.5
+    Checking futures-sink v0.3.32
+    Checking errno v0.3.14
+   Compiling ring v0.17.14
+    Checking stable_deref_trait v1.2.1
+    Checking signal-hook-registry v1.4.8
+    Checking socket2 v0.6.3
+    Checking mio v1.1.1
+    Checking futures-channel v0.3.32
+   Compiling zmij v1.0.21
+    Checking untrusted v0.9.0
+   Compiling getrandom v0.3.4
+   Compiling ahash v0.8.12
+    Checking slab v0.4.12
+    Checking futures-task v0.3.32
+   Compiling serde_json v1.0.149
+    Checking futures-io v0.3.32
+    Checking tracing-core v0.1.36
+    Checking litemap v0.8.1
+    Checking subtle v2.6.1
+    Checking writeable v0.6.2
+   Compiling crossbeam-utils v0.8.21
+   Compiling syn v1.0.109
+   Compiling thiserror v1.0.69
+    Checking crypto-common v0.1.7
+    Checking block-buffer v0.10.4
+   Compiling num-traits v0.2.19
+    Checking equivalent v1.0.2
+    Checking hashbrown v0.16.1
+    Checking percent-encoding v2.3.2
+    Checking form_urlencoded v1.2.2
+    Checking indexmap v2.13.0
+    Checking digest v0.10.7
+   Compiling getrandom v0.4.2
+   Compiling rustls v0.21.12
+   Compiling httparse v1.10.1
+    Checking rustls-webpki v0.101.7
+    Checking sct v0.7.1
+   Compiling zerofrom-derive v0.1.6
+   Compiling yoke-derive v0.8.1
+   Compiling serde_derive v1.0.228
+   Compiling zerovec-derive v0.11.2
+   Compiling displaydoc v0.2.5
+    Checking zerofrom v0.1.6
+    Checking yoke v0.8.1
+   Compiling tracing-attributes v0.1.31
+   Compiling tokio-macros v2.6.1
+    Checking zerovec v0.11.5
+   Compiling futures-macro v0.3.32
+    Checking tinystr v0.8.2
+    Checking icu_locale_core v2.1.1
+    Checking tokio v1.50.0
+    Checking potential_utf v0.1.4
+    Checking zerotrie v0.2.3
+    Checking icu_provider v2.1.1
+    Checking icu_collections v2.1.1
+   Compiling thiserror-impl v1.0.69
+    Checking tracing v0.1.44
+    Checking icu_normalizer v2.1.1
+    Checking futures-util v0.3.32
+    Checking icu_properties v2.1.2
+    Checking idna_adapter v1.2.1
+    Checking utf8_iter v1.0.4
+    Checking tower-service v0.3.3
+    Checking idna v1.1.0
+    Checking base64 v0.21.7
+    Checking url v2.5.8
+    Checking http v1.4.0
+    Checking allocator-api2 v0.2.21
+   Compiling crunchy v0.2.4
+   Compiling paste v1.0.15
+    Checking hashbrown v0.14.5
+   Compiling either v1.15.0
+    Checking tokio-util v0.7.18
+    Checking rand_core v0.6.4
+    Checking webpki-roots v0.25.4
+   Compiling tiny-keccak v2.0.2
+    Checking fnv v1.0.7
+    Checking zeroize v1.8.2
+    Checking cpufeatures v0.2.17
+    Checking httpdate v1.0.3
+    Checking rustls-pki-types v1.14.0
+    Checking http v0.2.12
+    Checking aho-corasick v1.1.4
+    Checking regex-syntax v0.8.10
+   Compiling tinyvec_macros v0.1.1
+   Compiling minimal-lexical v0.2.1
+   Compiling nom v7.1.3
+    Checking regex-automata v0.4.14
+   Compiling tinyvec v1.10.0
+    Checking http-body v1.0.1
+    Checking rustls-pemfile v1.0.4
+   Compiling ppv-lite86 v0.2.21
+   Compiling ident_case v1.0.1
+   Compiling unicode-segmentation v1.12.0
+    Checking try-lock v0.2.5
+   Compiling rustix v1.1.4
+   Compiling strsim v0.10.0
+   Compiling crc-catalog v2.4.0
+   Compiling ucd-trie v0.1.7
+   Compiling bitflags v2.11.0
+    Checking ryu v1.0.23
+   Compiling unicode_categories v0.1.1
+   Compiling unicase v2.9.0
+    Checking mime v0.3.17
+   Compiling iana-time-zone v0.1.65
+   Compiling mime_guess v2.0.5
+    Checking chrono v0.4.44
+   Compiling darling_core v0.13.4
+   Compiling sqlformat v0.2.6
+   Compiling pest v2.8.6
+   Compiling sha2 v0.10.9
+   Compiling crc v3.4.0
+   Compiling heck v0.4.1
+    Checking want v0.3.1
+   Compiling tokio-stream v0.1.18
+   Compiling rand_chacha v0.3.1
+   Compiling crossbeam-queue v0.3.12
+    Checking uuid v1.22.0
+   Compiling const-random-macro v0.1.16
+   Compiling futures-intrusive v0.5.0
+   Compiling unicode-normalization v0.1.25
+   Compiling hashlink v0.8.4
+   Compiling atoi v2.0.0
+    Checking http-body v0.4.6
+    Checking h2 v0.3.27
+   Compiling hmac v0.12.1
+   Compiling erasable v1.3.0
+    Checking socket2 v0.5.10
+   Compiling proc-macro-error-attr v1.0.4
+    Checking encoding_rs v0.8.35
+   Compiling rustls v0.22.4
+   Compiling linux-raw-sys v0.12.1
+    Checking tower-layer v0.3.3
+   Compiling unicode-bidi v0.3.18
+   Compiling byteorder v1.5.0
+   Compiling hex v0.4.3
+   Compiling event-listener v2.5.3
+   Compiling unicode-properties v0.1.4
+   Compiling stringprep v0.1.5
+   Compiling sqlx-core v0.7.4
+    Checking hyper v0.14.32
+   Compiling darling_macro v0.13.4
+   Compiling hkdf v0.12.4
+    Checking const-random v0.1.18
+    Checking rand v0.8.5
+   Compiling pest_meta v2.8.6
+    Checking serde_urlencoded v0.7.1
+    Checking rustls-webpki v0.102.8
+    Checking tokio-rustls v0.24.1
+   Compiling md-5 v0.10.6
+    Checking futures-executor v0.3.32
+   Compiling async-trait v0.1.89
+   Compiling proc-macro-error v1.0.4
+   Compiling home v0.5.12
+   Compiling whoami v1.6.1
+   Compiling rustversion v1.0.22
+    Checking bitflags v1.3.2
+   Compiling dotenvy v0.15.7
+   Compiling thiserror v2.0.18
+    Checking base64 v0.22.1
+   Compiling fastrand v2.3.0
+   Compiling num-conv v0.2.0
+   Compiling time-core v0.1.8
+    Checking powerfmt v0.2.0
+   Compiling time-macros v0.2.27
+    Checking deranged v0.5.8
+   Compiling tempfile v3.26.0
+   Compiling sqlx-postgres v0.7.4
+    Checking futures v0.3.32
+    Checking hyper-rustls v0.24.2
+   Compiling pest_generator v2.8.6
+   Compiling darling v0.13.4
+    Checking dlv-list v0.5.2
+    Checking http-body-util v0.1.3
+    Checking serde_spanned v0.6.9
+    Checking toml_datetime v0.6.11
+   Compiling thiserror-impl v2.0.18
+   Compiling pin-project-internal v1.1.11
+    Checking num-integer v0.1.46
+   Compiling crc32fast v1.5.0
+    Checking bit-vec v0.6.3
+    Checking pin-utils v0.1.0
+    Checking toml_write v0.1.2
+    Checking sync_wrapper v1.0.2
+   Compiling convert_case v0.4.0
+    Checking lazy_static v1.5.0
+    Checking sync_wrapper v0.1.2
+    Checking ipnet v2.12.0
+    Checking atomic-waker v1.1.2
+    Checking winnow v0.7.15
+   Compiling anyhow v1.0.102
+    Checking toml_edit v0.22.27
+    Checking pin-project v1.1.11
+    Checking time v0.3.47
+    Checking hyper v1.8.1
+    Checking reqwest v0.11.27
+   Compiling derive_more v0.99.20
+    Checking bit-set v0.5.3
+    Checking num-bigint v0.4.6
+   Compiling pest_derive v2.8.6
+   Compiling sqlx-macros-core v0.7.4
+    Checking rc-box v1.3.0
+    Checking ordered-multimap v0.7.3
+   Compiling serde_with_macros v1.5.2
+    Checking regex v1.12.3
+    Checking rustls-pemfile v2.2.0
+    Checking sha1 v0.10.6
+   Compiling itertools v0.9.0
+    Checking inotify-sys v0.1.5
+    Checking utf-8 v0.7.6
+    Checking adler2 v2.0.1
+    Checking arraydeque v0.5.1
+    Checking takecell v0.1.1
+    Checking data-encoding v2.10.0
+    Checking take_mut v0.2.2
+    Checking same-file v1.0.6
+    Checking never v0.1.0
+    Checking simd-adler32 v0.3.8
+    Checking base64ct v1.8.3
+    Checking openssl-probe v0.1.6
+    Checking rustls-native-certs v0.7.3
+    Checking password-hash v0.5.0
+    Checking convert_case v0.6.0
+   Compiling sqlx-macros v0.7.4
+    Checking miniz_oxide v0.8.9
+    Checking tungstenite v0.21.0
+    Checking walkdir v2.5.0
+    Checking yaml-rust2 v0.8.1
+    Checking inotify v0.9.6
+   Compiling aquamarine v0.1.12
+    Checking axum-core v0.4.5
+    Checking teloxide-core v0.9.1
+    Checking fancy-regex v0.12.0
+    Checking rust-ini v0.20.0
+    Checking json5 v0.4.1
+    Checking simple_asn1 v0.6.4
+    Checking hyper-util v0.1.20
+    Checking toml v0.8.23
+    Checking sharded-slab v0.1.7
+    Checking tower v0.5.3
+    Checking tokio-rustls v0.25.0
+    Checking dptree v0.3.0
+    Checking pem v3.0.6
+    Checking minreq v2.14.1
+    Checking ron v0.8.1
+   Compiling teloxide-macros v0.7.1
+    Checking crossbeam-channel v0.5.15
+    Checking bstr v1.12.1
+    Checking matchers v0.2.0
+    Checking combine v4.6.7
+    Checking blake2 v0.10.6
+    Checking tracing-log v0.2.0
+    Checking mio v0.8.11
+    Checking serde_path_to_error v0.1.20
+    Checking socket2 v0.4.10
+    Checking filetime v0.2.27
+    Checking thread_local v1.1.9
+    Checking sha1_smol v1.0.1
+    Checking nu-ansi-term v0.50.3
+    Checking rustc-hash v1.1.0
+    Checking matchit v0.7.3
+    Checking pathdiff v0.2.3
+    Checking config v0.14.1
+    Checking axum v0.7.9
+    Checking tiktoken-rs v0.5.9
+    Checking tracing-subscriber v0.3.22
+    Checking redis v0.24.0
+    Checking notify v6.1.1
+    Checking argon2 v0.5.3
+    Checking openai-api-rs v4.1.1
+    Checking teloxide v0.12.2
+    Checking jsonwebtoken v9.3.1
+    Checking tokio-tungstenite v0.21.0
+    Checking sqlx v0.7.4
+    Checking flate2 v1.1.9
+    Checking tower-http v0.5.2
+    Checking tower v0.4.13
+    Checking slack-messaging v0.2.2
+    Checking bincode v1.3.3
     Checking barca-strategos v0.1.0 (/home/ubuntu/Barca-Strategos)
-error[E0428]: the name `AnalyticsIntelligenceEngine` is defined multiple times
-   --> src/common/types.rs:310:1
-    |
-187 | pub struct AnalyticsIntelligenceEngine {
-    | -------------------------------------- previous definition of the type `AnalyticsIntelligenceEngine` here
-...
-310 | pub struct AnalyticsIntelligenceEngine {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `AnalyticsIntelligenceEngine` redefined here
-    |
-    = note: `AnalyticsIntelligenceEngine` must be defined only once in the type namespace of this module
-
 error[E0428]: the name `InterfaceAdaptation` is defined multiple times
-   --> src/common/types.rs:355:1
+   --> src/common/types.rs:351:1
     |
 114 | pub struct InterfaceAdaptation {
     | ------------------------------ previous definition of the type `InterfaceAdaptation` here
 ...
-355 | pub struct InterfaceAdaptation {
+351 | pub struct InterfaceAdaptation {
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `InterfaceAdaptation` redefined here
     |
     = note: `InterfaceAdaptation` must be defined only once in the type namespace of this module
 
-error[E0428]: the name `SettingsConfigurationManager` is defined multiple times
-   --> src/common/types.rs:383:1
-    |
-201 | pub struct SettingsConfigurationManager {
-    | --------------------------------------- previous definition of the type `SettingsConfigurationManager` here
-...
-383 | pub struct SettingsConfigurationManager {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `SettingsConfigurationManager` redefined here
-    |
-    = note: `SettingsConfigurationManager` must be defined only once in the type namespace of this module
-
-error[E0428]: the name `AgentType` is defined multiple times
-   --> src/common/types.rs:406:1
-    |
-133 | pub enum AgentType {
-    | ------------------ previous definition of the type `AgentType` here
-...
-406 | pub struct AgentType {
-    | ^^^^^^^^^^^^^^^^^^^^ `AgentType` redefined here
-    |
-    = note: `AgentType` must be defined only once in the type namespace of this module
-
 error[E0428]: the name `Workspace` is defined multiple times
-   --> src/common/types.rs:413:1
+   --> src/common/types.rs:395:1
     |
  80 | pub struct Workspace {
     | -------------------- previous definition of the type `Workspace` here
 ...
-413 | pub struct Workspace {
+395 | pub struct Workspace {
     | ^^^^^^^^^^^^^^^^^^^^ `Workspace` redefined here
     |
     = note: `Workspace` must be defined only once in the type namespace of this module
 
 error[E0428]: the name `CollaborationContext` is defined multiple times
-   --> src/common/types.rs:421:1
+   --> src/common/types.rs:404:1
     |
  98 | pub struct CollaborationContext {
     | ------------------------------- previous definition of the type `CollaborationContext` here
 ...
-421 | pub struct CollaborationContext {
+404 | pub struct CollaborationContext {
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `CollaborationContext` redefined here
     |
     = note: `CollaborationContext` must be defined only once in the type namespace of this module
 
 error[E0428]: the name `InterfaceAdaptation` is defined multiple times
-   --> src/common/types.rs:429:1
+   --> src/common/types.rs:412:1
     |
 114 | pub struct InterfaceAdaptation {
     | ------------------------------ previous definition of the type `InterfaceAdaptation` here
 ...
-429 | pub struct InterfaceAdaptation {
+412 | pub struct InterfaceAdaptation {
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `InterfaceAdaptation` redefined here
     |
     = note: `InterfaceAdaptation` must be defined only once in the type namespace of this module
-
-error[E0428]: the name `RiskLevel` is defined multiple times
-   --> src/common/types.rs:437:1
-    |
-144 | pub enum RiskLevel {
-    | ------------------ previous definition of the type `RiskLevel` here
-...
-437 | pub enum RiskLevel {
-    | ^^^^^^^^^^^^^^^^^^ `RiskLevel` redefined here
-    |
-    = note: `RiskLevel` must be defined only once in the type namespace of this module
-
-error[E0255]: the name `MonitoringConfig` is defined multiple times
-    --> src/compliance/nist_csf.rs:1009:1
-     |
-   4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, UpdateType, ComplianceMonitor, RiskAssessmentEngine, MonitoringConfig};
-     |                                                                                                                              ---------------- previous import of the type `MonitoringConfig` here
-...
-1009 | pub struct MonitoringConfig {
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ `MonitoringConfig` redefined here
-     |
-     = note: `MonitoringConfig` must be defined only once in the type namespace of this module
-help: you can use `as` to change the binding name of the import
-     |
-   4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, UpdateType, ComplianceMonitor, RiskAssessmentEngine, MonitoringConfig as OtherMonitoringConfig};
-     |                                                                                                                                               ++++++++++++++++++++++++
 
 error[E0255]: the name `FindingSeverity` is defined multiple times
     --> src/compliance/soc2.rs:1058:1
@@ -163,34 +848,49 @@ help: you can use `as` to change the binding name of the import
      |                                                                                                                         ++++++++++++++++++++++++
 
 error[E0255]: the name `ComplianceMonitor` is defined multiple times
-   --> src/compliance/pci_dss.rs:957:1
+   --> src/compliance/pci_dss.rs:959:1
     |
-  4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig};
+  4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig, UpdateType};
     |                                                                         ----------------- previous import of the type `ComplianceMonitor` here
 ...
-957 | pub struct ComplianceMonitor;
+959 | pub struct ComplianceMonitor;
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `ComplianceMonitor` redefined here
     |
     = note: `ComplianceMonitor` must be defined only once in the type namespace of this module
 help: you can use `as` to change the binding name of the import
     |
-  4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor as OtherComplianceMonitor, MonitoringConfig};
+  4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor as OtherComplianceMonitor, MonitoringConfig, UpdateType};
     |                                                                                           +++++++++++++++++++++++++
 
 error[E0255]: the name `MonitoringConfig` is defined multiple times
-    --> src/compliance/pci_dss.rs:1049:1
+    --> src/compliance/pci_dss.rs:1051:1
      |
-   4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig};
+   4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig, UpdateType};
      |                                                                                            ---------------- previous import of the type `MonitoringConfig` here
 ...
-1049 | pub struct MonitoringConfig {
+1051 | pub struct MonitoringConfig {
      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ `MonitoringConfig` redefined here
      |
      = note: `MonitoringConfig` must be defined only once in the type namespace of this module
 help: you can use `as` to change the binding name of the import
      |
-   4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig as OtherMonitoringConfig};
+   4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig as OtherMonitoringConfig, UpdateType};
      |                                                                                                             ++++++++++++++++++++++++
+
+error[E0255]: the name `ComplianceError` is defined multiple times
+    --> src/compliance/pci_dss.rs:1066:1
+     |
+   5 | use crate::compliance::pci_dss::ComplianceError;
+     |     ------------------------------------------- previous import of the type `ComplianceError` here
+...
+1066 | pub enum ComplianceError {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^ `ComplianceError` redefined here
+     |
+     = note: `ComplianceError` must be defined only once in the type namespace of this module
+help: you can use `as` to change the binding name of the import
+     |
+   5 | use crate::compliance::pci_dss::ComplianceError as OtherComplianceError;
+     |                                                 +++++++++++++++++++++++
 
 error[E0255]: the name `MonitoringConfig` is defined multiple times
    --> src/compliance/risk_management.rs:985:1
@@ -207,101 +907,47 @@ help: you can use `as` to change the binding name of the import
   4 | use crate::common::{MonitoringConfig as OtherMonitoringConfig};
     |                                      ++++++++++++++++++++++++
 
-error[E0255]: the name `MonitoringConfig` is defined multiple times
-   --> src/compliance/policy_management.rs:990:1
-    |
-  4 | use crate::common::{MonitoringConfig};
-    |                     ---------------- previous import of the type `MonitoringConfig` here
-...
-990 | pub struct MonitoringConfig {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ `MonitoringConfig` redefined here
-    |
-    = note: `MonitoringConfig` must be defined only once in the type namespace of this module
-help: you can use `as` to change the binding name of the import
-    |
-  4 | use crate::common::{MonitoringConfig as OtherMonitoringConfig};
-    |                                      ++++++++++++++++++++++++
-
-error[E0255]: the name `MonitoringConfig` is defined multiple times
-    --> src/compliance/vendor_risk.rs:1164:1
-     |
-   4 | use crate::common::{MonitoringConfig};
-     |                     ---------------- previous import of the type `MonitoringConfig` here
-...
-1164 | pub struct MonitoringConfig {
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ `MonitoringConfig` redefined here
-     |
-     = note: `MonitoringConfig` must be defined only once in the type namespace of this module
-help: you can use `as` to change the binding name of the import
-     |
-   4 | use crate::common::{MonitoringConfig as OtherMonitoringConfig};
-     |                                      ++++++++++++++++++++++++
-
 error[E0432]: unresolved import `base64`
  --> src/common/types.rs:6:5
   |
 6 | use base64;
   |     ^^^^^^ no external crate `base64`
 
-error[E0432]: unresolved import `regex`
- --> src/security/rasp.rs:8:5
+error[E0432]: unresolved import `crate::common::BASE64`
+ --> src/security/cryptography.rs:2:5
   |
-8 | use regex::Regex;
-  |     ^^^^^ use of unresolved module or unlinked crate `regex`
-  |
-  = help: if you wanted to use a crate named `regex`, use `cargo add regex` to add it to your `Cargo.toml`
-
-error[E0574]: expected struct, variant or union type, found enum `AgentType`
-   --> src/common/types.rs:405:17
-    |
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                 ^^^^^ not a struct, variant or union type
-
-error[E0574]: expected struct, variant or union type, found enum `AgentType`
-   --> src/common/types.rs:406:12
-    |
-406 | pub struct AgentType {
-    |            ^^^^^^^^^ not a struct, variant or union type
+2 | use crate::common::BASE64;
+  |     ^^^^^^^^^^^^^^^^^^^^^ no `BASE64` in `common`
 
 error[E0425]: cannot find type `Regex` in this scope
-  --> src/security/data_classification.rs:62:38
-   |
-62 |     custom_patterns: HashMap<String, Regex>,
-   |                                      ^^^^^ not found in this scope
-   |
-help: you might be missing a type parameter
-   |
-60 | pub struct DLPEngine<Regex> {
-   |                     +++++++
-
-error[E0425]: cannot find type `Regex` in this scope
-   --> src/security/data_classification.rs:198:65
+   --> src/security/data_classification.rs:242:65
     |
-198 |     pub fn add_custom_pattern(&mut self, name: String, pattern: Regex, classification: DataClassification) {
+242 |     pub fn add_custom_pattern(&mut self, name: String, pattern: Regex, classification: DataClassification) {
     |                                                                 ^^^^^ not found in this scope
-
-error[E0425]: cannot find type `Regex` in this scope
-   --> src/security/data_classification.rs:228:23
-    |
-228 |     pub patterns: Vec<Regex>,
-    |                       ^^^^^ not found in this scope
-    |
-help: you might be missing a type parameter
-    |
-226 | pub struct ClassificationPattern<Regex> {
-    |                                 +++++++
-
-error[E0425]: cannot find type `Regex` in this scope
-   --> src/security/data_classification.rs:228:23
-    |
-228 |     pub patterns: Vec<Regex>,
-    |                       ^^^^^ not found in this scope
 
 error[E0425]: cannot find type `Regex` in this scope
    --> src/security/network_security.rs:856:18
     |
 856 |     pub pattern: Regex,
     |                  ^^^^^ not found in this scope
+
+error[E0425]: cannot find type `MonitoringConfig` in this scope
+   --> src/compliance/nist_csf.rs:983:28
+    |
+983 |     pub monitoring_config: MonitoringConfig,
+    |                            ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+  4 + use crate::common::MonitoringConfig;
+    |
+  4 + use crate::compliance::MonitoringConfig;
+    |
+  4 + use crate::compliance::pci_dss::MonitoringConfig;
+    |
+  4 + use crate::compliance::risk_management::MonitoringConfig;
+    |
+    = and 2 other candidates
 
 error[E0425]: cannot find type `SOC2ControlAssessment` in this scope
    --> src/compliance/soc2.rs:336:74
@@ -369,918 +1015,16 @@ error[E0425]: cannot find type `SOC2ControlAssessment` in this scope
 766 |     pub control_assessments: Vec<SOC2ControlAssessment>,
     |                                  ^^^^^^^^^^^^^^^^^^^^^ not found in this scope
 
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:40:54
-    |
- 40 |     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-    |                                                      ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
- 40 -     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
- 40 +     pub async fn initialize(&mut self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:54:90
-    |
- 54 |     pub async fn assess_pci_compliance(&self, scope: &PCIScope) -> Result<PCIAssessment, ComplianceError> {
-    |                                                                                          ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
- 54 -     pub async fn assess_pci_compliance(&self, scope: &PCIScope) -> Result<PCIAssessment, ComplianceError> {
- 54 +     pub async fn assess_pci_compliance(&self, scope: &PCIScope) -> Result<PCIAssessment, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:81:106
-    |
- 81 |     pub async fn get_requirement_status(&self, requirement_id: &str) -> Result<Option<PCIControlStatus>, ComplianceError> {
-    |                                                                                                          ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
- 81 -     pub async fn get_requirement_status(&self, requirement_id: &str) -> Result<Option<PCIControlStatus>, ComplianceError> {
- 81 +     pub async fn get_requirement_status(&self, requirement_id: &str) -> Result<Option<PCIControlStatus>, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
 error[E0425]: cannot find type `PCIControl` in this scope
-  --> src/compliance/pci_dss.rs:82:31
+  --> src/compliance/pci_dss.rs:84:31
    |
-82 |         let requirements: Vec<PCIControl> = self.pci_framework.get_all_requirements().await?;
+84 |         let requirements: Vec<PCIControl> = self.pci_framework.get_all_requirements().await?;
    |                               ^^^^^^^^^^ not found in this scope
    |
 help: you might be missing a type parameter
    |
-26 | impl<PCIControl> PCIDSSCompliance {
+28 | impl<PCIControl> PCIDSSCompliance {
    |     ++++++++++++
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:89:107
-    |
- 89 |     pub async fn update_requirement(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
-    |                                                                                                           ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
- 89 -     pub async fn update_requirement(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
- 89 +     pub async fn update_requirement(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:96:94
-    |
- 96 |     pub async fn generate_pci_report(&self, assessment: &PCIAssessment) -> Result<PCIReport, ComplianceError> {
-    |                                                                                              ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
- 96 -     pub async fn generate_pci_report(&self, assessment: &PCIAssessment) -> Result<PCIReport, ComplianceError> {
- 96 +     pub async fn generate_pci_report(&self, assessment: &PCIAssessment) -> Result<PCIReport, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:101:59
-    |
-101 |     pub async fn get_pci_stats(&self) -> Result<PCIStats, ComplianceError> {
-    |                                                           ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-101 -     pub async fn get_pci_stats(&self) -> Result<PCIStats, ComplianceError> {
-101 +     pub async fn get_pci_stats(&self) -> Result<PCIStats, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:108:57
-    |
-108 |     async fn load_pci_controls(&mut self) -> Result<(), ComplianceError> {
-    |                                                         ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-108 -     async fn load_pci_controls(&mut self) -> Result<(), ComplianceError> {
-108 +     async fn load_pci_controls(&mut self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:394:110
-    |
-394 |     async fn assess_pci_requirement(&self, requirement: &PCIRequirement) -> Result<PCIRequirementAssessment, ComplianceError> {
-    |                                                                                                              ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-394 -     async fn assess_pci_requirement(&self, requirement: &PCIRequirement) -> Result<PCIRequirementAssessment, ComplianceError> {
-394 +     async fn assess_pci_requirement(&self, requirement: &PCIRequirement) -> Result<PCIRequirementAssessment, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:421:88
-    |
-421 |     async fn assess_implementation(&self, requirement: &PCIRequirement) -> Result<f64, ComplianceError> {
-    |                                                                                        ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-421 -     async fn assess_implementation(&self, requirement: &PCIRequirement) -> Result<f64, ComplianceError> {
-421 +     async fn assess_implementation(&self, requirement: &PCIRequirement) -> Result<f64, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:436:87
-    |
-436 |     async fn assess_effectiveness(&self, requirement: &PCIRequirement) -> Result<f64, ComplianceError> {
-    |                                                                                       ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-436 -     async fn assess_effectiveness(&self, requirement: &PCIRequirement) -> Result<f64, ComplianceError> {
-436 +     async fn assess_effectiveness(&self, requirement: &PCIRequirement) -> Result<f64, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:454:117
-    |
-454 |     async fn assess_findings(&self, requirement: &PCIRequirement, compliance_score: f64) -> Result<Vec<PCIFinding>, ComplianceError> {
-    |                                                                                                                     ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-454 -     async fn assess_findings(&self, requirement: &PCIRequirement, compliance_score: f64) -> Result<Vec<PCIFinding>, ComplianceError> {
-454 +     async fn assess_findings(&self, requirement: &PCIRequirement, compliance_score: f64) -> Result<Vec<PCIFinding>, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:469:120
-    |
-469 |     async fn assess_recommendations(&self, requirement: &PCIRequirement, compliance_score: f64) -> Result<Vec<String>, ComplianceError> {
-    |                                                                                                                        ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-469 -     async fn assess_recommendations(&self, requirement: &PCIRequirement, compliance_score: f64) -> Result<Vec<String>, ComplianceError> {
-469 +     async fn assess_recommendations(&self, requirement: &PCIRequirement, compliance_score: f64) -> Result<Vec<String>, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:481:97
-    |
-481 |     async fn identify_evidence_gaps(&self, requirement: &PCIRequirement) -> Result<Vec<String>, ComplianceError> {
-    |                                                                                                 ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-481 -     async fn identify_evidence_gaps(&self, requirement: &PCIRequirement) -> Result<Vec<String>, ComplianceError> {
-481 +     async fn identify_evidence_gaps(&self, requirement: &PCIRequirement) -> Result<Vec<String>, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:589:63
-    |
-589 |     async fn start_background_monitoring(&self) -> Result<(), ComplianceError> {
-    |                                                               ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-589 -     async fn start_background_monitoring(&self) -> Result<(), ComplianceError> {
-589 +     async fn start_background_monitoring(&self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:632:54
-    |
-632 |     async fn monitor_pci_status(&self) -> Result<(), ComplianceError> {
-    |                                                      ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-632 -     async fn monitor_pci_status(&self) -> Result<(), ComplianceError> {
-632 +     async fn monitor_pci_status(&self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:647:59
-    |
-647 |     async fn perform_pci_assessments(&self) -> Result<(), ComplianceError> {
-    |                                                           ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-647 -     async fn perform_pci_assessments(&self) -> Result<(), ComplianceError> {
-647 +     async fn perform_pci_assessments(&self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0433]: failed to resolve: use of undeclared type `UpdateType`
-   --> src/compliance/pci_dss.rs:653:30
-    |
-653 |                 update_type: UpdateType::Assessment,
-    |                              ^^^^^^^^^^ use of undeclared type `UpdateType`
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::common::UpdateType;
-    |
-  4 + use crate::compliance::UpdateType;
-    |
-  4 + use crate::compliance::soc2::UpdateType;
-    |
-  4 + use crate::monitoring::UpdateType;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:664:55
-    |
-664 |     async fn collect_pci_metrics(&self) -> Result<(), ComplianceError> {
-    |                                                       ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-664 -     async fn collect_pci_metrics(&self) -> Result<(), ComplianceError> {
-664 +     async fn collect_pci_metrics(&self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `UpdateType` in this scope
-   --> src/compliance/pci_dss.rs:725:22
-    |
-725 |     pub update_type: UpdateType,
-    |                      ^^^^^^^^^^ not found in this scope
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::common::UpdateType;
-    |
-  4 + use crate::compliance::UpdateType;
-    |
-  4 + use crate::compliance::soc2::UpdateType;
-    |
-  4 + use crate::monitoring::UpdateType;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:813:87
-    |
-813 |     pub async fn store_assessment(&mut self, assessment: PCIAssessment) -> Result<(), ComplianceError> {
-    |                                                                                       ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-813 -     pub async fn store_assessment(&mut self, assessment: PCIAssessment) -> Result<(), ComplianceError> {
-813 +     pub async fn store_assessment(&mut self, assessment: PCIAssessment) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:818:75
-    |
-818 |     pub async fn store_report(&mut self, report: PCIReport) -> Result<(), ComplianceError> {
-    |                                                                           ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-818 -     pub async fn store_report(&mut self, report: PCIReport) -> Result<(), ComplianceError> {
-818 +     pub async fn store_report(&mut self, report: PCIReport) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:823:60
-    |
-823 |     pub async fn get_statistics(&self) -> Result<PCIStats, ComplianceError> {
-    |                                                            ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-823 -     pub async fn get_statistics(&self) -> Result<PCIStats, ComplianceError> {
-823 +     pub async fn get_statistics(&self) -> Result<PCIStats, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:851:54
-    |
-851 |     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-    |                                                      ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-851 -     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-851 +     pub async fn initialize(&mut self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:855:84
-    |
-855 |     pub async fn add_requirement(&self, requirement: PCIRequirement) -> Result<(), ComplianceError> {
-    |                                                                                    ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-855 -     pub async fn add_requirement(&self, requirement: PCIRequirement) -> Result<(), ComplianceError> {
-855 +     pub async fn add_requirement(&self, requirement: PCIRequirement) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:861:100
-    |
-861 |     pub async fn get_requirements_by_scope(&self, scope: &PCIScope) -> Result<Vec<PCIRequirement>, ComplianceError> {
-    |                                                                                                    ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-861 -     pub async fn get_requirements_by_scope(&self, scope: &PCIScope) -> Result<Vec<PCIRequirement>, ComplianceError> {
-861 +     pub async fn get_requirements_by_scope(&self, scope: &PCIScope) -> Result<Vec<PCIRequirement>, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:871:77
-    |
-871 |     pub async fn get_all_requirements(&self) -> Result<Vec<PCIRequirement>, ComplianceError> {
-    |                                                                             ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-871 -     pub async fn get_all_requirements(&self) -> Result<Vec<PCIRequirement>, ComplianceError> {
-871 +     pub async fn get_all_requirements(&self) -> Result<Vec<PCIRequirement>, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:876:107
-    |
-876 |     pub async fn update_requirement(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
-    |                                                                                                           ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-876 -     pub async fn update_requirement(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
-876 +     pub async fn update_requirement(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0433]: failed to resolve: use of undeclared type `UpdateType`
-   --> src/compliance/pci_dss.rs:880:17
-    |
-880 |                 UpdateType::Implementation => {
-    |                 ^^^^^^^^^^ use of undeclared type `UpdateType`
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::common::UpdateType;
-    |
-  4 + use crate::compliance::UpdateType;
-    |
-  4 + use crate::compliance::soc2::UpdateType;
-    |
-  4 + use crate::monitoring::UpdateType;
-    |
-
-error[E0433]: failed to resolve: use of undeclared type `UpdateType`
-   --> src/compliance/pci_dss.rs:884:17
-    |
-884 |                 UpdateType::Assessment => {
-    |                 ^^^^^^^^^^ use of undeclared type `UpdateType`
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::common::UpdateType;
-    |
-  4 + use crate::compliance::UpdateType;
-    |
-  4 + use crate::compliance::soc2::UpdateType;
-    |
-  4 + use crate::monitoring::UpdateType;
-    |
-
-error[E0433]: failed to resolve: use of undeclared type `UpdateType`
-   --> src/compliance/pci_dss.rs:887:17
-    |
-887 |                 UpdateType::Review => {
-    |                 ^^^^^^^^^^ use of undeclared type `UpdateType`
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::common::UpdateType;
-    |
-  4 + use crate::compliance::UpdateType;
-    |
-  4 + use crate::compliance::soc2::UpdateType;
-    |
-  4 + use crate::monitoring::UpdateType;
-    |
-
-error[E0433]: failed to resolve: use of undeclared type `UpdateType`
-   --> src/compliance/pci_dss.rs:890:17
-    |
-890 |                 UpdateType::Evidence => {
-    |                 ^^^^^^^^^^ use of undeclared type `UpdateType`
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::common::UpdateType;
-    |
-  4 + use crate::compliance::UpdateType;
-    |
-  4 + use crate::compliance::soc2::UpdateType;
-    |
-  4 + use crate::monitoring::UpdateType;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:899:90
-    |
-899 |     pub async fn generate_report(&self, assessment: &PCIAssessment) -> Result<PCIReport, ComplianceError> {
-    |                                                                                          ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-899 -     pub async fn generate_report(&self, assessment: &PCIAssessment) -> Result<PCIReport, ComplianceError> {
-899 +     pub async fn generate_report(&self, assessment: &PCIAssessment) -> Result<PCIReport, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:934:54
-    |
-934 |     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-    |                                                      ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-934 -     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-934 +     pub async fn initialize(&mut self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:947:54
-    |
-947 |     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-    |                                                      ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-947 -     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-947 +     pub async fn initialize(&mut self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:951:111
-    |
-951 |     pub async fn log_requirement_update(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
-    |                                                                                                               ^^^^^^^^^^^^^^^
-...
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-    |
-help: a struct with a similar name exists
-    |
-951 -     pub async fn log_requirement_update(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
-951 +     pub async fn log_requirement_update(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:964:54
-    |
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-...
-964 |     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-    |                                                      ^^^^^^^^^^^^^^^
-    |
-help: a struct with a similar name exists
-    |
-964 -     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-964 +     pub async fn initialize(&mut self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:977:54
-    |
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-...
-977 |     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-    |                                                      ^^^^^^^^^^^^^^^
-    |
-help: a struct with a similar name exists
-    |
-977 -     pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-977 +     pub async fn initialize(&mut self) -> Result<(), ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
-
-error[E0425]: cannot find type `ComplianceError` in this scope
-   --> src/compliance/pci_dss.rs:981:63
-    |
-957 | pub struct ComplianceMonitor;
-    | ----------------------------- similarly named struct `ComplianceMonitor` defined here
-...
-981 |     pub async fn collect_metrics(&self) -> Result<PCIMetrics, ComplianceError> {
-    |                                                               ^^^^^^^^^^^^^^^
-    |
-help: a struct with a similar name exists
-    |
-981 -     pub async fn collect_metrics(&self) -> Result<PCIMetrics, ComplianceError> {
-981 +     pub async fn collect_metrics(&self) -> Result<PCIMetrics, ComplianceMonitor> {
-    |
-help: consider importing one of these enums
-    |
-  4 + use crate::compliance::ComplianceError;
-    |
-  4 + use crate::compliance::gdpr::ComplianceError;
-    |
-  4 + use crate::compliance::nist_csf::ComplianceError;
-    |
-  4 + use crate::compliance::soc2::ComplianceError;
-    |
 
 error[E0433]: failed to resolve: use of undeclared type `RecommendationPriority`
    --> src/compliance/risk_management.rs:419:27
@@ -1371,6 +1115,42 @@ help: consider importing one of these enums
   4 + use crate::compliance::soc2::RecommendationPriority;
     |
     = and 1 other candidate
+
+error[E0425]: cannot find type `MonitoringConfig` in this scope
+   --> src/compliance/policy_management.rs:941:26
+    |
+941 |     pub fn new(_config: &MonitoringConfig) -> Self {
+    |                          ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+  4 + use crate::common::MonitoringConfig;
+    |
+  4 + use crate::compliance::MonitoringConfig;
+    |
+  4 + use crate::compliance::pci_dss::MonitoringConfig;
+    |
+  4 + use crate::compliance::risk_management::MonitoringConfig;
+    |
+    = and 2 other candidates
+
+error[E0425]: cannot find type `MonitoringConfig` in this scope
+   --> src/compliance/policy_management.rs:958:28
+    |
+958 |     pub monitoring_config: MonitoringConfig,
+    |                            ^^^^^^^^^^^^^^^^ not found in this scope
+    |
+help: consider importing one of these structs
+    |
+  4 + use crate::common::MonitoringConfig;
+    |
+  4 + use crate::compliance::MonitoringConfig;
+    |
+  4 + use crate::compliance::pci_dss::MonitoringConfig;
+    |
+  4 + use crate::compliance::risk_management::MonitoringConfig;
+    |
+    = and 2 other candidates
 
 error[E0433]: failed to resolve: use of undeclared type `RecommendationPriority`
    --> src/compliance/vendor_risk.rs:366:27
@@ -1465,6 +1245,42 @@ help: consider importing one of these enums
   4 + use crate::compliance::soc2::RecommendationPriority;
     |
     = and 1 other candidate
+
+error[E0425]: cannot find type `MonitoringConfig` in this scope
+    --> src/compliance/vendor_risk.rs:1066:26
+     |
+1066 |     pub fn new(_config: &MonitoringConfig) -> Self {
+     |                          ^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing one of these structs
+     |
+   4 + use crate::common::MonitoringConfig;
+     |
+   4 + use crate::compliance::MonitoringConfig;
+     |
+   4 + use crate::compliance::pci_dss::MonitoringConfig;
+     |
+   4 + use crate::compliance::risk_management::MonitoringConfig;
+     |
+     = and 2 other candidates
+
+error[E0425]: cannot find type `MonitoringConfig` in this scope
+    --> src/compliance/vendor_risk.rs:1144:28
+     |
+1144 |     pub monitoring_config: MonitoringConfig,
+     |                            ^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing one of these structs
+     |
+   4 + use crate::common::MonitoringConfig;
+     |
+   4 + use crate::compliance::MonitoringConfig;
+     |
+   4 + use crate::compliance::pci_dss::MonitoringConfig;
+     |
+   4 + use crate::compliance::risk_management::MonitoringConfig;
+     |
+     = and 2 other candidates
 
 error[E0425]: cannot find type `VecDeque` in this scope
   --> src/monitoring/siem_integration.rs:17:30
@@ -2462,6 +2278,12 @@ warning: ambiguous glob re-exports
 15 | pub use real_time_monitoring::*;
    |         ----------------------- but the name `SecurityMetrics` in the type namespace is also re-exported here
 
+warning: unused import: `std::collections::HashMap`
+ --> src/security/data_classification.rs:3:5
+  |
+3 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
 warning: unused import: `async_trait::async_trait`
  --> src/security/cryptography.rs:3:5
   |
@@ -2504,11 +2326,11 @@ warning: unused import: `VecDeque`
 6 | use std::collections::{HashMap, VecDeque};
   |                                 ^^^^^^^^
 
-warning: unused import: `MonitoringConfig`
+warning: unused import: `MonitoringConfig as CommonMonitoringConfig`
  --> src/compliance/nist_csf.rs:4:126
   |
-4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, UpdateType, ComplianceMonitor, RiskAssessmentEngine, MonitoringConfig};
-  |                                                                                                                              ^^^^^^^^^^^^^^^^
+4 | ...UpdateType, ComplianceMonitor, RiskAssessmentEngine, MonitoringConfig as CommonMonitoringConfig};
+  |                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 warning: unused import: `async_trait::async_trait`
  --> src/compliance/nist_csf.rs:5:5
@@ -2561,19 +2383,31 @@ warning: unused import: `VecDeque`
 warning: unused imports: `ComplianceMonitor` and `MonitoringConfig`
  --> src/compliance/pci_dss.rs:4:73
   |
-4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig};
+4 | use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig, UpdateType};
   |                                                                         ^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^
 
-warning: unused import: `async_trait::async_trait`
+warning: unused import: `crate::compliance::pci_dss::ComplianceError`
  --> src/compliance/pci_dss.rs:5:5
   |
-5 | use async_trait::async_trait;
+5 | use crate::compliance::pci_dss::ComplianceError;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `async_trait::async_trait`
+ --> src/compliance/pci_dss.rs:6:5
+  |
+6 | use async_trait::async_trait;
   |     ^^^^^^^^^^^^^^^^^^^^^^^^
 
-warning: unused import: `VecDeque`
- --> src/compliance/pci_dss.rs:7:33
+warning: unused import: `thiserror::Error`
+ --> src/compliance/pci_dss.rs:8:5
   |
-7 | use std::collections::{HashMap, VecDeque};
+8 | use thiserror::Error;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `VecDeque`
+ --> src/compliance/pci_dss.rs:9:33
+  |
+9 | use std::collections::{HashMap, VecDeque};
   |                                 ^^^^^^^^
 
 warning: unused import: `MonitoringConfig`
@@ -2594,11 +2428,11 @@ warning: unused import: `VecDeque`
 7 | use std::collections::{HashMap, VecDeque};
   |                                 ^^^^^^^^
 
-warning: unused import: `MonitoringConfig`
+warning: unused import: `MonitoringConfig as CommonMonitoringConfig`
  --> src/compliance/policy_management.rs:4:21
   |
-4 | use crate::common::{MonitoringConfig};
-  |                     ^^^^^^^^^^^^^^^^
+4 | use crate::common::{MonitoringConfig as CommonMonitoringConfig};
+  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 warning: unused import: `async_trait::async_trait`
  --> src/compliance/policy_management.rs:5:5
@@ -2612,11 +2446,11 @@ warning: unused import: `VecDeque`
 7 | use std::collections::{HashMap, VecDeque};
   |                                 ^^^^^^^^
 
-warning: unused import: `MonitoringConfig`
+warning: unused import: `MonitoringConfig as CommonMonitoringConfig`
  --> src/compliance/vendor_risk.rs:4:21
   |
-4 | use crate::common::{MonitoringConfig};
-  |                     ^^^^^^^^^^^^^^^^
+4 | use crate::common::{MonitoringConfig as CommonMonitoringConfig};
+  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 warning: unused import: `async_trait::async_trait`
  --> src/compliance/vendor_risk.rs:5:5
@@ -2753,8 +2587,8 @@ warning: ambiguous glob re-exports
 11 | pub use iso27001::*;
    |         ^^^^^^^^^^^ the name `ComplianceError` in the type namespace is first re-exported here
 ...
-15 | pub use soc2::*;
-   |         ------- but the name `ComplianceError` in the type namespace is also re-exported here
+16 | pub use pci_dss::*;
+   |         ---------- but the name `ComplianceError` in the type namespace is also re-exported here
 
 warning: ambiguous glob re-exports
   --> src/compliance/mod.rs:12:9
@@ -2805,19 +2639,19 @@ warning: ambiguous glob re-exports
   --> src/compliance/mod.rs:12:9
    |
 12 | pub use nist_csf::*;
-   |         ^^^^^^^^^^^ the name `MonitoringConfig` in the type namespace is first re-exported here
-...
-19 | pub use vendor_risk::*;
-   |         -------------- but the name `MonitoringConfig` in the type namespace is also re-exported here
-
-warning: ambiguous glob re-exports
-  --> src/compliance/mod.rs:12:9
-   |
-12 | pub use nist_csf::*;
    |         ^^^^^^^^^^^ the name `MetricsConfig` in the type namespace is first re-exported here
 ...
 16 | pub use pci_dss::*;
    |         ---------- but the name `MetricsConfig` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/compliance/mod.rs:15:9
+   |
+15 | pub use soc2::*;
+   |         ^^^^^^^ the name `MonitoringConfig` in the type namespace is first re-exported here
+16 | pub use pci_dss::*;
+17 | pub use risk_management::*;
+   |         ------------------ but the name `MonitoringConfig` in the type namespace is also re-exported here
 
 warning: ambiguous glob re-exports
   --> src/compliance/mod.rs:17:9
@@ -2943,379 +2777,165 @@ error[E0728]: `await` is only allowed inside `async` functions and blocks
 616 |         self.consent_manager.has_consent_for_processing(request).await
     |                                                                  ^^^^^ only allowed inside `async` functions and blocks
 
-error[E0119]: conflicting implementations of trait `Debug` for type `types::AnalyticsIntelligenceEngine`
-   --> src/common/types.rs:309:10
-    |
-186 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ----- first implementation here
-...
-309 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ^^^^^ conflicting implementation for `types::AnalyticsIntelligenceEngine`
-
 error[E0119]: conflicting implementations of trait `Debug` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:354:10
+   --> src/common/types.rs:350:10
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ----- first implementation here
 ...
-354 | #[derive(Debug, Clone, Serialize, Deserialize)]
+350 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
 
-error[E0119]: conflicting implementations of trait `Debug` for type `types::SettingsConfigurationManager`
-   --> src/common/types.rs:382:10
-    |
-200 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ----- first implementation here
-...
-382 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ^^^^^ conflicting implementation for `types::SettingsConfigurationManager`
-
-error[E0119]: conflicting implementations of trait `Debug` for type `types::AgentType`
-   --> src/common/types.rs:405:10
-    |
-132 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-    |          ----- first implementation here
-...
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |          ^^^^^ conflicting implementation for `types::AgentType`
-
 error[E0119]: conflicting implementations of trait `Debug` for type `types::Workspace`
-   --> src/common/types.rs:412:10
+   --> src/common/types.rs:394:10
     |
  79 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ----- first implementation here
 ...
-412 | #[derive(Debug, Clone, Serialize, Deserialize)]
+394 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ^^^^^ conflicting implementation for `types::Workspace`
 
 error[E0119]: conflicting implementations of trait `Debug` for type `types::CollaborationContext`
-   --> src/common/types.rs:420:10
+   --> src/common/types.rs:403:10
     |
  97 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ----- first implementation here
 ...
-420 | #[derive(Debug, Clone, Serialize, Deserialize)]
+403 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ^^^^^ conflicting implementation for `types::CollaborationContext`
 
 error[E0119]: conflicting implementations of trait `Debug` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:428:10
+   --> src/common/types.rs:411:10
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ----- first implementation here
 ...
-428 | #[derive(Debug, Clone, Serialize, Deserialize)]
+411 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |          ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
 
-error[E0119]: conflicting implementations of trait `Debug` for type `types::RiskLevel`
-   --> src/common/types.rs:436:10
-    |
-143 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
-    |          ----- first implementation here
-...
-436 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |          ^^^^^ conflicting implementation for `types::RiskLevel`
-
-error[E0119]: conflicting implementations of trait `Clone` for type `types::AnalyticsIntelligenceEngine`
-   --> src/common/types.rs:309:17
-    |
-186 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ----- first implementation here
-...
-309 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ^^^^^ conflicting implementation for `types::AnalyticsIntelligenceEngine`
-
 error[E0119]: conflicting implementations of trait `Clone` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:354:17
+   --> src/common/types.rs:350:17
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ----- first implementation here
 ...
-354 | #[derive(Debug, Clone, Serialize, Deserialize)]
+350 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
 
-error[E0119]: conflicting implementations of trait `Clone` for type `types::SettingsConfigurationManager`
-   --> src/common/types.rs:382:17
-    |
-200 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ----- first implementation here
-...
-382 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ^^^^^ conflicting implementation for `types::SettingsConfigurationManager`
-
-error[E0119]: conflicting implementations of trait `Clone` for type `types::AgentType`
-   --> src/common/types.rs:405:17
-    |
-132 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-    |                 ----- first implementation here
-...
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                 ^^^^^ conflicting implementation for `types::AgentType`
-
 error[E0119]: conflicting implementations of trait `Clone` for type `types::Workspace`
-   --> src/common/types.rs:412:17
+   --> src/common/types.rs:394:17
     |
  79 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ----- first implementation here
 ...
-412 | #[derive(Debug, Clone, Serialize, Deserialize)]
+394 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ^^^^^ conflicting implementation for `types::Workspace`
 
 error[E0119]: conflicting implementations of trait `Clone` for type `types::CollaborationContext`
-   --> src/common/types.rs:420:17
+   --> src/common/types.rs:403:17
     |
  97 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ----- first implementation here
 ...
-420 | #[derive(Debug, Clone, Serialize, Deserialize)]
+403 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ^^^^^ conflicting implementation for `types::CollaborationContext`
 
 error[E0119]: conflicting implementations of trait `Clone` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:428:17
+   --> src/common/types.rs:411:17
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ----- first implementation here
 ...
-428 | #[derive(Debug, Clone, Serialize, Deserialize)]
+411 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                 ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
 
-error[E0119]: conflicting implementations of trait `Clone` for type `types::RiskLevel`
-   --> src/common/types.rs:436:17
-    |
-143 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
-    |                 ----- first implementation here
-...
-436 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                 ^^^^^ conflicting implementation for `types::RiskLevel`
-
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::AnalyticsIntelligenceEngine`
-   --> src/common/types.rs:309:24
-    |
-186 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        --------- first implementation here
-...
-309 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::AnalyticsIntelligenceEngine`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error[E0119]: conflicting implementations of trait `Serialize` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:354:24
+   --> src/common/types.rs:350:24
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        --------- first implementation here
 ...
-354 | #[derive(Debug, Clone, Serialize, Deserialize)]
+350 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        ^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
     |
     = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::SettingsConfigurationManager`
-   --> src/common/types.rs:382:24
-    |
-200 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        --------- first implementation here
-...
-382 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::SettingsConfigurationManager`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::AgentType`
-   --> src/common/types.rs:405:24
-    |
-132 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-    |                        --------- first implementation here
-...
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::AgentType`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error[E0119]: conflicting implementations of trait `Serialize` for type `types::Workspace`
-   --> src/common/types.rs:412:24
+   --> src/common/types.rs:394:24
     |
  79 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        --------- first implementation here
 ...
-412 | #[derive(Debug, Clone, Serialize, Deserialize)]
+394 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        ^^^^^^^^^ conflicting implementation for `types::Workspace`
     |
     = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0119]: conflicting implementations of trait `Serialize` for type `types::CollaborationContext`
-   --> src/common/types.rs:420:24
+   --> src/common/types.rs:403:24
     |
  97 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        --------- first implementation here
 ...
-420 | #[derive(Debug, Clone, Serialize, Deserialize)]
+403 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        ^^^^^^^^^ conflicting implementation for `types::CollaborationContext`
     |
     = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0119]: conflicting implementations of trait `Serialize` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:428:24
+   --> src/common/types.rs:411:24
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        --------- first implementation here
 ...
-428 | #[derive(Debug, Clone, Serialize, Deserialize)]
+411 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                        ^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
     |
     = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::RiskLevel`
-   --> src/common/types.rs:436:24
-    |
-143 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
-    |                        --------- first implementation here
-...
-436 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::RiskLevel`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::AnalyticsIntelligenceEngine`
-   --> src/common/types.rs:309:35
-    |
-186 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ----------- first implementation here
-...
-309 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::AnalyticsIntelligenceEngine`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:354:35
+   --> src/common/types.rs:350:35
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ----------- first implementation here
 ...
-354 | #[derive(Debug, Clone, Serialize, Deserialize)]
+350 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ^^^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
     |
     = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::SettingsConfigurationManager`
-   --> src/common/types.rs:382:35
-    |
-200 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ----------- first implementation here
-...
-382 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::SettingsConfigurationManager`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::AgentType`
-   --> src/common/types.rs:405:35
-    |
-132 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-    |                                   ----------- first implementation here
-...
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::AgentType`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::Workspace`
-   --> src/common/types.rs:412:35
+   --> src/common/types.rs:394:35
     |
  79 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ----------- first implementation here
 ...
-412 | #[derive(Debug, Clone, Serialize, Deserialize)]
+394 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ^^^^^^^^^^^ conflicting implementation for `types::Workspace`
     |
     = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::CollaborationContext`
-   --> src/common/types.rs:420:35
+   --> src/common/types.rs:403:35
     |
  97 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ----------- first implementation here
 ...
-420 | #[derive(Debug, Clone, Serialize, Deserialize)]
+403 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ^^^^^^^^^^^ conflicting implementation for `types::CollaborationContext`
     |
     = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:428:35
+   --> src/common/types.rs:411:35
     |
 113 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ----------- first implementation here
 ...
-428 | #[derive(Debug, Clone, Serialize, Deserialize)]
+411 | #[derive(Debug, Clone, Serialize, Deserialize)]
     |                                   ^^^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
     |
     = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::RiskLevel`
-   --> src/common/types.rs:436:35
-    |
-143 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
-    |                                   ----------- first implementation here
-...
-436 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::RiskLevel`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `StructuralPartialEq` for type `types::AgentType`
-   --> src/common/types.rs:405:48
-    |
-132 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-    |                                                --------- first implementation here
-...
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                                ^^^^^^^^^ conflicting implementation for `types::AgentType`
-
-error[E0119]: conflicting implementations of trait `StructuralPartialEq` for type `types::RiskLevel`
-   --> src/common/types.rs:436:48
-    |
-143 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
-    |                                                --------- first implementation here
-...
-436 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                                ^^^^^^^^^ conflicting implementation for `types::RiskLevel`
-
-error[E0119]: conflicting implementations of trait `PartialEq` for type `types::AgentType`
-   --> src/common/types.rs:405:48
-    |
-132 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-    |                                                --------- first implementation here
-...
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                                ^^^^^^^^^ conflicting implementation for `types::AgentType`
-
-error[E0119]: conflicting implementations of trait `PartialEq` for type `types::RiskLevel`
-   --> src/common/types.rs:436:48
-    |
-143 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
-    |                                                --------- first implementation here
-...
-436 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                                ^^^^^^^^^ conflicting implementation for `types::RiskLevel`
-
-error[E0119]: conflicting implementations of trait `std::cmp::Eq` for type `types::AgentType`
-   --> src/common/types.rs:405:59
-    |
-132 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-    |                                                           -- first implementation here
-...
-405 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                                           ^^ conflicting implementation for `types::AgentType`
-
-error[E0119]: conflicting implementations of trait `std::cmp::Eq` for type `types::RiskLevel`
-   --> src/common/types.rs:436:59
-    |
-143 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
-    |                                                           -- first implementation here
-...
-436 | #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-    |                                                           ^^ conflicting implementation for `types::RiskLevel`
 
 error[E0107]: enum takes 2 generic arguments but 1 generic argument was supplied
    --> src/gui/risk_management.rs:731:76
@@ -3357,25 +2977,25 @@ help: add missing generic argument
     |                                                                                                   +++
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `complexity`
-   --> src/common/types.rs:340:13
+   --> src/common/types.rs:336:13
     |
-340 |             complexity: InterfaceComplexity::Standard,
+336 |             complexity: InterfaceComplexity::Standard,
     |             ^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `layout`
-   --> src/common/types.rs:341:13
+   --> src/common/types.rs:337:13
     |
-341 |             layout: LayoutType::Default,
+337 |             layout: LayoutType::Default,
     |             ^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `theme`
-   --> src/common/types.rs:342:13
+   --> src/common/types.rs:338:13
     |
-342 |             theme: ThemeType::Light,
+338 |             theme: ThemeType::Light,
     |             ^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
@@ -5022,86 +4642,6 @@ error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
     = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
 
 error[E0308]: mismatched types
-   --> src/gui/real_time_monitoring.rs:162:50
-    |
-162 |         let mut interval = tokio::time::interval(Duration::seconds(5));
-    |                            --------------------- ^^^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |                            |
-    |                            arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/interval.rs:73:8
-    |
- 73 | pub fn interval(period: Duration) -> Interval {
-    |        ^^^^^^^^
-
-error[E0308]: mismatched types
-   --> src/gui/real_time_monitoring.rs:174:50
-    |
-174 |         let mut interval = tokio::time::interval(Duration::seconds(10));
-    |                            --------------------- ^^^^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |                            |
-    |                            arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/interval.rs:73:8
-    |
- 73 | pub fn interval(period: Duration) -> Interval {
-    |        ^^^^^^^^
-
-error[E0308]: mismatched types
-   --> src/gui/real_time_monitoring.rs:186:50
-    |
-186 |         let mut interval = tokio::time::interval(Duration::seconds(2));
-    |                            --------------------- ^^^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |                            |
-    |                            arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/interval.rs:73:8
-    |
- 73 | pub fn interval(period: Duration) -> Interval {
-    |        ^^^^^^^^
-
-error[E0382]: borrow of moved value: `metrics`
-   --> src/gui/real_time_monitoring.rs:208:31
-    |
-199 |         let metrics = collector.collect_all().await?;
-    |             ------- move occurs because `metrics` has type `real_time_monitoring::MonitoringMetrics`, which does not implement the `Copy` trait
-...
-204 |             real_time_data.update_metrics(metrics);
-    |                                           ------- value moved here
-...
-208 |         self.check_for_alerts(&metrics).await?;
-    |                               ^^^^^^^^ value borrowed here after move
-    |
-note: consider changing this parameter type in method `update_metrics` to borrow instead if owning the value isn't necessary
-   --> src/gui/real_time_monitoring.rs:787:47
-    |
-787 |     pub fn update_metrics(&mut self, metrics: MonitoringMetrics) {
-    |            -------------- in this method      ^^^^^^^^^^^^^^^^^ this parameter takes ownership of the value
-help: consider cloning the value if the performance cost is acceptable
-    |
-204 |             real_time_data.update_metrics(metrics.clone());
-    |                                                  ++++++++
-
-error[E0308]: mismatched types
-   --> src/gui/real_time_monitoring.rs:236:65
-    |
-236 |             self.visualization_engine.update_user_visualization(user_id).await?;
-    |                                       ------------------------- ^^^^^^^ expected `&str`, found `&UserId`
-    |                                       |
-    |                                       arguments to this method are incorrect
-    |
-    = note: expected reference `&str`
-               found reference `&types::UserId`
-note: method defined here
-   --> src/gui/real_time_monitoring.rs:940:18
-    |
-940 |     pub async fn update_user_visualization(&self, _user_id: &str) -> Result<(), GUIError> { Ok(()) }
-    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^        --------------
-
-error[E0308]: mismatched types
    --> src/gui/real_time_monitoring.rs:263:12
     |
 259 |                 target_users.push(user_id.clone());
@@ -5125,6 +4665,12 @@ help: the type constructed contains `Vec<types::UserId>` due to the type of the 
     |            this argument influences the type of `Ok`
 note: tuple variant defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/result.rs:561:4
+
+error[E0616]: field `0` of struct `types::UserId` is private
+   --> src/gui/real_time_monitoring.rs:236:74
+    |
+236 |             self.visualization_engine.update_user_visualization(&user_id.0).await?;
+    |                                                                          ^ private field
 
 error[E0308]: mismatched types
    --> src/gui/real_time_monitoring.rs:274:41
@@ -5232,9 +4778,9 @@ error[E0599]: no method named `initialize` found for struct `types::AnalyticsInt
  66 |         self.analytics_engine.initialize().await?;
     |                               ^^^^^^^^^^ method not found in `types::AnalyticsIntelligenceEngine`
     |
-   ::: src/common/types.rs:187:1
+   ::: src/common/types.rs:304:1
     |
-187 | pub struct AnalyticsIntelligenceEngine {
+304 | pub struct AnalyticsIntelligenceEngine {
     | -------------------------------------- method `initialize` not found for this struct
     |
     = help: items from traits can only be used if the trait is implemented and in scope
@@ -5251,9 +4797,9 @@ error[E0599]: no method named `initialize` found for struct `types::SettingsConf
  67 |         self.config_manager.initialize().await?;
     |                             ^^^^^^^^^^ method not found in `types::SettingsConfigurationManager`
     |
-   ::: src/common/types.rs:201:1
+   ::: src/common/types.rs:194:1
     |
-201 | pub struct SettingsConfigurationManager {
+194 | pub struct SettingsConfigurationManager {
     | --------------------------------------- method `initialize` not found for this struct
     |
     = help: items from traits can only be used if the trait is implemented and in scope
@@ -5304,9 +4850,9 @@ error[E0599]: no method named `get_insights` found for struct `types::AnalyticsI
 108 |             analytics_insights: self.analytics_engine.get_insights(user_id).await?,
     |                                                       ^^^^^^^^^^^^ method not found in `types::AnalyticsIntelligenceEngine`
     |
-   ::: src/common/types.rs:187:1
+   ::: src/common/types.rs:304:1
     |
-187 | pub struct AnalyticsIntelligenceEngine {
+304 | pub struct AnalyticsIntelligenceEngine {
     | -------------------------------------- method `get_insights` not found for this struct
 
 error[E0560]: struct `UnifiedDashboard` has no field named `vulnerabilities_patched_today`
@@ -5353,9 +4899,9 @@ note: `compliance_center::InterfaceComplexity` is defined in module `crate::gui:
 494 | pub enum InterfaceComplexity {
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 note: `types::InterfaceComplexity` is defined in module `crate::common::types` of the current crate
-   --> src/common/types.rs:362:1
+   --> src/common/types.rs:358:1
     |
-362 | pub enum InterfaceComplexity {
+358 | pub enum InterfaceComplexity {
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 error[E0277]: `?` couldn't convert the error to `gui::GUIError`
@@ -5601,6 +5147,30 @@ help: consider cloning the value if the performance cost is acceptable
 163 |         let threat_score = threats.iter().map(|t| t.severity.clone() as u8).sum::<u8>() as f64;
     |                                                             ++++++++
 
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:246:13
+    |
+246 |             Regex::new(r"(?i)password\s*[:=]\s*\S+").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:247:13
+    |
+247 |             Regex::new(r"(?i)api[_-]?key\s*[:=]\s*\S+").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:248:13
+    |
+248 |             Regex::new(r"(?i)secret\s*[:=]\s*\S+").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:249:13
+    |
+249 |             Regex::new(r"(?i)token\s*[:=]\s*\S+").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
 error[E0282]: type annotations needed
    --> src/security/rasp.rs:253:16
     |
@@ -5788,9 +5358,9 @@ error[E0599]: no method named `initialize` found for struct `types::RiskAssessme
  44 |         self.risk_assessment.initialize().await?;
     |                              ^^^^^^^^^^ method not found in `types::RiskAssessmentEngine`
     |
-   ::: src/common/types.rs:289:1
+   ::: src/common/types.rs:283:1
     |
-289 | pub struct RiskAssessmentEngine {
+283 | pub struct RiskAssessmentEngine {
     | ------------------------------- method `initialize` not found for this struct
     |
     = help: items from traits can only be used if the trait is implemented and in scope
@@ -5810,9 +5380,9 @@ error[E0277]: `?` couldn't convert the error to `nist_csf::ComplianceError`
      |         this can't be annotated with `?` because it has type `Result<_, std::string::String>`
      |
 note: `nist_csf::ComplianceError` needs to implement `From<std::string::String>`
-    --> src/compliance/nist_csf.rs:1025:1
+    --> src/compliance/nist_csf.rs:1018:1
      |
-1025 | pub enum ComplianceError {
+1018 | pub enum ComplianceError {
      | ^^^^^^^^^^^^^^^^^^^^^^^^
      = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
 
@@ -5827,9 +5397,9 @@ error[E0308]: mismatched types
     = note: expected reference `&str`
                found reference `&CSFFunctionUpdate`
 note: method defined here
-   --> src/common/types.rs:274:18
+   --> src/common/types.rs:268:18
     |
-274 |     pub async fn log_function_update(&mut self, _function_id: &str, _update: &str) -> Result<(), String> {
+268 |     pub async fn log_function_update(&mut self, _function_id: &str, _update: &str) -> Result<(), String> {
     |                  ^^^^^^^^^^^^^^^^^^^                                -------------
 
 error[E0277]: `?` couldn't convert the error to `nist_csf::ComplianceError`
@@ -5841,9 +5411,9 @@ error[E0277]: `?` couldn't convert the error to `nist_csf::ComplianceError`
      |         this can't be annotated with `?` because it has type `Result<_, std::string::String>`
      |
 note: `nist_csf::ComplianceError` needs to implement `From<std::string::String>`
-    --> src/compliance/nist_csf.rs:1025:1
+    --> src/compliance/nist_csf.rs:1018:1
      |
-1025 | pub enum ComplianceError {
+1018 | pub enum ComplianceError {
      | ^^^^^^^^^^^^^^^^^^^^^^^^
      = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
 
@@ -6740,9 +6310,9 @@ error[E0560]: struct `SOC2Stats` has no field named `average_score`
     = note: available fields are: `implemented_controls`, `partially_implemented_controls`, `not_implemented_controls`, `average_compliance_score`, `total_incidents` ... and 3 others
 
 error[E0308]: mismatched types
-   --> src/compliance/pci_dss.rs:597:50
+   --> src/compliance/pci_dss.rs:599:50
     |
-597 |         let mut interval = tokio::time::interval(Duration::hours(6));
+599 |         let mut interval = tokio::time::interval(Duration::hours(6));
     |                            --------------------- ^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
     |                            |
     |                            arguments to this function are incorrect
@@ -6754,9 +6324,9 @@ note: function defined here
     |        ^^^^^^^^
 
 error[E0308]: mismatched types
-   --> src/compliance/pci_dss.rs:609:50
+   --> src/compliance/pci_dss.rs:611:50
     |
-609 |         let mut interval = tokio::time::interval(Duration::days(30));
+611 |         let mut interval = tokio::time::interval(Duration::days(30));
     |                            --------------------- ^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
     |                            |
     |                            arguments to this function are incorrect
@@ -6768,9 +6338,9 @@ note: function defined here
     |        ^^^^^^^^
 
 error[E0308]: mismatched types
-   --> src/compliance/pci_dss.rs:621:50
+   --> src/compliance/pci_dss.rs:623:50
     |
-621 |         let mut interval = tokio::time::interval(Duration::hours(2));
+623 |         let mut interval = tokio::time::interval(Duration::hours(2));
     |                            --------------------- ^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
     |                            |
     |                            arguments to this function are incorrect
@@ -6782,9 +6352,9 @@ note: function defined here
     |        ^^^^^^^^
 
 error[E0614]: type `PCIMetrics` cannot be dereferenced
-   --> src/compliance/pci_dss.rs:668:9
+   --> src/compliance/pci_dss.rs:670:9
     |
-668 |         *db.metrics_store = metrics;
+670 |         *db.metrics_store = metrics;
     |         ^^^^^^^^^^^^^^^^^ can't be dereferenced
 
 error[E0308]: mismatched types
@@ -6851,101 +6421,6 @@ error[E0614]: type `compliance::risk_management::RiskMetrics` cannot be derefere
 523 |         *db.metrics_store = metrics;
     |         ^^^^^^^^^^^^^^^^^ can't be dereferenced
 
-error[E0369]: binary operation `!=` cannot be applied to type `PolicyStatus`
-   --> src/compliance/policy_management.rs:73:26
-    |
- 73 |         if policy.status != PolicyStatus::Draft {
-    |            ------------- ^^ ------------------- PolicyStatus
-    |            |
-    |            PolicyStatus
-    |
-note: an implementation of `PartialEq` might be missing for `PolicyStatus`
-   --> src/compliance/policy_management.rs:488:1
-    |
-488 | pub enum PolicyStatus {
-    | ^^^^^^^^^^^^^^^^^^^^^ must implement `PartialEq`
-help: consider annotating `PolicyStatus` with `#[derive(PartialEq)]`
-    |
-488 + #[derive(PartialEq)]
-489 | pub enum PolicyStatus {
-    |
-
-error[E0369]: binary operation `!=` cannot be applied to type `PolicyStatus`
-   --> src/compliance/policy_management.rs:112:26
-    |
-112 |         if policy.status != PolicyStatus::Approved {
-    |            ------------- ^^ ---------------------- PolicyStatus
-    |            |
-    |            PolicyStatus
-    |
-note: an implementation of `PartialEq` might be missing for `PolicyStatus`
-   --> src/compliance/policy_management.rs:488:1
-    |
-488 | pub enum PolicyStatus {
-    | ^^^^^^^^^^^^^^^^^^^^^ must implement `PartialEq`
-help: consider annotating `PolicyStatus` with `#[derive(PartialEq)]`
-    |
-488 + #[derive(PartialEq)]
-489 | pub enum PolicyStatus {
-    |
-
-error[E0369]: binary operation `==` cannot be applied to type `PolicyStatus`
-   --> src/compliance/policy_management.rs:143:26
-    |
-143 |         if policy.status == PolicyStatus::Published {
-    |            ------------- ^^ ----------------------- PolicyStatus
-    |            |
-    |            PolicyStatus
-    |
-note: an implementation of `PartialEq` might be missing for `PolicyStatus`
-   --> src/compliance/policy_management.rs:488:1
-    |
-488 | pub enum PolicyStatus {
-    | ^^^^^^^^^^^^^^^^^^^^^ must implement `PartialEq`
-help: consider annotating `PolicyStatus` with `#[derive(PartialEq)]`
-    |
-488 + #[derive(PartialEq)]
-489 | pub enum PolicyStatus {
-    |
-
-error[E0369]: binary operation `!=` cannot be applied to type `PolicyStatus`
-   --> src/compliance/policy_management.rs:155:26
-    |
-155 |         if policy.status != PolicyStatus::Published {
-    |            ------------- ^^ ----------------------- PolicyStatus
-    |            |
-    |            PolicyStatus
-    |
-note: an implementation of `PartialEq` might be missing for `PolicyStatus`
-   --> src/compliance/policy_management.rs:488:1
-    |
-488 | pub enum PolicyStatus {
-    | ^^^^^^^^^^^^^^^^^^^^^ must implement `PartialEq`
-help: consider annotating `PolicyStatus` with `#[derive(PartialEq)]`
-    |
-488 + #[derive(PartialEq)]
-489 | pub enum PolicyStatus {
-    |
-
-error[E0369]: binary operation `==` cannot be applied to type `PolicyStatus`
-   --> src/compliance/policy_management.rs:295:26
-    |
-295 |         if policy.status == PolicyStatus::Archived {
-    |            ------------- ^^ ---------------------- PolicyStatus
-    |            |
-    |            PolicyStatus
-    |
-note: an implementation of `PartialEq` might be missing for `PolicyStatus`
-   --> src/compliance/policy_management.rs:488:1
-    |
-488 | pub enum PolicyStatus {
-    | ^^^^^^^^^^^^^^^^^^^^^ must implement `PartialEq`
-help: consider annotating `PolicyStatus` with `#[derive(PartialEq)]`
-    |
-488 + #[derive(PartialEq)]
-489 | pub enum PolicyStatus {
-    |
-
 error[E0308]: mismatched types
    --> src/compliance/policy_management.rs:335:32
     |
@@ -7002,108 +6477,19 @@ note: function defined here
  73 | pub fn interval(period: Duration) -> Interval {
     |        ^^^^^^^^
 
-error[E0277]: can't compare `PolicyStatus` with `PolicyStatus`
-   --> src/compliance/policy_management.rs:668:58
+error[E0521]: borrowed data escapes outside of method
+   --> src/compliance/vendor_risk.rs:526:9
     |
-668 |                 (scope.status.is_empty() || scope.status.contains(&p.status))
-    |                                                          ^^^^^^^^ no implementation for `PolicyStatus == PolicyStatus`
-    |
-    = help: the trait `PartialEq` is not implemented for `PolicyStatus`
-note: required by a bound in `core::slice::<impl [T]>::contains`
-   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:4
-help: consider annotating `PolicyStatus` with `#[derive(PartialEq)]`
-    |
-488 + #[derive(PartialEq)]
-489 | pub enum PolicyStatus {
-    |
-
-error[E0308]: mismatched types
-   --> src/compliance/vendor_risk.rs:100:63
-    |
-100 |             next_assessment_date: Utc::now() + Duration::days(self.get_assessment_frequency(&risk_level)),
-    |                                                -------------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `i64`, found `u64`
-    |                                                |
-    |                                                arguments to this function are incorrect
-    |
-note: associated function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chrono-0.4.44/src/time_delta.rs:137:18
-    |
-137 |     pub const fn days(days: i64) -> TimeDelta {
-    |                  ^^^^
-help: you can convert a `u64` to an `i64` and panic if the converted value doesn't fit
-    |
-100 |             next_assessment_date: Utc::now() + Duration::days(self.get_assessment_frequency(&risk_level).try_into().unwrap()),
-    |                                                                                                         ++++++++++++++++++++
-
-error[E0308]: mismatched types
-   --> src/compliance/vendor_risk.rs:505:32
-    |
-505 |             tokio::time::sleep(Duration::days(7)).await;
-    |             ------------------ ^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |             |
-    |             arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/sleep.rs:123:8
-    |
-123 | pub fn sleep(duration: Duration) -> Sleep {
-    |        ^^^^^
-
-error[E0308]: mismatched types
-   --> src/compliance/vendor_risk.rs:517:32
-    |
-517 |             tokio::time::sleep(Duration::days(14)).await;
-    |             ------------------ ^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |             |
-    |             arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/sleep.rs:123:8
-    |
-123 | pub fn sleep(duration: Duration) -> Sleep {
-    |        ^^^^^
-
-error[E0308]: mismatched types
-   --> src/compliance/vendor_risk.rs:533:50
-    |
-533 |         let mut interval = tokio::time::interval(Duration::hours(4));
-    |                            --------------------- ^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |                            |
-    |                            arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/interval.rs:73:8
-    |
- 73 | pub fn interval(period: Duration) -> Interval {
-    |        ^^^^^^^^
-
-error[E0308]: mismatched types
-   --> src/compliance/vendor_risk.rs:545:50
-    |
-545 |         let mut interval = tokio::time::interval(Duration::hours(24));
-    |                            --------------------- ^^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |                            |
-    |                            arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/interval.rs:73:8
-    |
- 73 | pub fn interval(period: Duration) -> Interval {
-    |        ^^^^^^^^
-
-error[E0308]: mismatched types
-   --> src/compliance/vendor_risk.rs:557:50
-    |
-557 |         let mut interval = tokio::time::interval(Duration::hours(6));
-    |                            --------------------- ^^^^^^^^^^^^^^^^^^ expected `Duration`, found `TimeDelta`
-    |                            |
-    |                            arguments to this function are incorrect
-    |
-note: function defined here
-   --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.50.0/src/time/interval.rs:73:8
-    |
- 73 | pub fn interval(period: Duration) -> Interval {
-    |        ^^^^^^^^
+525 |     async fn start_background_monitoring(&self) -> Result<(), VendorError> {
+    |                                          -----
+    |                                          |
+    |                                          `self` is a reference that is only valid in the method body
+    |                                          let's call the lifetime of this reference `'1`
+526 |         tokio::spawn(self.background_vendor_monitor());
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         |
+    |         `self` escapes the method body here
+    |         argument requires that `'1` must outlive `'static`
 
 error[E0277]: can't compare `VendorRiskLevel` with `VendorRiskLevel`
    --> src/compliance/vendor_risk.rs:878:109
@@ -7590,445 +6976,75 @@ error[E0592]: duplicate definitions with name `get_soc2_stats`
 661 |     async fn get_soc2_stats(&self) -> Result<SOC2Stats, ComplianceError> {
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ duplicate definitions for `get_soc2_stats`
 
-error[E0609]: no field `model_version` on type `&types::AnalyticsIntelligenceEngine`
-   --> src/common/types.rs:312:9
-    |
-312 |     pub model_version: String,
-    |         ^^^^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `engine_id`, `capabilities`, `status`
-
-error[E0560]: struct `types::AnalyticsIntelligenceEngine` has no field named `model_version`
-   --> src/common/types.rs:312:5
-    |
-312 |     pub model_version: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ `types::AnalyticsIntelligenceEngine` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::AnalyticsIntelligenceEngine` has no field named `model_version`
-   --> src/common/types.rs:312:9
-    |
-312 |     pub model_version: String,
-    |         ^^^^^^^^^^^^^ `types::AnalyticsIntelligenceEngine` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::AnalyticsIntelligenceEngine` has no field named `model_version`
-   --> src/common/types.rs:320:13
-    |
-320 |             model_version: "1.0".to_string(),
-    |             ^^^^^^^^^^^^^ `types::AnalyticsIntelligenceEngine` does not have this field
-    |
-    = note: available fields are: `status`
-
 error[E0609]: no field `complexity` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:356:9
+   --> src/common/types.rs:352:9
     |
-356 |     pub complexity: InterfaceComplexity,
+352 |     pub complexity: InterfaceComplexity,
     |         ^^^^^^^^^^ unknown field
     |
     = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
 
 error[E0609]: no field `layout` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:357:9
+   --> src/common/types.rs:353:9
     |
-357 |     pub layout: LayoutType,
+353 |     pub layout: LayoutType,
     |         ^^^^^^ unknown field
     |
     = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
 
 error[E0609]: no field `theme` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:358:9
+   --> src/common/types.rs:354:9
     |
-358 |     pub theme: ThemeType,
+354 |     pub theme: ThemeType,
     |         ^^^^^ unknown field
     |
     = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `complexity`
-   --> src/common/types.rs:356:5
+   --> src/common/types.rs:352:5
     |
-356 |     pub complexity: InterfaceComplexity,
+352 |     pub complexity: InterfaceComplexity,
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: all struct fields are already assigned
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `layout`
-   --> src/common/types.rs:357:5
+   --> src/common/types.rs:353:5
     |
-357 |     pub layout: LayoutType,
+353 |     pub layout: LayoutType,
     |     ^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: all struct fields are already assigned
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `theme`
-   --> src/common/types.rs:358:5
+   --> src/common/types.rs:354:5
     |
-358 |     pub theme: ThemeType,
+354 |     pub theme: ThemeType,
     |     ^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: all struct fields are already assigned
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `complexity`
-   --> src/common/types.rs:356:9
+   --> src/common/types.rs:352:9
     |
-356 |     pub complexity: InterfaceComplexity,
+352 |     pub complexity: InterfaceComplexity,
     |         ^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: all struct fields are already assigned
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `layout`
-   --> src/common/types.rs:357:9
+   --> src/common/types.rs:353:9
     |
-357 |     pub layout: LayoutType,
+353 |     pub layout: LayoutType,
     |         ^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: all struct fields are already assigned
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `theme`
-   --> src/common/types.rs:358:9
+   --> src/common/types.rs:354:9
     |
-358 |     pub theme: ThemeType,
+354 |     pub theme: ThemeType,
     |         ^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0609]: no field `manager_id` on type `&types::SettingsConfigurationManager`
-   --> src/common/types.rs:384:9
-    |
-384 |     pub manager_id: String,
-    |         ^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `config_version`, `settings`, `last_updated`
-
-error[E0609]: no field `configuration_version` on type `&types::SettingsConfigurationManager`
-   --> src/common/types.rs:385:9
-    |
-385 |     pub configuration_version: String,
-    |         ^^^^^^^^^^^^^^^^^^^^^ unknown field
-    |
-help: a field with a similar name exists
-    |
-385 -     pub configuration_version: String,
-385 +     pub config_version: String,
-    |
-
-error[E0560]: struct `types::SettingsConfigurationManager` has no field named `manager_id`
-   --> src/common/types.rs:384:5
-    |
-384 |     pub manager_id: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^ `types::SettingsConfigurationManager` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::SettingsConfigurationManager` has no field named `configuration_version`
-   --> src/common/types.rs:385:5
-    |
-385 |     pub configuration_version: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::SettingsConfigurationManager` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::SettingsConfigurationManager` has no field named `manager_id`
-   --> src/common/types.rs:384:9
-    |
-384 |     pub manager_id: String,
-    |         ^^^^^^^^^^ `types::SettingsConfigurationManager` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::SettingsConfigurationManager` has no field named `configuration_version`
-   --> src/common/types.rs:385:9
-    |
-385 |     pub configuration_version: String,
-    |         ^^^^^^^^^^^^^^^^^^^^^ `types::SettingsConfigurationManager` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::SettingsConfigurationManager` has no field named `manager_id`
-   --> src/common/types.rs:392:13
-    |
-392 |             manager_id: "settings_default".to_string(),
-    |             ^^^^^^^^^^ `types::SettingsConfigurationManager` does not have this field
-    |
-    = note: available fields are: `config_version`, `last_updated`
-
-error[E0560]: struct `types::SettingsConfigurationManager` has no field named `configuration_version`
-   --> src/common/types.rs:393:13
-    |
-393 |             configuration_version: "1.0".to_string(),
-    |             ^^^^^^^^^^^^^^^^^^^^^ unknown field
-    |
-help: a field with a similar name exists
-    |
-393 -             configuration_version: "1.0".to_string(),
-393 +             config_version: "1.0".to_string(),
-    |
-
-error[E0609]: no field `agent_id` on type `&types::AgentType`
-   --> src/common/types.rs:407:9
-    |
-407 |     pub agent_id: String,
-    |         ^^^^^^^^ unknown field
-
-error[E0609]: no field `agent_category` on type `&types::AgentType`
-   --> src/common/types.rs:408:9
-    |
-408 |     pub agent_category: String,
-    |         ^^^^^^^^^^^^^^ unknown field
-
-error[E0609]: no field `capabilities` on type `&types::AgentType`
-   --> src/common/types.rs:409:9
-    |
-409 |     pub capabilities: Vec<String>,
-    |         ^^^^^^^^^^^^ unknown field
-
-error[E0609]: no field `workspace_id` on type `&types::Workspace`
-   --> src/common/types.rs:414:9
-    |
-414 |     pub workspace_id: String,
-    |         ^^^^^^^^^^^^ unknown field
-    |
-help: a field with a similar name exists
-    |
-414 -     pub workspace_id: String,
-414 +     pub workspace_type: String,
-    |
-
-error[E0609]: no field `description` on type `&types::Workspace`
-   --> src/common/types.rs:416:9
-    |
-416 |     pub description: String,
-    |         ^^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `id`, `name`, `workspace_type`, `members`, `created_at`
-
-error[E0609]: no field `components` on type `&types::Workspace`
-   --> src/common/types.rs:417:9
-    |
-417 |     pub components: Vec<String>,
-    |         ^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `id`, `name`, `workspace_type`, `members`, `created_at`
-
-error[E0560]: struct `types::Workspace` has no field named `workspace_id`
-   --> src/common/types.rs:414:5
-    |
-414 |     pub workspace_id: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^ `types::Workspace` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::Workspace` has no field named `description`
-   --> src/common/types.rs:416:5
-    |
-416 |     pub description: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^ `types::Workspace` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::Workspace` has no field named `components`
-   --> src/common/types.rs:417:5
-    |
-417 |     pub components: Vec<String>,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::Workspace` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::Workspace` has no field named `workspace_id`
-   --> src/common/types.rs:414:9
-    |
-414 |     pub workspace_id: String,
-    |         ^^^^^^^^^^^^ `types::Workspace` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::Workspace` has no field named `description`
-   --> src/common/types.rs:416:9
-    |
-416 |     pub description: String,
-    |         ^^^^^^^^^^^ `types::Workspace` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::Workspace` has no field named `components`
-   --> src/common/types.rs:417:9
-    |
-417 |     pub components: Vec<String>,
-    |         ^^^^^^^^^^ `types::Workspace` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0609]: no field `context_id` on type `&types::CollaborationContext`
-   --> src/common/types.rs:422:9
-    |
-422 |     pub context_id: String,
-    |         ^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `workspace_id`, `active_channels`, `shared_documents`, `participant_permissions`
-
-error[E0609]: no field `participants` on type `&types::CollaborationContext`
-   --> src/common/types.rs:423:9
-    |
-423 |     pub participants: Vec<UserId>,
-    |         ^^^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `workspace_id`, `active_channels`, `shared_documents`, `participant_permissions`
-
-error[E0609]: no field `shared_resources` on type `&types::CollaborationContext`
-   --> src/common/types.rs:424:9
-    |
-424 |     pub shared_resources: Vec<String>,
-    |         ^^^^^^^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `workspace_id`, `active_channels`, `shared_documents`, `participant_permissions`
-
-error[E0609]: no field `collaboration_type` on type `&types::CollaborationContext`
-   --> src/common/types.rs:425:9
-    |
-425 |     pub collaboration_type: String,
-    |         ^^^^^^^^^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `workspace_id`, `active_channels`, `shared_documents`, `participant_permissions`
-
-error[E0560]: struct `types::CollaborationContext` has no field named `context_id`
-   --> src/common/types.rs:422:5
-    |
-422 |     pub context_id: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::CollaborationContext` has no field named `participants`
-   --> src/common/types.rs:423:5
-    |
-423 |     pub participants: Vec<UserId>,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::CollaborationContext` has no field named `shared_resources`
-   --> src/common/types.rs:424:5
-    |
-424 |     pub shared_resources: Vec<String>,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::CollaborationContext` has no field named `collaboration_type`
-   --> src/common/types.rs:425:5
-    |
-425 |     pub collaboration_type: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::CollaborationContext` has no field named `context_id`
-   --> src/common/types.rs:422:9
-    |
-422 |     pub context_id: String,
-    |         ^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::CollaborationContext` has no field named `participants`
-   --> src/common/types.rs:423:9
-    |
-423 |     pub participants: Vec<UserId>,
-    |         ^^^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::CollaborationContext` has no field named `shared_resources`
-   --> src/common/types.rs:424:9
-    |
-424 |     pub shared_resources: Vec<String>,
-    |         ^^^^^^^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::CollaborationContext` has no field named `collaboration_type`
-   --> src/common/types.rs:425:9
-    |
-425 |     pub collaboration_type: String,
-    |         ^^^^^^^^^^^^^^^^^^ `types::CollaborationContext` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0609]: no field `adaptation_id` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:430:9
-    |
-430 |     pub adaptation_id: String,
-    |         ^^^^^^^^^^^^^ unknown field
-    |
-help: a field with a similar name exists
-    |
-430 -     pub adaptation_id: String,
-430 +     pub adaptation_type: String,
-    |
-
-error[E0609]: no field `user_preferences` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:431:9
-    |
-431 |     pub user_preferences: UserPreferences,
-    |         ^^^^^^^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
-
-error[E0609]: no field `accessibility_settings` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:432:9
-    |
-432 |     pub accessibility_settings: HashMap<String, String>,
-    |         ^^^^^^^^^^^^^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `adaptation_id`
-   --> src/common/types.rs:430:5
-    |
-430 |     pub adaptation_id: String,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `user_preferences`
-   --> src/common/types.rs:431:5
-    |
-431 |     pub user_preferences: UserPreferences,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `accessibility_settings`
-   --> src/common/types.rs:432:5
-    |
-432 |     pub accessibility_settings: HashMap<String, String>,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `adaptation_id`
-   --> src/common/types.rs:430:9
-    |
-430 |     pub adaptation_id: String,
-    |         ^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `user_preferences`
-   --> src/common/types.rs:431:9
-    |
-431 |     pub user_preferences: UserPreferences,
-    |         ^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `accessibility_settings`
-   --> src/common/types.rs:432:9
-    |
-432 |     pub accessibility_settings: HashMap<String, String>,
-    |         ^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
     = note: all struct fields are already assigned
 
@@ -8208,9 +7224,9 @@ error[E0308]: mismatched types
     = note: expected reference `&types::AnalyticsConfig`
                found reference `&AnalyticsGUIConfig`
 note: associated function defined here
-   --> src/common/types.rs:317:12
+   --> src/common/types.rs:312:12
     |
-317 |     pub fn new(_config: &AnalyticsConfig) -> Self {
+312 |     pub fn new(_config: &AnalyticsConfig) -> Self {
     |            ^^^ -------------------------
 
 error[E0308]: mismatched types
@@ -8224,9 +7240,9 @@ error[E0308]: mismatched types
     = note: expected reference `&SettingsConfig`
                found reference `&SettingsGUIConfig`
 note: associated function defined here
-   --> src/common/types.rs:390:12
+   --> src/common/types.rs:384:12
     |
-390 |     pub fn new(_config: &SettingsConfig) -> Self {
+384 |     pub fn new(_config: &SettingsConfig) -> Self {
     |            ^^^ ------------------------
 
 error[E0599]: no method named `has_risk_access` found for enum `UserRole` in the current scope
@@ -8257,173 +7273,137 @@ error[E0599]: no method named `has_agent_access` found for enum `UserRole` in th
  22 | pub enum UserRole {
     | ----------------- method `has_agent_access` not found for this enum
 
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:72:21
+error[E0560]: struct `ClassificationPattern` has no field named `patterns`
+  --> src/security/data_classification.rs:82:17
    |
-72 |                     Regex::new(r"\b\d{3}-\d{2}-\d{4}\b").unwrap(), // SSN
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:73:21
+82 |                 patterns: vec![], // Empty until regex dependency is available
+   |                 ^^^^^^^^ `ClassificationPattern` does not have this field
    |
-73 |                     Regex::new(r"\b[A-Z]{2}\d{2}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{2}\b").unwrap(), // IBAN
-   |                     ^^^^^ use of undeclared type `Regex`
+   = note: all struct fields are already assigned
 
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:74:21
-   |
-74 |                     Regex::new(r"\b\d{3}[-.\s]?\d{2}[-.\s]?\d{4}\b").unwrap(), // Driver's license
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:83:21
-   |
-83 |                     Regex::new(r"\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b").unwrap(), // Credit card
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:84:21
-   |
-84 |                     Regex::new(r"\b\d{3}-\d{6}\b").unwrap(), // Bank account
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:85:21
-   |
-85 |                     Regex::new(r"\b\d{9,}\b").unwrap(), // Account numbers (9+ digits)
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:94:21
-   |
-94 |                     Regex::new(r"(?i)medical\s+record").unwrap(),
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:95:21
-   |
-95 |                     Regex::new(r"(?i)health\s+information").unwrap(),
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:96:21
-   |
-96 |                     Regex::new(r"(?i)patient\s+data").unwrap(),
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:97:21
-   |
-97 |                     Regex::new(r"(?i)diagnosis").unwrap(),
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-  --> src/security/data_classification.rs:98:21
-   |
-98 |                     Regex::new(r"(?i)treatment").unwrap(),
-   |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:107:21
+error[E0560]: struct `ClassificationPattern` has no field named `patterns`
+   --> src/security/data_classification.rs:100:17
     |
-107 |                     Regex::new(r"(?i)password\s*[:=]\s*\S+").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:108:21
+100 |                 patterns: vec![], // Empty until regex dependency is available
+    |                 ^^^^^^^^ `ClassificationPattern` does not have this field
     |
-108 |                     Regex::new(r"(?i)api[_-]?key\s*[:=]\s*\S+").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
+    = note: all struct fields are already assigned
 
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:109:21
+error[E0560]: struct `ClassificationPattern` has no field named `patterns`
+   --> src/security/data_classification.rs:120:17
     |
-109 |                     Regex::new(r"(?i)secret\s*[:=]\s*\S+").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
+120 |                 patterns: vec![], // Empty until regex dependency is available
+    |                 ^^^^^^^^ `ClassificationPattern` does not have this field
+    |
+    = note: all struct fields are already assigned
 
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:110:21
+error[E0560]: struct `ClassificationPattern` has no field named `patterns`
+   --> src/security/data_classification.rs:140:17
     |
-110 |                     Regex::new(r"(?i)token\s*[:=]\s*\S+").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
+140 |                 patterns: vec![], // Empty until regex dependency is available
+    |                 ^^^^^^^^ `ClassificationPattern` does not have this field
+    |
+    = note: all struct fields are already assigned
 
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:111:21
+error[E0560]: struct `ClassificationPattern` has no field named `patterns`
+   --> src/security/data_classification.rs:160:17
     |
-111 |                     Regex::new(r"(?i)auth\s*[:=]\s*\S+").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
+160 |                 patterns: vec![], // Empty until regex dependency is available
+    |                 ^^^^^^^^ `ClassificationPattern` does not have this field
+    |
+    = note: all struct fields are already assigned
 
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:120:21
+error[E0560]: struct `ClassificationPattern` has no field named `patterns`
+   --> src/security/data_classification.rs:178:17
     |
-120 |                     Regex::new(r"(?i)confidential").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
+178 |                 patterns: vec![], // Empty until regex dependency is available
+    |                 ^^^^^^^^ `ClassificationPattern` does not have this field
+    |
+    = note: all struct fields are already assigned
 
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:121:21
+error[E0609]: no field `patterns` on type `&ClassificationPattern`
+   --> src/security/data_classification.rs:232:39
     |
-121 |                     Regex::new(r"(?i)proprietary").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:122:21
+232 |                 for regex in &pattern.patterns {
+    |                                       ^^^^^^^^ unknown field
     |
-122 |                     Regex::new(r"(?i)trade\s+secret").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:123:21
-    |
-123 |                     Regex::new(r"(?i)internal\s+only").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:124:21
-    |
-124 |                     Regex::new(r"(?i)company\s+confidential").unwrap(),
-    |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:133:21
-    |
-133 |                     Regex::new(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b").unwrap(), // Email
-    |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:134:21
-    |
-134 |                     Regex::new(r"\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b").unwrap(), // Phone
-    |                     ^^^^^ use of undeclared type `Regex`
-
-error[E0433]: failed to resolve: use of undeclared type `Regex`
-   --> src/security/data_classification.rs:135:21
-    |
-135 |                     Regex::new(r"\b\d{5}\s?\d{5}\b").unwrap(), // ZIP code
-    |                     ^^^^^ use of undeclared type `Regex`
+    = note: available fields are: `classification`, `description`
 
 error[E0282]: type annotations needed
-   --> src/security/data_classification.rs:154:20
+   --> src/security/data_classification.rs:233:33
     |
-154 |                 if regex.is_match(content) {
-    |                    ^^^^^ cannot infer type
-
-error[E0282]: type annotations needed
-   --> src/security/data_classification.rs:165:16
-    |
-165 |             if regex.is_match(content) {
-    |                ^^^^^ cannot infer type
-
-error[E0282]: type annotations needed
-   --> src/security/data_classification.rs:189:33
-    |
-189 |                     sanitized = regex.replace_all(&sanitized, "[REDACTED]").to_string();
+233 |                     sanitized = regex.replace_all(&sanitized, "[REDACTED]").to_string();
     |                                 ^^^^^ cannot infer type
 
-error[E0282]: type annotations needed
-   --> src/security/data_classification.rs:208:20
+error[E0609]: no field `custom_patterns` on type `&mut DLPEngine`
+   --> src/security/data_classification.rs:243:14
     |
-208 |                 if regex.is_match(content) {
+243 |         self.custom_patterns.insert(name, pattern);
+    |              ^^^^^^^^^^^^^^^ unknown field
+    |
+    = note: available field is: `classification_patterns`
+
+error[E0609]: no field `patterns` on type `&ClassificationPattern`
+   --> src/security/data_classification.rs:251:35
+    |
+251 |             for regex in &pattern.patterns {
+    |                                   ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `classification`, `description`
+
+error[E0282]: type annotations needed
+   --> src/security/data_classification.rs:252:20
+    |
+252 |                 if regex.is_match(content) {
     |                    ^^^^^ cannot infer type
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:497:13
+    |
+497 |             Regex::new(r"(?i)(union|select|insert|update|delete|drop|create|alter)").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:498:13
+    |
+498 |             Regex::new(r"(?i)(\bor|and|or|not)\s+").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:499:13
+    |
+499 |             Regex::new(r"(?i)(--|;|/\*|\*/)").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:504:13
+    |
+504 |             Regex::new(r"(?i)<script[^>]*>.*?</script>").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:505:13
+    |
+505 |             Regex::new(r"(?i)javascript:").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:506:13
+    |
+506 |             Regex::new(r"(?i)on\w+\s*=").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:511:13
+    |
+511 |             Regex::new(r"(?i)(;|\||&|&&)`").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
+
+error[E0433]: failed to resolve: use of undeclared type `Regex`
+   --> src/security/rasp.rs:512:13
+    |
+512 |             Regex::new(r"(?i)(rm|ls|cat|ps|kill)").unwrap(),
+    |             ^^^^^ use of undeclared type `Regex`
 
 error[E0282]: type annotations needed
    --> src/security/rasp.rs:516:16
@@ -8446,40 +7426,15 @@ note: `nist_csf::RiskConfig` is defined in module `crate::compliance::nist_csf` 
 1002 | pub struct RiskConfig {
      | ^^^^^^^^^^^^^^^^^^^^^
 note: `types::RiskConfig` is defined in module `crate::common::types` of the current crate
-    --> src/common/types.rs:243:1
+    --> src/common/types.rs:237:1
      |
- 243 | pub struct RiskConfig {
+ 237 | pub struct RiskConfig {
      | ^^^^^^^^^^^^^^^^^^^^^
 note: associated function defined here
-    --> src/common/types.rs:296:12
+    --> src/common/types.rs:290:12
      |
- 296 |     pub fn new(_config: &RiskConfig) -> Self {
+ 290 |     pub fn new(_config: &RiskConfig) -> Self {
      |            ^^^ --------------------
-
-error[E0308]: mismatched types
-    --> src/compliance/nist_csf.rs:33:56
-     |
-  33 |             compliance_monitor: ComplianceMonitor::new(&config.monitoring_config),
-     |                                 ---------------------- ^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::MonitoringConfig`, found `nist_csf::MonitoringConfig`
-     |                                 |
-     |                                 arguments to this function are incorrect
-     |
-     = note: `nist_csf::MonitoringConfig` and `types::MonitoringConfig` have similar names, but are actually distinct types
-note: `nist_csf::MonitoringConfig` is defined in module `crate::compliance::nist_csf` of the current crate
-    --> src/compliance/nist_csf.rs:1009:1
-     |
-1009 | pub struct MonitoringConfig {
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-note: `types::MonitoringConfig` is defined in module `crate::common::types` of the current crate
-    --> src/common/types.rs:233:1
-     |
- 233 | pub struct MonitoringConfig {
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-note: associated function defined here
-    --> src/common/types.rs:259:12
-     |
- 259 |     pub fn new(_config: &MonitoringConfig) -> Self {
-     |            ^^^ --------------------------
 
 error[E0609]: no field `request_type` on type `&DataSubjectRequest`
    --> src/compliance/gdpr.rs:628:70
@@ -8504,14 +7459,14 @@ note: `soc2::MonitoringConfig` is defined in module `crate::compliance::soc2` of
 1005 | pub struct MonitoringConfig {
      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 note: `types::MonitoringConfig` is defined in module `crate::common::types` of the current crate
-    --> src/common/types.rs:233:1
+    --> src/common/types.rs:227:1
      |
- 233 | pub struct MonitoringConfig {
+ 227 | pub struct MonitoringConfig {
      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 note: associated function defined here
-    --> src/common/types.rs:259:12
+    --> src/common/types.rs:253:12
      |
- 259 |     pub fn new(_config: &MonitoringConfig) -> Self {
+ 253 |     pub fn new(_config: &MonitoringConfig) -> Self {
      |            ^^^ --------------------------
 
 error[E0599]: no variant or associated item named `Technical` found for enum `SOC2ControlCategory` in the current scope
@@ -8639,7 +7594,7 @@ error[E0277]: the trait bound `tokio::sync::RwLock<Vec<SOC2Assessment>>: serde::
                (T0, T1, T2)
                (T0, T1, T2, T3)
                (T0, T1, T2, T3, T4)
-             and 1373 others
+             and 1366 others
      = note: required for `Arc<tokio::sync::RwLock<Vec<SOC2Assessment>>>` to implement `Serialize`
 note: required by a bound in `gui::_::_serde::ser::SerializeStruct::serialize_field`
     --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.228/src/ser/mod.rs:1917:21
@@ -8671,7 +7626,7 @@ error[E0277]: the trait bound `tokio::sync::RwLock<HashMap<std::string::String, 
                (T0, T1, T2)
                (T0, T1, T2, T3)
                (T0, T1, T2, T3, T4)
-             and 1373 others
+             and 1366 others
      = note: required for `Arc<tokio::sync::RwLock<HashMap<std::string::String, SOC2Report>>>` to implement `Serialize`
 note: required by a bound in `gui::_::_serde::ser::SerializeStruct::serialize_field`
     --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.228/src/ser/mod.rs:1917:21
@@ -8684,75 +7639,75 @@ note: required by a bound in `gui::_::_serde::ser::SerializeStruct::serialize_fi
      = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0308]: mismatched types
-   --> src/compliance/pci_dss.rs:547:27
+   --> src/compliance/pci_dss.rs:549:27
     |
-535 |                 FindingSeverity::Critical => critical.push(finding),
+537 |                 FindingSeverity::Critical => critical.push(finding),
     |                                              --------      ------- this argument has type `&PCIFinding`...
     |                                              |
     |                                              ... which causes `critical` to have type `Vec<&PCIFinding>`
 ...
-547 |                 findings: critical,
+549 |                 findings: critical,
     |                           ^^^^^^^^ expected `Vec<PCIFinding>`, found `Vec<&PCIFinding>`
     |
     = note: expected struct `Vec<PCIFinding>`
                found struct `Vec<&PCIFinding>`
 help: consider using clone here
     |
-535 |                 FindingSeverity::Critical => critical.push(finding.clone()),
+537 |                 FindingSeverity::Critical => critical.push(finding.clone()),
     |                                                                   ++++++++
 
 error[E0308]: mismatched types
-   --> src/compliance/pci_dss.rs:558:27
+   --> src/compliance/pci_dss.rs:560:27
     |
-536 |                 FindingSeverity::High => high.push(finding),
+538 |                 FindingSeverity::High => high.push(finding),
     |                                          ----      ------- this argument has type `&PCIFinding`...
     |                                          |
     |                                          ... which causes `high` to have type `Vec<&PCIFinding>`
 ...
-558 |                 findings: high,
+560 |                 findings: high,
     |                           ^^^^ expected `Vec<PCIFinding>`, found `Vec<&PCIFinding>`
     |
     = note: expected struct `Vec<PCIFinding>`
                found struct `Vec<&PCIFinding>`
 help: consider using clone here
     |
-536 |                 FindingSeverity::High => high.push(finding.clone()),
+538 |                 FindingSeverity::High => high.push(finding.clone()),
     |                                                           ++++++++
 
 error[E0308]: mismatched types
-   --> src/compliance/pci_dss.rs:569:27
+   --> src/compliance/pci_dss.rs:571:27
     |
-537 |                 FindingSeverity::Medium => medium.push(finding),
+539 |                 FindingSeverity::Medium => medium.push(finding),
     |                                            ------      ------- this argument has type `&PCIFinding`...
     |                                            |
     |                                            ... which causes `medium` to have type `Vec<&PCIFinding>`
 ...
-569 |                 findings: medium,
+571 |                 findings: medium,
     |                           ^^^^^^ expected `Vec<PCIFinding>`, found `Vec<&PCIFinding>`
     |
     = note: expected struct `Vec<PCIFinding>`
                found struct `Vec<&PCIFinding>`
 help: consider using clone here
     |
-537 |                 FindingSeverity::Medium => medium.push(finding.clone()),
+539 |                 FindingSeverity::Medium => medium.push(finding.clone()),
     |                                                               ++++++++
 
 error[E0308]: mismatched types
-   --> src/compliance/pci_dss.rs:580:27
+   --> src/compliance/pci_dss.rs:582:27
     |
-538 |                 FindingSeverity::Low => low.push(finding),
+540 |                 FindingSeverity::Low => low.push(finding),
     |                                         ---      ------- this argument has type `&PCIFinding`...
     |                                         |
     |                                         ... which causes `low` to have type `Vec<&PCIFinding>`
 ...
-580 |                 findings: low,
+582 |                 findings: low,
     |                           ^^^ expected `Vec<PCIFinding>`, found `Vec<&PCIFinding>`
     |
     = note: expected struct `Vec<PCIFinding>`
                found struct `Vec<&PCIFinding>`
 help: consider using clone here
     |
-538 |                 FindingSeverity::Low => low.push(finding.clone()),
+540 |                 FindingSeverity::Low => low.push(finding.clone()),
     |                                                         ++++++++
 
 error[E0560]: struct `VendorRiskProfile` has no field named `low_rendors`
@@ -8840,6 +7795,20 @@ warning: unused variable: `user_id`
     |
 687 |     pub async fn get_understanding_score(&self, user_id: &str) -> Result<f64, GUIError> {
     |                                                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_user_id`
+
+warning: variable does not need to be mutable
+   --> src/security/data_classification.rs:191:13
+    |
+191 |         let mut highest_classification = DataClassification::Public;
+    |             ----^^^^^^^^^^^^^^^^^^^^^^
+    |             |
+    |             help: remove this `mut`
+
+warning: unused variable: `content`
+   --> src/security/data_classification.rs:190:33
+    |
+190 |     pub fn classify_data(&self, content: &str) -> DataClassification {
+    |                                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_content`
 
 warning: unused variable: `public_key`
    --> src/security/cryptography.rs:227:45
@@ -9033,6 +8002,18 @@ warning: unused variable: `update`
     |
 933 |     pub async fn log_control_update(&self, control_id: &str, update: &SOC2ControlUpdate) -> Result<(), ComplianceError> {
     |                                                              ^^^^^^ help: if this is intentional, prefix it with an underscore: `_update`
+
+warning: unused variable: `requirement_id`
+   --> src/compliance/pci_dss.rs:953:48
+    |
+953 |     pub async fn log_requirement_update(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
+    |                                                ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_requirement_id`
+
+warning: unused variable: `update`
+   --> src/compliance/pci_dss.rs:953:70
+    |
+953 |     pub async fn log_requirement_update(&self, requirement_id: &str, update: &PCIControlUpdate) -> Result<(), ComplianceError> {
+    |                                                                      ^^^^^^ help: if this is intentional, prefix it with an underscore: `_update`
 
 warning: unused variable: `risk`
    --> src/compliance/risk_management.rs:270:57
@@ -9420,5 +8401,5 @@ warning: unused variable: `status`
 
 Some errors have detailed explanations: E0004, E0061, E0107, E0119, E0255, E0277, E0282, E0308, E0369...
 For more information about an error, try `rustc --explain E0004`.
-warning: `barca-strategos` (lib) generated 188 warnings
-error: could not compile `barca-strategos` (lib) due to 614 previous errors; 188 warnings emitted
+warning: `barca-strategos` (lib) generated 195 warnings
+error: could not compile `barca-strategos` (lib) due to 482 previous errors; 195 warnings emitted

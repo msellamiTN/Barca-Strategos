@@ -3,7 +3,6 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use chrono::{DateTime, Utc};
 use uuid::Uuid;
-use base64;
 
 // User and session management types
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
@@ -117,6 +116,7 @@ pub struct InterfaceAdaptation {
     pub parameters: HashMap<String, String>,
     pub created_at: DateTime<Utc>,
     pub expires_at: Option<DateTime<Utc>>,
+    pub adaptive_features: Vec<AdaptiveFeature>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -126,6 +126,16 @@ pub enum AdaptationType {
     LargeText,
     SimplifiedInterface,
     CustomLayout,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
+pub enum AdaptiveFeature {
+    SimplifiedInterface,
+    CriticalInformationHighlighting,
+    ReducedCognitiveLoad,
+    ProgressiveDisclosure,
+    EnhancedCommunication,
+    SharedWorkspace,
 }
 
 // Agent types (separate from AlertType)
@@ -348,34 +358,6 @@ pub struct AnalyticsData {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct InterfaceAdaptation {
-    pub complexity: InterfaceComplexity,
-    pub layout: LayoutType,
-    pub theme: ThemeType,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum InterfaceComplexity {
-    Simplified,
-    Standard,
-    Advanced,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum LayoutType {
-    Default,
-    Compact,
-    Detailed,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum ThemeType {
-    Light,
-    Dark,
-    Auto,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AnalyticsConfig;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SettingsConfig;
@@ -389,41 +371,4 @@ impl SettingsConfigurationManager {
             last_updated: Utc::now(),
         }
     }
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Workspace {
-    pub id: String,
-    pub name: String,
-    pub workspace_type: WorkspaceType,
-    pub members: Vec<UserId>,
-    pub created_at: DateTime<Utc>,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct CollaborationContext {
-    pub workspace_id: String,
-    pub active_channels: Vec<String>,
-    pub shared_documents: Vec<String>,
-    pub participant_permissions: HashMap<UserId, PermissionLevel>,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct InterfaceAdaptation {
-    pub user_id: UserId,
-    pub adaptation_type: AdaptationType,
-    pub parameters: HashMap<String, String>,
-    pub created_at: DateTime<Utc>,
-    pub expires_at: Option<DateTime<Utc>>,
-}
-
-// Risk and compliance related types
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Risk {
-    pub risk_id: String,
-    pub title: String,
-    pub description: String,
-    pub level: RiskLevel,
-    pub category: String,
-    pub mitigation_status: String,
 }
