@@ -1,7 +1,7 @@
 // use crate::core::*;
 // use crate::security::*;
 // use crate::monitoring::*;
-use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, UpdateType, ComplianceMonitor, RiskAssessmentEngine, MonitoringConfig};
+use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, UpdateType, ComplianceMonitor, RiskAssessmentEngine, MonitoringConfig as CommonMonitoringConfig};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -1003,13 +1003,6 @@ pub struct RiskConfig {
     pub risk_assessment_interval_days: u32,
     pub risk_threshold: f64,
     pub risk_tolerance_level: RiskLevel,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct MonitoringConfig {
-    pub continuous_monitoring: bool,
-    pub alert_threshold: f64,
-    pub metrics_collection_interval_hours: u32,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

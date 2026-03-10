@@ -1,7 +1,7 @@
 // use crate::core::*;
 // use crate::security::*;
 // use crate::monitoring::*;
-use crate::common::{MonitoringConfig};
+use crate::common::{MonitoringConfig as CommonMonitoringConfig};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -484,7 +484,7 @@ pub struct PolicyCategory {
     pub review_period_days: u32,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum PolicyStatus {
     Draft,
     PendingApproval,
@@ -984,13 +984,6 @@ pub struct DistributionConfig {
     pub automatic_distribution: bool,
     pub distribution_channels: Vec<String>,
     pub acknowledgment_required: bool,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct MonitoringConfig {
-    pub policy_monitoring_enabled: bool,
-    pub review_reminder_enabled: bool,
-    pub reminder_advance_days: u32,
 }
 
 // Error types

@@ -183,13 +183,6 @@ pub enum ThreatSeverity {
 }
 
 // GUI component types
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct AnalyticsIntelligenceEngine {
-    pub engine_id: String,
-    pub capabilities: Vec<String>,
-    pub status: EngineStatus,
-}
-
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub enum EngineStatus {
     Active,
@@ -199,6 +192,7 @@ pub enum EngineStatus {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SettingsConfigurationManager {
+    pub manager_id: String,
     pub config_version: String,
     pub settings: HashMap<String, String>,
     pub last_updated: DateTime<Utc>,
@@ -302,8 +296,8 @@ impl RiskAssessmentEngine {
     }
 }
 
-// Cryptography constants
-pub const BASE64: base64::engine::GeneralPurpose = base64::engine::general_purpose::STANDARD;
+// Cryptography constants - commented out until base64 dependency is resolved
+// pub const BASE64: base64::engine::GeneralPurpose = base64::engine::general_purpose::STANDARD;
 
 // Analytics and intelligence types
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -311,6 +305,7 @@ pub struct AnalyticsIntelligenceEngine {
     pub engine_id: String,
     pub model_version: String,
     pub capabilities: Vec<String>,
+    pub status: EngineStatus,
 }
 
 impl AnalyticsIntelligenceEngine {
@@ -319,6 +314,7 @@ impl AnalyticsIntelligenceEngine {
             engine_id: "analytics_default".to_string(),
             model_version: "1.0".to_string(),
             capabilities: vec!["threat_detection".to_string(), "anomaly_detection".to_string()],
+            status: EngineStatus::Active,
         }
     }
     
@@ -380,67 +376,48 @@ pub enum ThemeType {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct SettingsConfigurationManager {
-    pub manager_id: String,
-    pub configuration_version: String,
-    pub settings: HashMap<String, String>,
-}
+pub struct AnalyticsConfig;
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SettingsConfig;
 
 impl SettingsConfigurationManager {
     pub fn new(_config: &SettingsConfig) -> Self {
         Self {
             manager_id: "settings_default".to_string(),
-            configuration_version: "1.0".to_string(),
+            config_version: "1.0".to_string(),
             settings: HashMap::new(),
+            last_updated: Utc::now(),
         }
     }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct AnalyticsConfig;
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct SettingsConfig;
-
-// Additional common types for GUI components
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-pub struct AgentType {
-    pub agent_id: String,
-    pub agent_category: String,
-    pub capabilities: Vec<String>,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Workspace {
-    pub workspace_id: String,
+    pub id: String,
     pub name: String,
-    pub description: String,
-    pub components: Vec<String>,
+    pub workspace_type: WorkspaceType,
+    pub members: Vec<UserId>,
+    pub created_at: DateTime<Utc>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CollaborationContext {
-    pub context_id: String,
-    pub participants: Vec<UserId>,
-    pub shared_resources: Vec<String>,
-    pub collaboration_type: String,
+    pub workspace_id: String,
+    pub active_channels: Vec<String>,
+    pub shared_documents: Vec<String>,
+    pub participant_permissions: HashMap<UserId, PermissionLevel>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct InterfaceAdaptation {
-    pub adaptation_id: String,
-    pub user_preferences: UserPreferences,
-    pub accessibility_settings: HashMap<String, String>,
+    pub user_id: UserId,
+    pub adaptation_type: AdaptationType,
+    pub parameters: HashMap<String, String>,
+    pub created_at: DateTime<Utc>,
+    pub expires_at: Option<DateTime<Utc>>,
 }
 
 // Risk and compliance related types
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
-pub enum RiskLevel {
-    Low,
-    Medium,
-    High,
-    Critical,
-}
-
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Risk {
     pub risk_id: String,

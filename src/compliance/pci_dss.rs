@@ -1,9 +1,11 @@
 // use crate::core::*;
 // use crate::security::*;
 // use crate::monitoring::*;
-use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig};
+use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig, UpdateType};
+use crate::compliance::pci_dss::ComplianceError;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
+use thiserror::Error;
 use std::collections::{HashMap, VecDeque};
 use std::sync::Arc;
 use tokio::sync::RwLock;
@@ -1057,4 +1059,15 @@ pub struct MetricsConfig {
     pub enable_real_time_metrics: bool,
     pub metrics_retention_days: u32,
     pub dashboard_refresh_interval_minutes: u32,
+}
+
+// PCI DSS errors
+#[derive(Debug, thiserror::Error)]
+pub enum ComplianceError {
+    #[error("PCI DSS requirement not found: {0}")]
+    RequirementNotFound(String),
+    #[error("PCI DSS assessment failed: {0}")]
+    AssessmentFailed(String),
+    #[error("PCI DSS policy error: {0}")]
+    PolicyError(String),
 }

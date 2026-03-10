@@ -1,7 +1,7 @@
 // use crate::core::*;
 // use crate::security::*;
 // use crate::monitoring::*;
-use crate::common::{MonitoringConfig};
+use crate::common::{MonitoringConfig as CommonMonitoringConfig};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -97,7 +97,7 @@ impl VendorRiskManagement {
             overall_risk_score,
             risk_level,
             recommendations,
-            next_assessment_date: Utc::now() + Duration::days(self.get_assessment_frequency(&risk_level)),
+            next_assessment_date: Utc::now() + Duration::days(self.get_assessment_frequency(&risk_level) as i64),
         };
         
         // Store assessment
@@ -502,7 +502,7 @@ impl VendorRiskManagement {
         // Schedule initial assessment for new vendor
         let vendor_id = vendor_id.to_string();
         tokio::spawn(async move {
-            tokio::time::sleep(Duration::days(7)).await;
+            tokio::time::sleep(std::time::Duration::from_secs(7 * 24 * 3600)).await;
             // Conduct initial assessment
             println!("Conducting initial assessment for vendor: {}", vendor_id);
         });
@@ -514,7 +514,7 @@ impl VendorRiskManagement {
         // Schedule reassessment due to significant changes
         let vendor_id = vendor_id.to_string();
         tokio::spawn(async move {
-            tokio::time::sleep(Duration::days(14)).await;
+            tokio::time::sleep(std::time::Duration::from_secs(14 * 24 * 3600)).await;
             // Conduct reassessment
             println!("Conducting reassessment for vendor: {}", vendor_id);
         });
@@ -530,7 +530,7 @@ impl VendorRiskManagement {
     }
     
     async fn background_vendor_monitor(&self) {
-        let mut interval = tokio::time::interval(Duration::hours(4));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(4 * 3600));
         
         loop {
             interval.tick().await;
@@ -542,7 +542,7 @@ impl VendorRiskManagement {
     }
     
     async fn background_compliance_monitor(&self) {
-        let mut interval = tokio::time::interval(Duration::hours(24));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(24 * 3600));
         
         loop {
             interval.tick().await;
@@ -554,7 +554,7 @@ impl VendorRiskManagement {
     }
     
     async fn background_assessment_scheduler(&self) {
-        let mut interval = tokio::time::interval(Duration::hours(6));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(6 * 3600));
         
         loop {
             interval.tick().await;
@@ -1158,13 +1158,6 @@ pub struct AssessmentConfig {
     pub assessment_frequency_days: u32,
     pub auto_scheduling: bool,
     pub assessment_template_path: String,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct MonitoringConfig {
-    pub continuous_monitoring: bool,
-    pub real_time_alerts: bool,
-    pub monitoring_interval_hours: u32,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

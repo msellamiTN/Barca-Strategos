@@ -159,7 +159,7 @@ impl RealTimeMonitoringCenter {
     }
 
     async fn metrics_collection_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5));
         
         loop {
             interval.tick().await;
@@ -171,7 +171,7 @@ impl RealTimeMonitoringCenter {
     }
 
     async fn alert_processing_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(10));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(10));
         
         loop {
             interval.tick().await;
@@ -183,7 +183,7 @@ impl RealTimeMonitoringCenter {
     }
 
     async fn visualization_update_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(2));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(2));
         
         loop {
             interval.tick().await;
@@ -201,7 +201,7 @@ impl RealTimeMonitoringCenter {
         // Update real-time data
         {
             let mut real_time_data = self.real_time_data.write().await;
-            real_time_data.update_metrics(metrics);
+            real_time_data.update_metrics(metrics.clone());
         }
 
         // Check for alerts
@@ -233,7 +233,7 @@ impl RealTimeMonitoringCenter {
         let user_monitors = self.user_monitors.read().await;
         
         for (user_id, _monitor) in user_monitors.iter() {
-            self.visualization_engine.update_user_visualization(user_id).await?;
+            self.visualization_engine.update_user_visualization(&user_id.0).await?;
         }
 
         Ok(())
