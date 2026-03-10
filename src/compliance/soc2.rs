@@ -313,7 +313,6 @@ impl SOC2Compliance {
                     "Threat hunting".to_string(),
                     "Network device monitoring".to_string(),
                 ],
-                ],
                 objective: "Detect and respond to network security incidents".to_string(),
                 control_type: SOC2ControlType::Technical,
                 status: SOC2ControlStatus::Implemented,
