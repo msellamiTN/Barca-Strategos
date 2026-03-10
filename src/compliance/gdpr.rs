@@ -1,6 +1,8 @@
 // use crate::core::*;
 // use crate::security::*;
 // use crate::monitoring::*;
+use crate::common::{RiskLevel, ComplianceMonitor};
+use crate::compliance::gdpr_types::{GDPRMetrics, GDPRControlUpdate, GDPRControlStatus, BreachNotificationStats};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};

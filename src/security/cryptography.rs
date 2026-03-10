@@ -1,11 +1,12 @@
 // use crate::core::*;
+use crate::common::BASE64;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::sync::Arc;
 use tokio::sync::RwLock;
 use chrono::{DateTime, Utc, Duration};
-// use ring::{rand, signature, digest};
+use ring::{rand, signature, digest};
 // use data_encoding::BASE64;
 // use x509_parser::prelude::*;
 

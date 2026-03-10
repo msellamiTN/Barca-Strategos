@@ -2,6 +2,7 @@
 use crate::gui::*;
 use crate::compliance::*;
 use crate::monitoring::alerting::AlertSeverity;
+use crate::common::{UserId, User, InterfaceAdaptation};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};

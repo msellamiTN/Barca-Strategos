@@ -18,6 +18,7 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use tokio::sync::RwLock;
 use uuid::Uuid;
+use crate::common::{UserId, User, UserPreferences, Workspace, CollaborationContext, AnalyticsIntelligenceEngine, SettingsConfigurationManager, AnalyticsInsights, InterfaceAdaptation};
 
 /// Main GUI System for Barca-Strategos Phoenix
 /// Integrates all system features with optimized intuitive interfaces

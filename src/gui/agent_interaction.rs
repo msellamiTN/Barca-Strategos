@@ -1,5 +1,6 @@
 // use crate::core::*;
 use crate::gui::*;
+use crate::common::{UserId, User, InterfaceAdaptation, AgentType};
 // use crate::ai::*;
 // use crate::runtime::*;
 use async_trait::async_trait;

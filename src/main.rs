@@ -1,3 +1,9 @@
+mod common;
+mod gui;
+mod compliance;
+mod security;
+mod monitoring;
+
 use axum::{
     extract::ws::{Message, WebSocket, WebSocketUpgrade},
     response::Response,

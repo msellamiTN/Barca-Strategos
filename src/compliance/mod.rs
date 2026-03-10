@@ -1,6 +1,7 @@
 pub mod iso27001;
 pub mod nist_csf;
 pub mod gdpr;
+pub mod gdpr_types;
 pub mod soc2;
 pub mod pci_dss;
 pub mod risk_management;
@@ -10,6 +11,7 @@ pub mod vendor_risk;
 pub use iso27001::*;
 pub use nist_csf::*;
 pub use gdpr::*;
+pub use gdpr_types::*;
 pub use soc2::*;
 pub use pci_dss::*;
 pub use risk_management::*;

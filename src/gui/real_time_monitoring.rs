@@ -1,6 +1,7 @@
 // use crate::core::*;
 use crate::gui::*;
 use crate::monitoring::*;
+use crate::common::{UserId, User, InterfaceAdaptation};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -65,7 +66,7 @@ impl RealTimeMonitoringCenter {
             security_metrics: real_time_data.get_security_metrics().clone(),
             performance_metrics: real_time_data.get_performance_metrics().clone(),
             compliance_metrics: real_time_data.get_compliance_metrics().clone(),
-            user_specific_metrics,
+            user_specific_metrics: HashMap::new(),
             active_alerts: alerts,
             cognitive_load: monitor.cognitive_load.clone(),
             visualization_data: self.visualization_engine.get_user_visualization(user_id).await?,

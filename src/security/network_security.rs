@@ -1,4 +1,5 @@
 // use crate::core::*;
+use crate::common::ThreatSeverity;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};

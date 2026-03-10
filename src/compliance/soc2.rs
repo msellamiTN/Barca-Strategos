@@ -1,6 +1,7 @@
 // use crate::core::*;
 // use crate::security::*;
 // use crate::monitoring::*;
+use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, UpdateType, ComplianceMonitor, MonitoringConfig};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -892,7 +893,7 @@ impl SOC2Framework {
         Ok(())
     }
     
-    fn is_control_in_scope(&self, control: &SOC2Scope) -> bool {
+    fn is_control_in_scope(&self, control: &SOC2Control, scope: &SOC2Scope) -> bool {
         scope.departments.iter().any(|dept| control.owner.contains(dept)) ||
         scope.systems.iter().any(|sys| control.title.contains(sys)) ||
         scope.processes.iter().any(|proc| control.title.contains(proc))
