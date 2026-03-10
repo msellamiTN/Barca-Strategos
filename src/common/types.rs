@@ -247,3 +247,68 @@ pub struct RiskAssessmentEngine {
 
 // Cryptography constants
 pub const BASE64: base64::engine::GeneralPurpose = base64::engine::general_purpose::STANDARD;
+
+// Analytics and intelligence types
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AnalyticsIntelligenceEngine {
+    pub engine_id: String,
+    pub model_version: String,
+    pub capabilities: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SettingsConfigurationManager {
+    pub manager_id: String,
+    pub configuration_version: String,
+    pub settings: HashMap<String, String>,
+}
+
+// Additional common types for GUI components
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct AgentType {
+    pub agent_id: String,
+    pub agent_category: String,
+    pub capabilities: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Workspace {
+    pub workspace_id: String,
+    pub name: String,
+    pub description: String,
+    pub components: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CollaborationContext {
+    pub context_id: String,
+    pub participants: Vec<UserId>,
+    pub shared_resources: Vec<String>,
+    pub collaboration_type: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct InterfaceAdaptation {
+    pub adaptation_id: String,
+    pub user_preferences: UserPreferences,
+    pub accessibility_settings: HashMap<String, String>,
+}
+
+// Risk and compliance related types
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub enum RiskLevel {
+    Low,
+    Medium,
+    High,
+    Critical,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Risk {
+    pub risk_id: String,
+    pub title: String,
+    pub description: String,
+    pub level: RiskLevel,
+    pub category: String,
+    pub mitigation_status: String,
+}

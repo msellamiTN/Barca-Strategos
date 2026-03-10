@@ -601,7 +601,7 @@ pub struct ComplianceUpdate {
     pub timestamp: DateTime<Utc>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
 pub enum ComplianceFramework {
     ISO27001,
     NISTCSF,

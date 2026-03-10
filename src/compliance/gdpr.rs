@@ -392,13 +392,13 @@ impl GDPRCompliance {
         let mut findings = Vec::new();
         
         for assessment in assessments {
-            findings.extend(assessment.findings);
+            findings.extend(assessment.findings.clone());
         }
         
         findings
     }
     
-    fn generate_gpr_recommendations(&self, findings: &[GDPRFinding]) -> Vec<String> {
+    fn generate_gpr_recommendations(&self, findings: &[GDPRFinding]) -> Vec<GDPRRecommendation> {
         let mut recommendations = Vec::new();
         
         // Group findings by severity
@@ -409,10 +409,10 @@ impl GDPRCompliance {
         
         for finding in findings {
             match finding.severity {
-                FindingSeverity::Critical => critical_priority.push(finding),
-                FindingSeverity::High => high_priority.push(finding),
-                FindingSeverity::Medium => medium_priority.push(finding),
-                FindingSeverity::Low => low_priority.push(finding),
+                FindingSeverity::Critical => critical_priority.push(finding.clone()),
+                FindingSeverity::High => high_priority.push(finding.clone()),
+                FindingSeverity::Medium => medium_priority.push(finding.clone()),
+                FindingSeverity::Low => low_priority.push(finding.clone()),
             }
         }
         
@@ -698,14 +698,6 @@ pub enum GDPRControlType {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum GDPRControlStatus {
-    NotImplemented,
-    PartiallyImplemented,
-    Implemented,
-    Compliant,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct GDPRControlAssessment {
     pub control_id: String,
     pub control_title: String,
@@ -777,6 +769,15 @@ pub struct DataSubjectRequest {
     sensitive_data: bool,
 }
 
+impl DataSubjectRequest {
+    pub fn contains_sensitive_data(&self) -> bool {
+        // Check if request contains sensitive data
+        let sensitive_keywords = vec!["password", "credit card", "social security number", "health record"];
+        let request_text = format!("{} {}", self.purpose, self.processing_purpose);
+        sensitive_keywords.iter().any(|keyword| request_text.to_lowercase().contains(&keyword.to_lowercase()))
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DataSubjectResponse {
     pub request_id: String,
@@ -825,7 +826,7 @@ pub struct GDPRReport {
     pub next_steps: Vec<String>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GDPRStats {
     pub total_controls: usize,
     pub compliant_controls: usize,
@@ -1000,7 +1001,7 @@ impl BreachNotification {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone)]
 pub struct GDPRDatabase {
     assessments: Arc<RwLock<Vec<GDPRAssessment>>>,
     metrics: Arc<RwLock<GDPRStats>>,

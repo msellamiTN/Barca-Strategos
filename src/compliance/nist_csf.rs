@@ -477,7 +477,7 @@ impl NISTCSF {
         let mut findings = Vec::new();
         
         for assessment in assessments {
-            findings.extend(assessment.findings);
+            findings.extend(assessment.findings.clone());
         }
         
         findings
@@ -494,10 +494,10 @@ impl NISTCSF {
         
         for finding in findings {
             match finding.severity {
-                FindingSeverity::Critical => critical_priority.push(finding),
-                FindingSeverity::High => high_priority.push(finding),
-                FindingSeverity::Medium => medium_priority.push(finding),
-                FindingSeverity::Low => low_priority.push(finding),
+                FindingSeverity::Critical => critical_priority.push(finding.clone()),
+                FindingSeverity::High => high_priority.push(finding.clone()),
+                FindingSeverity::Medium => medium_priority.push(finding.clone()),
+                FindingSeverity::Low => low_priority.push(finding.clone()),
             }
         }
         
@@ -683,6 +683,14 @@ pub enum CSFFunctionCategory {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum CSFFunctionStatus {
+    NotImplemented,
+    PartiallyImplemented,
+    Implemented,
+    Compliant,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub enum CSFControlStatus {
     NotImplemented,
     PartiallyImplemented,
     Implemented,
@@ -886,7 +894,7 @@ impl MetricsCollector {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone)]
 pub struct CSFDatabase {
     assessments: Arc<RwLock<Vec<CSFAssessment>>>,
     metrics: Arc<RwLock<CSFMetrics>>,

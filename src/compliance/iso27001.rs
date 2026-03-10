@@ -421,7 +421,7 @@ impl ISO27001Compliance {
         let mut findings = Vec::new();
         
         for assessment in assessments {
-            findings.extend(assessment.findings);
+            findings.extend(assessment.findings.clone());
         }
         
         findings
@@ -437,10 +437,10 @@ impl ISO27001Compliance {
         
         for finding in findings {
             match finding.severity {
-                FindingSeverity::Critical => high_priority.push(finding),
-                FindingSeverity::High => high_priority.push(finding),
-                FindingSeverity::Medium => medium_priority.push(finding),
-                FindingSeverity::Low => low_priority.push(finding),
+                FindingSeverity::Critical => high_priority.push(finding.clone()),
+                FindingSeverity::High => high_priority.push(finding.clone()),
+                FindingSeverity::Medium => medium_priority.push(finding.clone()),
+                FindingSeverity::Low => low_priority.push(finding.clone()),
             }
         }
         

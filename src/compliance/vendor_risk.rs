@@ -706,7 +706,7 @@ pub struct RiskFactor {
     pub mitigation_required: bool,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub enum RiskFactorSeverity {
     Low,
     Medium,
@@ -813,7 +813,7 @@ pub struct VendorRiskProfile {
     pub critical_vendors: usize,
     pub high_risk_vendors: usize,
     pub medium_risk_vendors: usize,
-    pub low_rendors: usize,
+    pub low_risk_vendors: usize,
     pub minimal_risk_vendors: usize,
     pub risk_distribution: HashMap<String, usize>,
 }
