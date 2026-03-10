@@ -1,792 +1,4 @@
-    Updating crates.io index
-     Locking 431 packages to latest compatible versions
-      Adding adler2 v2.0.1
-      Adding ahash v0.8.12
-      Adding aho-corasick v1.1.4
-      Adding allocator-api2 v0.2.21
-      Adding android_system_properties v0.1.5
-      Adding anstyle v1.0.13
-      Adding anyhow v1.0.102
-      Adding aquamarine v0.1.12
-      Adding argon2 v0.5.3
-      Adding arraydeque v0.5.1
-      Adding async-trait v0.1.89
-      Adding atoi v2.0.0
-      Adding atomic-waker v1.1.2
-      Adding autocfg v1.5.0
-      Adding axum v0.7.9 (available: v0.8.8)
-      Adding axum-core v0.4.5
-      Adding base64 v0.21.7
-      Adding base64 v0.22.1
-      Adding base64ct v1.8.3
-      Adding bincode v1.3.3 (available: v3.0.0)
-      Adding bit-set v0.5.3
-      Adding bit-vec v0.6.3
-      Adding bitflags v1.3.2
-      Adding bitflags v2.11.0
-      Adding blake2 v0.10.6
-      Adding block-buffer v0.10.4
-      Adding bstr v1.12.1
-      Adding bumpalo v3.20.2
-      Adding byteorder v1.5.0
-      Adding bytes v1.11.1
-      Adding cc v1.2.56
-      Adding cfg-if v1.0.4
-      Adding chrono v0.4.44
-      Adding combine v4.6.7
-      Adding config v0.14.1 (available: v0.15.19)
-      Adding const-oid v0.9.6
-      Adding const-random v0.1.18
-      Adding const-random-macro v0.1.16
-      Adding convert_case v0.4.0
-      Adding convert_case v0.6.0
-      Adding core-foundation v0.9.4
-      Adding core-foundation v0.10.1
-      Adding core-foundation-sys v0.8.7
-      Adding cpufeatures v0.2.17
-      Adding crc v3.4.0
-      Adding crc-catalog v2.4.0
-      Adding crc32fast v1.5.0
-      Adding crossbeam-channel v0.5.15
-      Adding crossbeam-queue v0.3.12
-      Adding crossbeam-utils v0.8.21
-      Adding crunchy v0.2.4
-      Adding crypto-common v0.1.7
-      Adding darling v0.13.4
-      Adding darling_core v0.13.4
-      Adding darling_macro v0.13.4
-      Adding data-encoding v2.10.0
-      Adding der v0.7.10
-      Adding deranged v0.5.8
-      Adding derive_more v0.99.20
-      Adding digest v0.10.7
-      Adding displaydoc v0.2.5
-      Adding dlv-list v0.5.2
-      Adding dotenvy v0.15.7
-      Adding downcast v0.11.0
-      Adding dptree v0.3.0
-      Adding either v1.15.0
-      Adding encoding_rs v0.8.35
-      Adding equivalent v1.0.2
-      Adding erasable v1.3.0
-      Adding errno v0.3.14
-      Adding etcetera v0.8.0
-      Adding event-listener v2.5.3
-      Adding fancy-regex v0.12.0
-      Adding fastrand v2.3.0
-      Adding filetime v0.2.27
-      Adding find-msvc-tools v0.1.9
-      Adding flate2 v1.1.9
-      Adding flume v0.11.1
-      Adding fnv v1.0.7
-      Adding foldhash v0.1.5
-      Adding foreign-types v0.3.2
-      Adding foreign-types-shared v0.1.1
-      Adding form_urlencoded v1.2.2
-      Adding fragile v2.0.1
-      Adding fsevent-sys v4.1.0
-      Adding futures v0.3.32
-      Adding futures-channel v0.3.32
-      Adding futures-core v0.3.32
-      Adding futures-executor v0.3.32
-      Adding futures-intrusive v0.5.0
-      Adding futures-io v0.3.32
-      Adding futures-macro v0.3.32
-      Adding futures-sink v0.3.32
-      Adding futures-task v0.3.32
-      Adding futures-util v0.3.32
-      Adding generic-array v0.14.7 (available: v0.14.9)
-      Adding getrandom v0.2.17
-      Adding getrandom v0.3.4
-      Adding getrandom v0.4.2
-      Adding h2 v0.3.27
-      Adding hashbrown v0.14.5
-      Adding hashbrown v0.15.5
-      Adding hashbrown v0.16.1
-      Adding hashlink v0.8.4
-      Adding heck v0.4.1
-      Adding heck v0.5.0
-      Adding hex v0.4.3
-      Adding hkdf v0.12.4
-      Adding hmac v0.12.1
-      Adding home v0.5.12
-      Adding http v0.2.12
-      Adding http v1.4.0
-      Adding http-body v0.4.6
-      Adding http-body v1.0.1
-      Adding http-body-util v0.1.3
-      Adding httparse v1.10.1
-      Adding httpdate v1.0.3
-      Adding hyper v0.14.32
-      Adding hyper v1.8.1
-      Adding hyper-rustls v0.24.2
-      Adding hyper-util v0.1.20
-      Adding iana-time-zone v0.1.65
-      Adding iana-time-zone-haiku v0.1.2
-      Adding icu_collections v2.1.1
-      Adding icu_locale_core v2.1.1
-      Adding icu_normalizer v2.1.1
-      Adding icu_normalizer_data v2.1.1
-      Adding icu_properties v2.1.2
-      Adding icu_properties_data v2.1.2
-      Adding icu_provider v2.1.1
-      Adding id-arena v2.3.0
-      Adding ident_case v1.0.1
-      Adding idna v1.1.0
-      Adding idna_adapter v1.2.1
-      Adding indexmap v2.13.0
-      Adding inotify v0.9.6
-      Adding inotify-sys v0.1.5
-      Adding ipnet v2.12.0
-      Adding itertools v0.9.0
-      Adding itoa v1.0.17
-      Adding js-sys v0.3.91
-      Adding json5 v0.4.1
-      Adding jsonwebtoken v9.3.1 (available: v10.3.0)
-      Adding kqueue v1.1.1
-      Adding kqueue-sys v1.0.4
-      Adding lazy_static v1.5.0
-      Adding leb128fmt v0.1.0
-      Adding libc v0.2.183
-      Adding libm v0.2.16
-      Adding libredox v0.1.14
-      Adding libsqlite3-sys v0.27.0
-      Adding linux-raw-sys v0.12.1
-      Adding litemap v0.8.1
-      Adding lock_api v0.4.14
-      Adding log v0.4.29
-      Adding matchers v0.2.0
-      Adding matchit v0.7.3
-      Adding md-5 v0.10.6
-      Adding memchr v2.8.0
-      Adding mime v0.3.17
-      Adding mime_guess v2.0.5
-      Adding minimal-lexical v0.2.1
-      Adding miniz_oxide v0.8.9
-      Adding minreq v2.14.1
-      Adding mio v0.8.11
-      Adding mio v1.1.1
-      Adding mockall v0.12.1 (available: v0.14.0)
-      Adding mockall_derive v0.12.1
-      Adding native-tls v0.2.18
-      Adding never v0.1.0
-      Adding nom v7.1.3
-      Adding notify v6.1.1 (available: v8.2.0)
-      Adding nu-ansi-term v0.50.3
-      Adding num-bigint v0.4.6
-      Adding num-bigint-dig v0.8.6
-      Adding num-conv v0.2.0
-      Adding num-integer v0.1.46
-      Adding num-iter v0.1.45
-      Adding num-traits v0.2.19
-      Adding once_cell v1.21.3
-      Adding openai-api-rs v4.1.1 (available: v9.0.1)
-      Adding openssl v0.10.75
-      Adding openssl-macros v0.1.1
-      Adding openssl-probe v0.1.6
-      Adding openssl-probe v0.2.1
-      Adding openssl-sys v0.9.111
-      Adding ordered-multimap v0.7.3
-      Adding parking_lot v0.12.5
-      Adding parking_lot_core v0.9.12
-      Adding password-hash v0.5.0
-      Adding paste v1.0.15
-      Adding pathdiff v0.2.3
-      Adding pem v3.0.6
-      Adding pem-rfc7468 v0.7.0
-      Adding percent-encoding v2.3.2
-      Adding pest v2.8.6
-      Adding pest_derive v2.8.6
-      Adding pest_generator v2.8.6
-      Adding pest_meta v2.8.6
-      Adding pin-project v1.1.11
-      Adding pin-project-internal v1.1.11
-      Adding pin-project-lite v0.2.17
-      Adding pin-utils v0.1.0
-      Adding pkcs1 v0.7.5
-      Adding pkcs8 v0.10.2
-      Adding pkg-config v0.3.32
-      Adding plain v0.2.3
-      Adding potential_utf v0.1.4
-      Adding powerfmt v0.2.0
-      Adding ppv-lite86 v0.2.21
-      Adding predicates v3.1.4
-      Adding predicates-core v1.0.10
-      Adding predicates-tree v1.0.13
-      Adding prettyplease v0.2.37
-      Adding proc-macro-error v1.0.4
-      Adding proc-macro-error-attr v1.0.4
-      Adding proc-macro2 v1.0.106
-      Adding quote v1.0.45
-      Adding r-efi v5.3.0
-      Adding r-efi v6.0.0
-      Adding rand v0.8.5
-      Adding rand_chacha v0.3.1
-      Adding rand_core v0.6.4
-      Adding rc-box v1.3.0
-      Adding redis v0.24.0 (available: v1.0.5)
-      Adding redox_syscall v0.5.18
-      Adding redox_syscall v0.7.3
-      Adding regex v1.12.3
-      Adding regex-automata v0.4.14
-      Adding regex-syntax v0.8.10
-      Adding reqwest v0.11.27 (available: v0.13.2)
-      Adding ring v0.17.14
-      Adding ron v0.8.1
-      Adding rsa v0.9.10
-      Adding rust-ini v0.20.0
-      Adding rustc-hash v1.1.0
-      Adding rustc_version v0.4.1
-      Adding rustix v1.1.4
-      Adding rustls v0.21.12
-      Adding rustls v0.22.4
-      Adding rustls-native-certs v0.7.3
-      Adding rustls-pemfile v1.0.4
-      Adding rustls-pemfile v2.2.0
-      Adding rustls-pki-types v1.14.0
-      Adding rustls-webpki v0.101.7
-      Adding rustls-webpki v0.102.8
-      Adding rustversion v1.0.22
-      Adding ryu v1.0.23
-      Adding same-file v1.0.6
-      Adding schannel v0.1.29
-      Adding scopeguard v1.2.0
-      Adding sct v0.7.1
-      Adding security-framework v2.11.1
-      Adding security-framework v3.7.0
-      Adding security-framework-sys v2.17.0
-      Adding semver v1.0.27
-      Adding serde v1.0.228
-      Adding serde_core v1.0.228
-      Adding serde_derive v1.0.228
-      Adding serde_json v1.0.149
-      Adding serde_path_to_error v0.1.20
-      Adding serde_spanned v0.6.9
-      Adding serde_urlencoded v0.7.1
-      Adding serde_with_macros v1.5.2
-      Adding sha1 v0.10.6
-      Adding sha1_smol v1.0.1
-      Adding sha2 v0.10.9
-      Adding sharded-slab v0.1.7
-      Adding shlex v1.3.0
-      Adding signal-hook-registry v1.4.8
-      Adding signature v2.2.0
-      Adding simd-adler32 v0.3.8
-      Adding simple_asn1 v0.6.4
-      Adding slab v0.4.12
-      Adding slack-messaging v0.2.2 (available: v0.7.2)
-      Adding smallvec v1.15.1
-      Adding socket2 v0.4.10
-      Adding socket2 v0.5.10
-      Adding socket2 v0.6.3
-      Adding spin v0.9.8
-      Adding spki v0.7.3
-      Adding sqlformat v0.2.6
-      Adding sqlx v0.7.4 (available: v0.8.6)
-      Adding sqlx-core v0.7.4
-      Adding sqlx-macros v0.7.4
-      Adding sqlx-macros-core v0.7.4
-      Adding sqlx-mysql v0.7.4
-      Adding sqlx-postgres v0.7.4
-      Adding sqlx-sqlite v0.7.4
-      Adding stable_deref_trait v1.2.1
-      Adding stringprep v0.1.5
-      Adding strsim v0.10.0
-      Adding subtle v2.6.1
-      Adding syn v1.0.109
-      Adding syn v2.0.117
-      Adding sync_wrapper v0.1.2
-      Adding sync_wrapper v1.0.2
-      Adding synstructure v0.13.2
-      Adding system-configuration v0.5.1
-      Adding system-configuration-sys v0.5.0
-      Adding take_mut v0.2.2
-      Adding takecell v0.1.1
-      Adding teloxide v0.12.2 (available: v0.17.0)
-      Adding teloxide-core v0.9.1
-      Adding teloxide-macros v0.7.1
-      Adding tempfile v3.26.0
-      Adding termtree v0.5.1
-      Adding thiserror v1.0.69 (available: v2.0.18)
-      Adding thiserror v2.0.18
-      Adding thiserror-impl v1.0.69
-      Adding thiserror-impl v2.0.18
-      Adding thread_local v1.1.9
-      Adding tiktoken-rs v0.5.9 (available: v0.9.1)
-      Adding time v0.3.47
-      Adding time-core v0.1.8
-      Adding time-macros v0.2.27
-      Adding tiny-keccak v2.0.2
-      Adding tinystr v0.8.2
-      Adding tinyvec v1.10.0
-      Adding tinyvec_macros v0.1.1
-      Adding tokio v1.50.0
-      Adding tokio-macros v2.6.1
-      Adding tokio-rustls v0.24.1
-      Adding tokio-rustls v0.25.0
-      Adding tokio-stream v0.1.18
-      Adding tokio-tungstenite v0.21.0 (available: v0.28.0)
-      Adding tokio-util v0.7.18
-      Adding toml v0.8.23
-      Adding toml_datetime v0.6.11
-      Adding toml_edit v0.22.27
-      Adding toml_write v0.1.2
-      Adding tower v0.4.13 (available: v0.5.3)
-      Adding tower v0.5.3
-      Adding tower-http v0.5.2 (available: v0.6.8)
-      Adding tower-layer v0.3.3
-      Adding tower-service v0.3.3
-      Adding tracing v0.1.44
-      Adding tracing-attributes v0.1.31
-      Adding tracing-core v0.1.36
-      Adding tracing-log v0.2.0
-      Adding tracing-subscriber v0.3.22
-      Adding try-lock v0.2.5
-      Adding tungstenite v0.21.0
-      Adding typenum v1.19.0
-      Adding ucd-trie v0.1.7
-      Adding unicase v2.9.0
-      Adding unicode-bidi v0.3.18
-      Adding unicode-ident v1.0.24
-      Adding unicode-normalization v0.1.25
-      Adding unicode-properties v0.1.4
-      Adding unicode-segmentation v1.12.0
-      Adding unicode-xid v0.2.6
-      Adding unicode_categories v0.1.1
-      Adding untrusted v0.9.0
-      Adding url v2.5.8
-      Adding urlencoding v2.1.3
-      Adding utf-8 v0.7.6
-      Adding utf8_iter v1.0.4
-      Adding uuid v1.22.0
-      Adding valuable v0.1.1
-      Adding vcpkg v0.2.15
-      Adding version_check v0.9.5
-      Adding walkdir v2.5.0
-      Adding want v0.3.1
-      Adding wasi v0.11.1+wasi-snapshot-preview1
-      Adding wasip2 v1.0.2+wasi-0.2.9
-      Adding wasip3 v0.4.0+wasi-0.3.0-rc-2026-01-06
-      Adding wasite v0.1.0
-      Adding wasm-bindgen v0.2.114
-      Adding wasm-bindgen-futures v0.4.64
-      Adding wasm-bindgen-macro v0.2.114
-      Adding wasm-bindgen-macro-support v0.2.114
-      Adding wasm-bindgen-shared v0.2.114
-      Adding wasm-encoder v0.244.0
-      Adding wasm-metadata v0.244.0
-      Adding wasm-streams v0.4.2
-      Adding wasmparser v0.244.0
-      Adding web-sys v0.3.91
-      Adding webpki-roots v0.25.4
-      Adding whoami v1.6.1
-      Adding winapi v0.3.9
-      Adding winapi-i686-pc-windows-gnu v0.4.0
-      Adding winapi-util v0.1.11
-      Adding winapi-x86_64-pc-windows-gnu v0.4.0
-      Adding windows-core v0.62.2
-      Adding windows-implement v0.60.2
-      Adding windows-interface v0.59.3
-      Adding windows-link v0.2.1
-      Adding windows-result v0.4.1
-      Adding windows-strings v0.5.1
-      Adding windows-sys v0.48.0
-      Adding windows-sys v0.52.0
-      Adding windows-sys v0.61.2
-      Adding windows-targets v0.48.5
-      Adding windows-targets v0.52.6
-      Adding windows_aarch64_gnullvm v0.48.5
-      Adding windows_aarch64_gnullvm v0.52.6
-      Adding windows_aarch64_msvc v0.48.5
-      Adding windows_aarch64_msvc v0.52.6
-      Adding windows_i686_gnu v0.48.5
-      Adding windows_i686_gnu v0.52.6
-      Adding windows_i686_gnullvm v0.52.6
-      Adding windows_i686_msvc v0.48.5
-      Adding windows_i686_msvc v0.52.6
-      Adding windows_x86_64_gnu v0.48.5
-      Adding windows_x86_64_gnu v0.52.6
-      Adding windows_x86_64_gnullvm v0.48.5
-      Adding windows_x86_64_gnullvm v0.52.6
-      Adding windows_x86_64_msvc v0.48.5
-      Adding windows_x86_64_msvc v0.52.6
-      Adding winnow v0.7.15
-      Adding winreg v0.50.0
-      Adding wit-bindgen v0.51.0
-      Adding wit-bindgen-core v0.51.0
-      Adding wit-bindgen-rust v0.51.0
-      Adding wit-bindgen-rust-macro v0.51.0
-      Adding wit-component v0.244.0
-      Adding wit-parser v0.244.0
-      Adding writeable v0.6.2
-      Adding yaml-rust2 v0.8.1
-      Adding yoke v0.8.1
-      Adding yoke-derive v0.8.1
-      Adding zerocopy v0.8.42
-      Adding zerocopy-derive v0.8.42
-      Adding zerofrom v0.1.6
-      Adding zerofrom-derive v0.1.6
-      Adding zeroize v1.8.2
-      Adding zerotrie v0.2.3
-      Adding zerovec v0.11.5
-      Adding zerovec-derive v0.11.2
-      Adding zmij v1.0.21
-   Compiling proc-macro2 v1.0.106
-   Compiling quote v1.0.45
-   Compiling unicode-ident v1.0.24
-   Compiling libc v0.2.183
-    Checking cfg-if v1.0.4
-   Compiling version_check v0.9.5
-   Compiling serde_core v1.0.228
-   Compiling shlex v1.3.0
-   Compiling find-msvc-tools v0.1.9
-   Compiling syn v2.0.117
-    Checking memchr v2.8.0
-   Compiling serde v1.0.228
-   Compiling cc v1.2.56
-   Compiling parking_lot_core v0.9.12
-    Checking pin-project-lite v0.2.17
-    Checking itoa v1.0.17
-    Checking smallvec v1.15.1
-   Compiling typenum v1.19.0
-   Compiling generic-array v0.14.7
-    Checking bytes v1.11.1
-   Compiling zerocopy v0.8.42
-    Checking futures-core v0.3.32
-    Checking log v0.4.29
-   Compiling autocfg v1.5.0
-    Checking scopeguard v1.2.0
-    Checking getrandom v0.2.17
-    Checking once_cell v1.21.3
-    Checking lock_api v0.4.14
-   Compiling synstructure v0.13.2
-   Compiling icu_properties_data v2.1.2
-   Compiling icu_normalizer_data v2.1.1
-    Checking parking_lot v0.12.5
-    Checking futures-sink v0.3.32
-    Checking errno v0.3.14
-   Compiling ring v0.17.14
-    Checking stable_deref_trait v1.2.1
-    Checking signal-hook-registry v1.4.8
-    Checking socket2 v0.6.3
-    Checking mio v1.1.1
-    Checking futures-channel v0.3.32
-   Compiling zmij v1.0.21
-    Checking untrusted v0.9.0
-   Compiling getrandom v0.3.4
-   Compiling ahash v0.8.12
-    Checking slab v0.4.12
-    Checking futures-task v0.3.32
-   Compiling serde_json v1.0.149
-    Checking futures-io v0.3.32
-    Checking tracing-core v0.1.36
-    Checking litemap v0.8.1
-    Checking subtle v2.6.1
-    Checking writeable v0.6.2
-   Compiling crossbeam-utils v0.8.21
-   Compiling syn v1.0.109
-   Compiling thiserror v1.0.69
-    Checking crypto-common v0.1.7
-    Checking block-buffer v0.10.4
-   Compiling num-traits v0.2.19
-    Checking equivalent v1.0.2
-    Checking hashbrown v0.16.1
-    Checking percent-encoding v2.3.2
-    Checking form_urlencoded v1.2.2
-    Checking indexmap v2.13.0
-    Checking digest v0.10.7
-   Compiling getrandom v0.4.2
-   Compiling rustls v0.21.12
-   Compiling httparse v1.10.1
-    Checking rustls-webpki v0.101.7
-    Checking sct v0.7.1
-   Compiling zerofrom-derive v0.1.6
-   Compiling yoke-derive v0.8.1
-   Compiling serde_derive v1.0.228
-   Compiling zerovec-derive v0.11.2
-   Compiling displaydoc v0.2.5
-    Checking zerofrom v0.1.6
-    Checking yoke v0.8.1
-   Compiling tracing-attributes v0.1.31
-   Compiling tokio-macros v2.6.1
-    Checking zerovec v0.11.5
-   Compiling futures-macro v0.3.32
-    Checking tinystr v0.8.2
-    Checking icu_locale_core v2.1.1
-    Checking tokio v1.50.0
-    Checking potential_utf v0.1.4
-    Checking zerotrie v0.2.3
-    Checking icu_provider v2.1.1
-    Checking icu_collections v2.1.1
-   Compiling thiserror-impl v1.0.69
-    Checking tracing v0.1.44
-    Checking icu_normalizer v2.1.1
-    Checking futures-util v0.3.32
-    Checking icu_properties v2.1.2
-    Checking idna_adapter v1.2.1
-    Checking utf8_iter v1.0.4
-    Checking tower-service v0.3.3
-    Checking idna v1.1.0
-    Checking base64 v0.21.7
-    Checking url v2.5.8
-    Checking http v1.4.0
-    Checking allocator-api2 v0.2.21
-   Compiling crunchy v0.2.4
-   Compiling paste v1.0.15
-    Checking hashbrown v0.14.5
-   Compiling either v1.15.0
-    Checking tokio-util v0.7.18
-    Checking rand_core v0.6.4
-    Checking webpki-roots v0.25.4
-   Compiling tiny-keccak v2.0.2
-    Checking fnv v1.0.7
-    Checking zeroize v1.8.2
-    Checking cpufeatures v0.2.17
-    Checking httpdate v1.0.3
-    Checking rustls-pki-types v1.14.0
-    Checking http v0.2.12
-    Checking aho-corasick v1.1.4
-    Checking regex-syntax v0.8.10
-   Compiling tinyvec_macros v0.1.1
-   Compiling minimal-lexical v0.2.1
-   Compiling nom v7.1.3
-    Checking regex-automata v0.4.14
-   Compiling tinyvec v1.10.0
-    Checking http-body v1.0.1
-    Checking rustls-pemfile v1.0.4
-   Compiling ppv-lite86 v0.2.21
-   Compiling ident_case v1.0.1
-   Compiling unicode-segmentation v1.12.0
-    Checking try-lock v0.2.5
-   Compiling rustix v1.1.4
-   Compiling strsim v0.10.0
-   Compiling crc-catalog v2.4.0
-   Compiling ucd-trie v0.1.7
-   Compiling bitflags v2.11.0
-    Checking ryu v1.0.23
-   Compiling unicode_categories v0.1.1
-   Compiling unicase v2.9.0
-    Checking mime v0.3.17
-   Compiling iana-time-zone v0.1.65
-   Compiling mime_guess v2.0.5
-    Checking chrono v0.4.44
-   Compiling darling_core v0.13.4
-   Compiling sqlformat v0.2.6
-   Compiling pest v2.8.6
-   Compiling sha2 v0.10.9
-   Compiling crc v3.4.0
-   Compiling heck v0.4.1
-    Checking want v0.3.1
-   Compiling tokio-stream v0.1.18
-   Compiling rand_chacha v0.3.1
-   Compiling crossbeam-queue v0.3.12
-    Checking uuid v1.22.0
-   Compiling const-random-macro v0.1.16
-   Compiling futures-intrusive v0.5.0
-   Compiling unicode-normalization v0.1.25
-   Compiling hashlink v0.8.4
-   Compiling atoi v2.0.0
-    Checking http-body v0.4.6
-    Checking h2 v0.3.27
-   Compiling hmac v0.12.1
-   Compiling erasable v1.3.0
-    Checking socket2 v0.5.10
-   Compiling proc-macro-error-attr v1.0.4
-    Checking encoding_rs v0.8.35
-   Compiling rustls v0.22.4
-   Compiling linux-raw-sys v0.12.1
-    Checking tower-layer v0.3.3
-   Compiling unicode-bidi v0.3.18
-   Compiling byteorder v1.5.0
-   Compiling hex v0.4.3
-   Compiling event-listener v2.5.3
-   Compiling unicode-properties v0.1.4
-   Compiling stringprep v0.1.5
-   Compiling sqlx-core v0.7.4
-    Checking hyper v0.14.32
-   Compiling darling_macro v0.13.4
-   Compiling hkdf v0.12.4
-    Checking const-random v0.1.18
-    Checking rand v0.8.5
-   Compiling pest_meta v2.8.6
-    Checking serde_urlencoded v0.7.1
-    Checking rustls-webpki v0.102.8
-    Checking tokio-rustls v0.24.1
-   Compiling md-5 v0.10.6
-    Checking futures-executor v0.3.32
-   Compiling async-trait v0.1.89
-   Compiling proc-macro-error v1.0.4
-   Compiling home v0.5.12
-   Compiling whoami v1.6.1
-   Compiling rustversion v1.0.22
-    Checking bitflags v1.3.2
-   Compiling dotenvy v0.15.7
-   Compiling thiserror v2.0.18
-    Checking base64 v0.22.1
-   Compiling fastrand v2.3.0
-   Compiling num-conv v0.2.0
-   Compiling time-core v0.1.8
-    Checking powerfmt v0.2.0
-   Compiling time-macros v0.2.27
-    Checking deranged v0.5.8
-   Compiling tempfile v3.26.0
-   Compiling sqlx-postgres v0.7.4
-    Checking futures v0.3.32
-    Checking hyper-rustls v0.24.2
-   Compiling pest_generator v2.8.6
-   Compiling darling v0.13.4
-    Checking dlv-list v0.5.2
-    Checking http-body-util v0.1.3
-    Checking serde_spanned v0.6.9
-    Checking toml_datetime v0.6.11
-   Compiling thiserror-impl v2.0.18
-   Compiling pin-project-internal v1.1.11
-    Checking num-integer v0.1.46
-   Compiling crc32fast v1.5.0
-    Checking bit-vec v0.6.3
-    Checking pin-utils v0.1.0
-    Checking toml_write v0.1.2
-    Checking sync_wrapper v1.0.2
-   Compiling convert_case v0.4.0
-    Checking lazy_static v1.5.0
-    Checking sync_wrapper v0.1.2
-    Checking ipnet v2.12.0
-    Checking atomic-waker v1.1.2
-    Checking winnow v0.7.15
-   Compiling anyhow v1.0.102
-    Checking toml_edit v0.22.27
-    Checking pin-project v1.1.11
-    Checking time v0.3.47
-    Checking hyper v1.8.1
-    Checking reqwest v0.11.27
-   Compiling derive_more v0.99.20
-    Checking bit-set v0.5.3
-    Checking num-bigint v0.4.6
-   Compiling pest_derive v2.8.6
-   Compiling sqlx-macros-core v0.7.4
-    Checking rc-box v1.3.0
-    Checking ordered-multimap v0.7.3
-   Compiling serde_with_macros v1.5.2
-    Checking regex v1.12.3
-    Checking rustls-pemfile v2.2.0
-    Checking sha1 v0.10.6
-   Compiling itertools v0.9.0
-    Checking inotify-sys v0.1.5
-    Checking utf-8 v0.7.6
-    Checking adler2 v2.0.1
-    Checking arraydeque v0.5.1
-    Checking takecell v0.1.1
-    Checking data-encoding v2.10.0
-    Checking take_mut v0.2.2
-    Checking same-file v1.0.6
-    Checking never v0.1.0
-    Checking simd-adler32 v0.3.8
-    Checking base64ct v1.8.3
-    Checking openssl-probe v0.1.6
-    Checking rustls-native-certs v0.7.3
-    Checking password-hash v0.5.0
-    Checking convert_case v0.6.0
-   Compiling sqlx-macros v0.7.4
-    Checking miniz_oxide v0.8.9
-    Checking tungstenite v0.21.0
-    Checking walkdir v2.5.0
-    Checking yaml-rust2 v0.8.1
-    Checking inotify v0.9.6
-   Compiling aquamarine v0.1.12
-    Checking axum-core v0.4.5
-    Checking teloxide-core v0.9.1
-    Checking fancy-regex v0.12.0
-    Checking rust-ini v0.20.0
-    Checking json5 v0.4.1
-    Checking simple_asn1 v0.6.4
-    Checking hyper-util v0.1.20
-    Checking toml v0.8.23
-    Checking sharded-slab v0.1.7
-    Checking tower v0.5.3
-    Checking tokio-rustls v0.25.0
-    Checking dptree v0.3.0
-    Checking pem v3.0.6
-    Checking minreq v2.14.1
-    Checking ron v0.8.1
-   Compiling teloxide-macros v0.7.1
-    Checking crossbeam-channel v0.5.15
-    Checking bstr v1.12.1
-    Checking matchers v0.2.0
-    Checking combine v4.6.7
-    Checking blake2 v0.10.6
-    Checking tracing-log v0.2.0
-    Checking mio v0.8.11
-    Checking serde_path_to_error v0.1.20
-    Checking socket2 v0.4.10
-    Checking filetime v0.2.27
-    Checking thread_local v1.1.9
-    Checking sha1_smol v1.0.1
-    Checking nu-ansi-term v0.50.3
-    Checking rustc-hash v1.1.0
-    Checking matchit v0.7.3
-    Checking pathdiff v0.2.3
-    Checking config v0.14.1
-    Checking axum v0.7.9
-    Checking tiktoken-rs v0.5.9
-    Checking tracing-subscriber v0.3.22
-    Checking redis v0.24.0
-    Checking notify v6.1.1
-    Checking argon2 v0.5.3
-    Checking openai-api-rs v4.1.1
-    Checking teloxide v0.12.2
-    Checking jsonwebtoken v9.3.1
-    Checking tokio-tungstenite v0.21.0
-    Checking sqlx v0.7.4
-    Checking flate2 v1.1.9
-    Checking tower-http v0.5.2
-    Checking tower v0.4.13
-    Checking slack-messaging v0.2.2
-    Checking bincode v1.3.3
     Checking barca-strategos v0.1.0 (/home/ubuntu/Barca-Strategos)
-error[E0428]: the name `InterfaceAdaptation` is defined multiple times
-   --> src/common/types.rs:351:1
-    |
-114 | pub struct InterfaceAdaptation {
-    | ------------------------------ previous definition of the type `InterfaceAdaptation` here
-...
-351 | pub struct InterfaceAdaptation {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `InterfaceAdaptation` redefined here
-    |
-    = note: `InterfaceAdaptation` must be defined only once in the type namespace of this module
-
-error[E0428]: the name `Workspace` is defined multiple times
-   --> src/common/types.rs:395:1
-    |
- 80 | pub struct Workspace {
-    | -------------------- previous definition of the type `Workspace` here
-...
-395 | pub struct Workspace {
-    | ^^^^^^^^^^^^^^^^^^^^ `Workspace` redefined here
-    |
-    = note: `Workspace` must be defined only once in the type namespace of this module
-
-error[E0428]: the name `CollaborationContext` is defined multiple times
-   --> src/common/types.rs:404:1
-    |
- 98 | pub struct CollaborationContext {
-    | ------------------------------- previous definition of the type `CollaborationContext` here
-...
-404 | pub struct CollaborationContext {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `CollaborationContext` redefined here
-    |
-    = note: `CollaborationContext` must be defined only once in the type namespace of this module
-
-error[E0428]: the name `InterfaceAdaptation` is defined multiple times
-   --> src/common/types.rs:412:1
-    |
-114 | pub struct InterfaceAdaptation {
-    | ------------------------------ previous definition of the type `InterfaceAdaptation` here
-...
-412 | pub struct InterfaceAdaptation {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `InterfaceAdaptation` redefined here
-    |
-    = note: `InterfaceAdaptation` must be defined only once in the type namespace of this module
-
 error[E0255]: the name `FindingSeverity` is defined multiple times
     --> src/compliance/soc2.rs:1058:1
      |
@@ -907,17 +119,44 @@ help: you can use `as` to change the binding name of the import
   4 | use crate::common::{MonitoringConfig as OtherMonitoringConfig};
     |                                      ++++++++++++++++++++++++
 
-error[E0432]: unresolved import `base64`
- --> src/common/types.rs:6:5
-  |
-6 | use base64;
-  |     ^^^^^^ no external crate `base64`
-
 error[E0432]: unresolved import `crate::common::BASE64`
  --> src/security/cryptography.rs:2:5
   |
 2 | use crate::common::BASE64;
   |     ^^^^^^^^^^^^^^^^^^^^^ no `BASE64` in `common`
+
+error[E0425]: cannot find type `InterfaceComplexity` in this scope
+  --> src/common/types.rs:49:31
+   |
+49 |     pub interface_complexity: InterfaceComplexity,
+   |                               ^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this enum through its public re-export
+   |
+ 1 + use crate::gui::InterfaceComplexity;
+   |
+
+error[E0433]: failed to resolve: use of undeclared type `InterfaceComplexity`
+   --> src/common/types.rs:346:25
+    |
+346 |             complexity: InterfaceComplexity::Standard,
+    |                         ^^^^^^^^^^^^^^^^^^^ use of undeclared type `InterfaceComplexity`
+    |
+help: consider importing this enum through its public re-export
+    |
+  1 + use crate::gui::InterfaceComplexity;
+    |
+
+error[E0433]: failed to resolve: use of undeclared type `LayoutType`
+   --> src/common/types.rs:347:21
+    |
+347 |             layout: LayoutType::Default,
+    |                     ^^^^^^^^^^ use of undeclared type `LayoutType`
+    |
+help: consider importing this enum through its public re-export
+    |
+  1 + use crate::gui::LayoutType;
+    |
 
 error[E0425]: cannot find type `Regex` in this scope
    --> src/security/data_classification.rs:242:65
@@ -2096,20 +1335,20 @@ error[E0603]: tuple struct constructor `UserId` is private
 151 |         let user_id_obj = crate::common::types::UserId(user_id.to_string());
     |                                                 ^^^^^^ private tuple struct constructor
     |
-   ::: src/common/types.rs:10:19
+   ::: src/common/types.rs:9:19
     |
- 10 | pub struct UserId(String);
+  9 | pub struct UserId(String);
     |                   ------ a constructor is private if any of the fields is private
     |
 note: the tuple struct constructor `UserId` is defined here
-   --> src/common/types.rs:10:1
+   --> src/common/types.rs:9:1
     |
- 10 | pub struct UserId(String);
+  9 | pub struct UserId(String);
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 help: consider making the field publicly accessible
-   --> src/common/types.rs:10:19
+   --> src/common/types.rs:9:19
     |
- 10 | pub struct UserId(pub String);
+  9 | pub struct UserId(pub String);
     |                   +++
 
 warning: unused import: `uuid::Uuid`
@@ -2777,166 +2016,6 @@ error[E0728]: `await` is only allowed inside `async` functions and blocks
 616 |         self.consent_manager.has_consent_for_processing(request).await
     |                                                                  ^^^^^ only allowed inside `async` functions and blocks
 
-error[E0119]: conflicting implementations of trait `Debug` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:350:10
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ----- first implementation here
-...
-350 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-
-error[E0119]: conflicting implementations of trait `Debug` for type `types::Workspace`
-   --> src/common/types.rs:394:10
-    |
- 79 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ----- first implementation here
-...
-394 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ^^^^^ conflicting implementation for `types::Workspace`
-
-error[E0119]: conflicting implementations of trait `Debug` for type `types::CollaborationContext`
-   --> src/common/types.rs:403:10
-    |
- 97 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ----- first implementation here
-...
-403 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ^^^^^ conflicting implementation for `types::CollaborationContext`
-
-error[E0119]: conflicting implementations of trait `Debug` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:411:10
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ----- first implementation here
-...
-411 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |          ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-
-error[E0119]: conflicting implementations of trait `Clone` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:350:17
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ----- first implementation here
-...
-350 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-
-error[E0119]: conflicting implementations of trait `Clone` for type `types::Workspace`
-   --> src/common/types.rs:394:17
-    |
- 79 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ----- first implementation here
-...
-394 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ^^^^^ conflicting implementation for `types::Workspace`
-
-error[E0119]: conflicting implementations of trait `Clone` for type `types::CollaborationContext`
-   --> src/common/types.rs:403:17
-    |
- 97 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ----- first implementation here
-...
-403 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ^^^^^ conflicting implementation for `types::CollaborationContext`
-
-error[E0119]: conflicting implementations of trait `Clone` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:411:17
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ----- first implementation here
-...
-411 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                 ^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:350:24
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        --------- first implementation here
-...
-350 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::Workspace`
-   --> src/common/types.rs:394:24
-    |
- 79 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        --------- first implementation here
-...
-394 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::Workspace`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::CollaborationContext`
-   --> src/common/types.rs:403:24
-    |
- 97 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        --------- first implementation here
-...
-403 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::CollaborationContext`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Serialize` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:411:24
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        --------- first implementation here
-...
-411 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                        ^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-    |
-    = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:350:35
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ----------- first implementation here
-...
-350 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::Workspace`
-   --> src/common/types.rs:394:35
-    |
- 79 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ----------- first implementation here
-...
-394 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::Workspace`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::CollaborationContext`
-   --> src/common/types.rs:403:35
-    |
- 97 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ----------- first implementation here
-...
-403 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::CollaborationContext`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
-error[E0119]: conflicting implementations of trait `Deserialize<'_>` for type `types::InterfaceAdaptation`
-   --> src/common/types.rs:411:35
-    |
-113 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ----------- first implementation here
-...
-411 | #[derive(Debug, Clone, Serialize, Deserialize)]
-    |                                   ^^^^^^^^^^^ conflicting implementation for `types::InterfaceAdaptation`
-    |
-    = note: this error originates in the derive macro `Deserialize` (in Nightly builds, run with -Z macro-backtrace for more info)
-
 error[E0107]: enum takes 2 generic arguments but 1 generic argument was supplied
    --> src/gui/risk_management.rs:731:76
     |
@@ -2977,28 +2056,34 @@ help: add missing generic argument
     |                                                                                                   +++
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `complexity`
-   --> src/common/types.rs:336:13
+   --> src/common/types.rs:346:13
     |
-336 |             complexity: InterfaceComplexity::Standard,
+346 |             complexity: InterfaceComplexity::Standard,
     |             ^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`, `adaptive_features`
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `layout`
-   --> src/common/types.rs:337:13
+   --> src/common/types.rs:347:13
     |
-337 |             layout: LayoutType::Default,
+347 |             layout: LayoutType::Default,
     |             ^^^^^^ `types::InterfaceAdaptation` does not have this field
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`, `adaptive_features`
 
 error[E0560]: struct `types::InterfaceAdaptation` has no field named `theme`
-   --> src/common/types.rs:338:13
+   --> src/common/types.rs:348:13
     |
-338 |             theme: ThemeType::Light,
+348 |             theme: ThemeType::Light,
     |             ^^^^^ `types::InterfaceAdaptation` does not have this field
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`, `adaptive_features`
+
+error[E0433]: failed to resolve: use of undeclared type `ThemeType`
+   --> src/common/types.rs:348:20
+    |
+348 |             theme: ThemeType::Light,
+    |                    ^^^^^^^^^ use of undeclared type `ThemeType`
 
 error[E0308]: mismatched types
   --> src/gui/dashboard.rs:66:22
@@ -3061,13 +2146,160 @@ error[E0308]: mismatched types
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/dashboard.rs:136:40
+error[E0308]: mismatched types
+   --> src/gui/dashboard.rs:138:21
     |
-136 |             for feature in &adaptation.adaptive_features {
-    |                                        ^^^^^^^^^^^^^^^^^ unknown field
+137 |                 match feature {
+    |                       ------- this expression has type `&types::AdaptiveFeature`
+138 |                     AdaptiveFeature::SimplifiedInterface => {
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+   ::: src/gui/mod.rs:636:5
+    |
+636 |     SimplifiedInterface,
+    |     ------------------- unit variant defined here
+    |
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src/gui/dashboard.rs:141:21
+    |
+137 |                 match feature {
+    |                       ------- this expression has type `&types::AdaptiveFeature`
+...
+141 |                     AdaptiveFeature::CriticalInformationHighlighting => {
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |
+   ::: src/gui/mod.rs:637:5
+    |
+637 |     CriticalInformationHighlighting,
+    |     ------------------------------- unit variant defined here
+    |
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src/gui/dashboard.rs:144:21
+    |
+137 |                 match feature {
+    |                       ------- this expression has type `&types::AdaptiveFeature`
+...
+144 |                     AdaptiveFeature::ReducedCognitiveLoad => {
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |
+   ::: src/gui/mod.rs:638:5
+    |
+638 |     ReducedCognitiveLoad,
+    |     -------------------- unit variant defined here
+    |
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src/gui/dashboard.rs:147:21
+    |
+137 |                 match feature {
+    |                       ------- this expression has type `&types::AdaptiveFeature`
+...
+147 |                     AdaptiveFeature::ProgressiveDisclosure => {
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |
+   ::: src/gui/mod.rs:639:5
+    |
+639 |     ProgressiveDisclosure,
+    |     --------------------- unit variant defined here
+    |
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src/gui/dashboard.rs:150:21
+    |
+137 |                 match feature {
+    |                       ------- this expression has type `&types::AdaptiveFeature`
+...
+150 |                     AdaptiveFeature::EnhancedCommunication => {
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |
+   ::: src/gui/mod.rs:640:5
+    |
+640 |     EnhancedCommunication,
+    |     --------------------- unit variant defined here
+    |
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src/gui/dashboard.rs:153:21
+    |
+137 |                 match feature {
+    |                       ------- this expression has type `&types::AdaptiveFeature`
+...
+153 |                     AdaptiveFeature::SharedWorkspace => {
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |
+   ::: src/gui/mod.rs:641:5
+    |
+641 |     SharedWorkspace,
+    |     --------------- unit variant defined here
+    |
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
 
 error[E0308]: mismatched types
    --> src/gui/dashboard.rs:194:50
@@ -3143,9 +2375,9 @@ error[E0599]: no method named `has_risk_access` found for enum `UserRole` in the
 299 |         if user.role.has_risk_access() {
     |                      ^^^^^^^^^^^^^^^
     |
-   ::: src/common/types.rs:22:1
+   ::: src/common/types.rs:21:1
     |
- 22 | pub enum UserRole {
+ 21 | pub enum UserRole {
     | ----------------- method `has_risk_access` not found for this enum
     |
 help: there is a method `has_system_access` with a similar name
@@ -3378,29 +2610,71 @@ error[E0308]: mismatched types
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/cognitive_collaboration.rs:136:27
+error[E0308]: mismatched types
+   --> src/gui/cognitive_collaboration.rs:136:54
     |
 136 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ReducedCognitiveLoad) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/cognitive_collaboration.rs:141:27
+error[E0308]: mismatched types
+   --> src/gui/cognitive_collaboration.rs:141:54
     |
 141 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::EnhancedCommunication) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/cognitive_collaboration.rs:145:27
+error[E0308]: mismatched types
+   --> src/gui/cognitive_collaboration.rs:145:54
     |
 145 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::SharedWorkspace) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
 error[E0308]: mismatched types
    --> src/gui/cognitive_collaboration.rs:169:50
@@ -3456,6 +2730,28 @@ error[E0308]: mismatched types
                found reference `&std::string::String`
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
+
+error[E0382]: borrow of moved value: `optimization`
+   --> src/gui/cognitive_collaboration.rs:253:68
+    |
+248 |     async fn apply_collaboration_optimization(&self, session_id: &str, optimization: CollaborationOptimization) -> Result<(), GUIError> {
+    |                                                                        ------------ move occurs because `optimization` has type `CollaborationOptimization`, which does not implement the `Copy` trait
+249 |         // Apply optimization to collaboration engine
+250 |         self.collaboration_engine.apply_optimization(session_id, optimization).await?;
+    |                                                                  ------------ value moved here
+...
+253 |         self.cognitive_load_manager.apply_optimization(session_id, optimization.clone()).await?;
+    |                                                                    ^^^^^^^^^^^^ value borrowed here after move
+    |
+note: consider changing this parameter type in method `apply_optimization` to borrow instead if owning the value isn't necessary
+   --> src/gui/cognitive_collaboration.rs:744:78
+    |
+744 |     pub async fn apply_optimization(&self, _session_id: &str, _optimization: CollaborationOptimization) -> Result<(), GUIError> {
+    |                  ------------------ in this method                           ^^^^^^^^^^^^^^^^^^^^^^^^^ this parameter takes ownership of the value
+help: consider cloning the value if the performance cost is acceptable
+    |
+250 |         self.collaboration_engine.apply_optimization(session_id, optimization.clone()).await?;
+    |                                                                              ++++++++
 
 error[E0382]: use of moved value: `change.model_change`
    --> src/gui/cognitive_collaboration.rs:267:65
@@ -3681,29 +2977,71 @@ error[E0308]: mismatched types
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/compliance_center.rs:137:27
+error[E0308]: mismatched types
+   --> src/gui/compliance_center.rs:137:54
     |
 137 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::SimplifiedInterface) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/compliance_center.rs:142:27
+error[E0308]: mismatched types
+   --> src/gui/compliance_center.rs:142:54
     |
 142 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::CriticalInformationHighlighting) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/compliance_center.rs:146:27
+error[E0308]: mismatched types
+   --> src/gui/compliance_center.rs:146:54
     |
 146 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ProgressiveDisclosure) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
 error[E0308]: mismatched types
    --> src/gui/compliance_center.rs:157:36
@@ -3871,9 +3209,9 @@ error[E0599]: no method named `can_handle_alert` found for struct `types::User` 
 321 |                session.user.can_handle_alert(&alert.framework, &alert.severity) {
     |                             ^^^^^^^^^^^^^^^^ method not found in `types::User`
     |
-   ::: src/common/types.rs:13:1
+   ::: src/common/types.rs:12:1
     |
- 13 | pub struct User {
+ 12 | pub struct User {
     | --------------- method `can_handle_alert` not found for this struct
 
 error[E0308]: mismatched types
@@ -4017,29 +3355,93 @@ error[E0308]: mismatched types
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/security_operations.rs:109:27
+error[E0308]: mismatched types
+   --> src/gui/security_operations.rs:109:54
     |
 109 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::CriticalInformationHighlighting) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/security_operations.rs:113:27
+error[E0308]: mismatched types
+   --> src/gui/security_operations.rs:113:54
     |
 113 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ReducedCognitiveLoad) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/security_operations.rs:117:27
+error[E0308]: mismatched types
+   --> src/gui/security_operations.rs:117:54
     |
 117 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::EnhancedCommunication) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
+
+error[E0596]: cannot borrow `self.security_analytics` as mutable, as it is behind a `&` reference
+   --> src/gui/security_operations.rs:140:9
+    |
+140 |         self.security_analytics.update_with_compliance_analytics(analytics_data.clone()).await?;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^ `self` is a `&` reference, so it cannot be borrowed as mutable
+    |
+help: consider changing this to be a mutable reference
+    |
+138 |     pub async fn update_with_analytics(&mut self, analytics_data: ComplianceAnalyticsData) -> Result<(), GUIError> {
+    |                                         +++
+
+error[E0596]: cannot borrow `self.security_dashboard` as mutable, as it is behind a `&` reference
+   --> src/gui/security_operations.rs:143:9
+    |
+143 |         self.security_dashboard.update_with_analytics(analytics_data).await?;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^ `self` is a `&` reference, so it cannot be borrowed as mutable
+    |
+help: consider changing this to be a mutable reference
+    |
+138 |     pub async fn update_with_analytics(&mut self, analytics_data: ComplianceAnalyticsData) -> Result<(), GUIError> {
+    |                                         +++
 
 error[E0308]: mismatched types
    --> src/gui/security_operations.rs:159:50
@@ -4174,29 +3576,71 @@ error[E0308]: mismatched types
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/risk_management.rs:107:27
+error[E0308]: mismatched types
+   --> src/gui/risk_management.rs:107:54
     |
 107 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ReducedCognitiveLoad) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/risk_management.rs:111:27
+error[E0308]: mismatched types
+   --> src/gui/risk_management.rs:111:54
     |
 111 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::CriticalInformationHighlighting) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/risk_management.rs:115:27
+error[E0308]: mismatched types
+   --> src/gui/risk_management.rs:115:54
     |
 115 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ProgressiveDisclosure) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
 error[E0599]: no method named `update_with_analytics` found for struct `gui::risk_management::RiskDashboard` in the current scope
    --> src/gui/risk_management.rs:141:29
@@ -4340,29 +3784,71 @@ error[E0308]: mismatched types
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/agent_interaction.rs:179:27
+error[E0308]: mismatched types
+   --> src/gui/agent_interaction.rs:179:54
     |
 179 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ReducedCognitiveLoad) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/agent_interaction.rs:183:27
+error[E0308]: mismatched types
+   --> src/gui/agent_interaction.rs:183:54
     |
 183 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::EnhancedCommunication) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/agent_interaction.rs:187:27
+error[E0308]: mismatched types
+   --> src/gui/agent_interaction.rs:187:54
     |
 187 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ProgressiveDisclosure) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
 error[E0599]: no variant or associated item named `SecurityAnalyst` found for enum `types::AgentType` in the current scope
    --> src/gui/agent_interaction.rs:213:54
@@ -4370,9 +3856,9 @@ error[E0599]: no variant or associated item named `SecurityAnalyst` found for en
 213 |         agent_manager.register_agent_type(AgentType::SecurityAnalyst).await?;
     |                                                      ^^^^^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `SecurityAnalyst` not found for this enum
 
 error[E0599]: no variant or associated item named `ThreatHunter` found for enum `types::AgentType` in the current scope
@@ -4381,9 +3867,9 @@ error[E0599]: no variant or associated item named `ThreatHunter` found for enum 
 214 |         agent_manager.register_agent_type(AgentType::ThreatHunter).await?;
     |                                                      ^^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `ThreatHunter` not found for this enum
 
 error[E0599]: no variant or associated item named `AIAssistant` found for enum `types::AgentType` in the current scope
@@ -4392,9 +3878,9 @@ error[E0599]: no variant or associated item named `AIAssistant` found for enum `
 216 |         agent_manager.register_agent_type(AgentType::AIAssistant).await?;
     |                                                      ^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `AIAssistant` not found for this enum
 
 error[E0599]: no variant or associated item named `ComplianceAnalyst` found for enum `types::AgentType` in the current scope
@@ -4403,9 +3889,9 @@ error[E0599]: no variant or associated item named `ComplianceAnalyst` found for 
 217 |         agent_manager.register_agent_type(AgentType::ComplianceAnalyst).await?;
     |                                                      ^^^^^^^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `ComplianceAnalyst` not found for this enum
 
 error[E0599]: no variant or associated item named `RiskAnalyst` found for enum `types::AgentType` in the current scope
@@ -4414,9 +3900,9 @@ error[E0599]: no variant or associated item named `RiskAnalyst` found for enum `
 218 |         agent_manager.register_agent_type(AgentType::RiskAnalyst).await?;
     |                                                      ^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `RiskAnalyst` not found for this enum
 
 error[E0308]: mismatched types
@@ -4555,9 +4041,9 @@ error[E0599]: no variant or associated item named `SecurityAnalyst` found for en
 778 |                 agent_type: AgentType::SecurityAnalyst,
     |                                        ^^^^^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `SecurityAnalyst` not found for this enum
 
 error[E0599]: no variant or associated item named `SecurityAnalyst` found for enum `types::AgentType` in the current scope
@@ -4566,9 +4052,9 @@ error[E0599]: no variant or associated item named `SecurityAnalyst` found for en
 802 |             agent_type: AgentType::SecurityAnalyst,
     |                                    ^^^^^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `SecurityAnalyst` not found for this enum
 
 error[E0599]: no variant or associated item named `SecurityAnalyst` found for enum `types::AgentType` in the current scope
@@ -4577,9 +4063,9 @@ error[E0599]: no variant or associated item named `SecurityAnalyst` found for en
 898 |             preferred_agents: vec![AgentType::SecurityAnalyst],
     |                                               ^^^^^^^^^^^^^^^ variant or associated item not found in `types::AgentType`
     |
-   ::: src/common/types.rs:133:1
+   ::: src/common/types.rs:143:1
     |
-133 | pub enum AgentType {
+143 | pub enum AgentType {
     | ------------------ variant or associated item `SecurityAnalyst` not found for this enum
 
 error[E0308]: mismatched types
@@ -4617,29 +4103,71 @@ error[E0308]: mismatched types
 note: method defined here
    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/std/src/collections/hash/map.rs:1259:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/real_time_monitoring.rs:104:27
+error[E0308]: mismatched types
+   --> src/gui/real_time_monitoring.rs:104:54
     |
 104 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ReducedCognitiveLoad) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/real_time_monitoring.rs:108:27
+error[E0308]: mismatched types
+   --> src/gui/real_time_monitoring.rs:108:54
     |
 108 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::CriticalInformationHighlighting) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
-error[E0609]: no field `adaptive_features` on type `&types::InterfaceAdaptation`
-   --> src/gui/real_time_monitoring.rs:112:27
+error[E0308]: mismatched types
+   --> src/gui/real_time_monitoring.rs:112:54
     |
 112 |             if adaptation.adaptive_features.contains(&AdaptiveFeature::ProgressiveDisclosure) {
-    |                           ^^^^^^^^^^^^^^^^^ unknown field
+    |                                             -------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::AdaptiveFeature`, found `gui::AdaptiveFeature`
+    |                                             |
+    |                                             arguments to this method are incorrect
     |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
+    = note: `gui::AdaptiveFeature` and `types::AdaptiveFeature` have similar names, but are actually distinct types
+note: `gui::AdaptiveFeature` is defined in module `crate::gui` of the current crate
+   --> src/gui/mod.rs:635:1
+    |
+635 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: `types::AdaptiveFeature` is defined in module `crate::common::types` of the current crate
+   --> src/common/types.rs:132:1
+    |
+132 | pub enum AdaptiveFeature {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^
+note: method defined here
+   --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/slice/mod.rs:2589:11
 
 error[E0308]: mismatched types
    --> src/gui/real_time_monitoring.rs:263:12
@@ -4778,9 +4306,9 @@ error[E0599]: no method named `initialize` found for struct `types::AnalyticsInt
  66 |         self.analytics_engine.initialize().await?;
     |                               ^^^^^^^^^^ method not found in `types::AnalyticsIntelligenceEngine`
     |
-   ::: src/common/types.rs:304:1
+   ::: src/common/types.rs:314:1
     |
-304 | pub struct AnalyticsIntelligenceEngine {
+314 | pub struct AnalyticsIntelligenceEngine {
     | -------------------------------------- method `initialize` not found for this struct
     |
     = help: items from traits can only be used if the trait is implemented and in scope
@@ -4797,9 +4325,9 @@ error[E0599]: no method named `initialize` found for struct `types::SettingsConf
  67 |         self.config_manager.initialize().await?;
     |                             ^^^^^^^^^^ method not found in `types::SettingsConfigurationManager`
     |
-   ::: src/common/types.rs:194:1
+   ::: src/common/types.rs:204:1
     |
-194 | pub struct SettingsConfigurationManager {
+204 | pub struct SettingsConfigurationManager {
     | --------------------------------------- method `initialize` not found for this struct
     |
     = help: items from traits can only be used if the trait is implemented and in scope
@@ -4850,9 +4378,9 @@ error[E0599]: no method named `get_insights` found for struct `types::AnalyticsI
 108 |             analytics_insights: self.analytics_engine.get_insights(user_id).await?,
     |                                                       ^^^^^^^^^^^^ method not found in `types::AnalyticsIntelligenceEngine`
     |
-   ::: src/common/types.rs:304:1
+   ::: src/common/types.rs:314:1
     |
-304 | pub struct AnalyticsIntelligenceEngine {
+314 | pub struct AnalyticsIntelligenceEngine {
     | -------------------------------------- method `get_insights` not found for this struct
 
 error[E0560]: struct `UnifiedDashboard` has no field named `vulnerabilities_patched_today`
@@ -4883,26 +4411,6 @@ note: `gui::GUIError` needs to implement `From<std::string::String>`
 731 | pub enum GUIError {
     | ^^^^^^^^^^^^^^^^^
     = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
-
-error[E0308]: mismatched types
-   --> src/gui/mod.rs:259:60
-    |
-259 |                 session.preferences.interface_complexity = InterfaceComplexity::Simplified;
-    |                 ----------------------------------------   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `types::InterfaceComplexity`, found `compliance_center::InterfaceComplexity`
-    |                 |
-    |                 expected due to the type of this binding
-    |
-    = note: `compliance_center::InterfaceComplexity` and `types::InterfaceComplexity` have similar names, but are actually distinct types
-note: `compliance_center::InterfaceComplexity` is defined in module `crate::gui::compliance_center` of the current crate
-   --> src/gui/compliance_center.rs:494:1
-    |
-494 | pub enum InterfaceComplexity {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-note: `types::InterfaceComplexity` is defined in module `crate::common::types` of the current crate
-   --> src/common/types.rs:358:1
-    |
-358 | pub enum InterfaceComplexity {
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 error[E0277]: `?` couldn't convert the error to `gui::GUIError`
    --> src/gui/mod.rs:267:76
@@ -4995,6 +4503,16 @@ help: consider annotating `gui::UrgencyLevel` with `#[derive(PartialEq)]`
 655 | pub enum UrgencyLevel {
     |
 
+warning: variable does not need to be mutable
+  --> src/security/cryptography.rs:40:13
+   |
+40 |         let mut key_store = self.key_store.write().await;
+   |             ----^^^^^^^^^
+   |             |
+   |             help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
 error[E0609]: no field `key` on type `&EncryptionKey`
   --> src/security/cryptography.rs:67:90
    |
@@ -5026,8 +4544,6 @@ warning: variable does not need to be mutable
     |             ----^^^^
     |             |
     |             help: remove this `mut`
-    |
-    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
 
 warning: variable does not need to be mutable
    --> src/security/cryptography.rs:141:17
@@ -5036,6 +4552,14 @@ warning: variable does not need to be mutable
     |                 ----^^^^^^^^^
     |                 |
     |                 help: remove this `mut`
+
+warning: variable does not need to be mutable
+   --> src/security/cryptography.rs:180:13
+    |
+180 |         let mut key_store = self.key_store.write().await;
+    |             ----^^^^^^^^^
+    |             |
+    |             help: remove this `mut`
 
 error[E0609]: no field `public_key` on type `Document`
    --> src/security/cryptography.rs:203:49
@@ -5090,6 +4614,14 @@ help: consider giving this closure parameter an explicit type
     |
 222 |             .map_err(|e: /* Type */| CryptoError::KeyDerivationFailed(e.to_string()))?;
     |                        ++++++++++++
+
+warning: variable does not need to be mutable
+   --> src/security/cryptography.rs:287:13
+    |
+287 |         let mut key_store = self.key_store.write().await;
+    |             ----^^^^^^^^^
+    |             |
+    |             help: remove this `mut`
 
 error[E0369]: binary operation `==` cannot be applied to type `ProtectionState`
    --> src/security/rasp.rs:71:30
@@ -5147,6 +4679,17 @@ help: consider cloning the value if the performance cost is acceptable
 163 |         let threat_score = threats.iter().map(|t| t.severity.clone() as u8).sum::<u8>() as f64;
     |                                                             ++++++++
 
+error[E0507]: cannot move out of `decision.action` which is behind a shared reference
+   --> src/security/rasp.rs:222:21
+    |
+222 |             action: decision.action,
+    |                     ^^^^^^^^^^^^^^^ move occurs because `decision.action` has type `rasp::SecurityAction`, which does not implement the `Copy` trait
+    |
+help: consider cloning the value if the performance cost is acceptable
+    |
+222 |             action: decision.action.clone(),
+    |                                    ++++++++
+
 error[E0433]: failed to resolve: use of undeclared type `Regex`
    --> src/security/rasp.rs:246:13
     |
@@ -5184,6 +4727,67 @@ error[E0606]: casting `rasp::ThreatSeverity` as `f64` is invalid
     |                         ^^^^^^^^^^^^^^^^^^^^^^
     |
     = help: cast through an integer first
+
+error[E0382]: borrow of moved value: `segment`
+   --> src/security/network_security.rs:108:42
+    |
+ 92 |         let segment = NetworkSegment {
+    |             ------- move occurs because `segment` has type `NetworkSegment`, which does not implement the `Copy` trait
+...
+105 |         segments.insert(segment_config.id.clone(), segment);
+    |                                                    ------- value moved here
+...
+108 |         self.update_firewall_for_segment(&segment).await?;
+    |                                          ^^^^^^^^ value borrowed here after move
+    |
+help: consider cloning the value if the performance cost is acceptable
+    |
+105 |         segments.insert(segment_config.id.clone(), segment.clone());
+    |                                                           ++++++++
+
+error[E0004]: non-exhaustive patterns: `FirewallAction::Log` not covered
+   --> src/security/network_security.rs:295:35
+    |
+295 |         let firewall_risk = match firewall_decision.action {
+    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^ pattern `FirewallAction::Log` not covered
+    |
+note: `FirewallAction` defined here
+   --> src/security/network_security.rs:522:10
+    |
+522 | pub enum FirewallAction {
+    |          ^^^^^^^^^^^^^^
+...
+525 |     Log,
+    |     --- not covered
+    = note: the matched value is of type `FirewallAction`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+    |
+297 ~             FirewallAction::Allow => 0.0,
+298 ~             FirewallAction::Log => todo!(),
+    |
+
+error[E0004]: non-exhaustive patterns: `NetworkAction::Quarantine` and `NetworkAction::RateLimit` not covered
+   --> src/security/network_security.rs:302:34
+    |
+302 |         let segment_risk = match segment_decision.action {
+    |                                  ^^^^^^^^^^^^^^^^^^^^^^^ patterns `NetworkAction::Quarantine` and `NetworkAction::RateLimit` not covered
+    |
+note: `NetworkAction` defined here
+   --> src/security/network_security.rs:465:10
+    |
+465 | pub enum NetworkAction {
+    |          ^^^^^^^^^^^^^
+...
+468 |     Quarantine,
+    |     ---------- not covered
+469 |     RateLimit,
+    |     --------- not covered
+    = note: the matched value is of type `NetworkAction`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern, a match arm with multiple or-patterns as shown, or multiple match arms
+    |
+304 ~             NetworkAction::Allow => 0.0,
+305 ~             NetworkAction::Quarantine | NetworkAction::RateLimit => todo!(),
+    |
 
 error[E0308]: mismatched types
    --> src/security/network_security.rs:764:34
@@ -5231,6 +4835,23 @@ error[E0606]: casting `types::ThreatSeverity` as `f64` is invalid
     |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
     |
     = help: cast through an integer first
+
+error[E0382]: borrow of moved value: `findings`
+  --> src/compliance/iso27001.rs:83:60
+   |
+72 |         let findings = self.generate_compliance_findings(&control_assessments);
+   |             -------- move occurs because `findings` has type `Vec<ComplianceFinding>`, which does not implement the `Copy` trait
+...
+82 |             findings,
+   |             -------- value moved here
+83 |             recommendations: self.generate_recommendations(&findings),
+   |                                                            ^^^^^^^^^ value borrowed here after move
+   |
+   = note: borrow occurs due to deref coercion to `[ComplianceFinding]`
+help: consider cloning the value if the performance cost is acceptable
+   |
+82 |             findings: findings.clone(),
+   |                     ++++++++++++++++++
 
 error[E0308]: mismatched types
    --> src/compliance/iso27001.rs:339:41
@@ -5358,9 +4979,9 @@ error[E0599]: no method named `initialize` found for struct `types::RiskAssessme
  44 |         self.risk_assessment.initialize().await?;
     |                              ^^^^^^^^^^ method not found in `types::RiskAssessmentEngine`
     |
-   ::: src/common/types.rs:283:1
+   ::: src/common/types.rs:293:1
     |
-283 | pub struct RiskAssessmentEngine {
+293 | pub struct RiskAssessmentEngine {
     | ------------------------------- method `initialize` not found for this struct
     |
     = help: items from traits can only be used if the trait is implemented and in scope
@@ -5386,6 +5007,23 @@ note: `nist_csf::ComplianceError` needs to implement `From<std::string::String>`
      | ^^^^^^^^^^^^^^^^^^^^^^^^
      = note: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait
 
+error[E0382]: borrow of moved value: `findings`
+  --> src/compliance/nist_csf.rs:84:64
+   |
+73 |         let findings = self.generate_csf_findings(&function_assessments);
+   |             -------- move occurs because `findings` has type `Vec<CSFFinding>`, which does not implement the `Copy` trait
+...
+83 |             findings,
+   |             -------- value moved here
+84 |             recommendations: self.generate_csf_recommendations(&findings),
+   |                                                                ^^^^^^^^^ value borrowed here after move
+   |
+   = note: borrow occurs due to deref coercion to `[CSFFinding]`
+help: consider cloning the value if the performance cost is acceptable
+   |
+83 |             findings: findings.clone(),
+   |                     ++++++++++++++++++
+
 error[E0308]: mismatched types
    --> src/compliance/nist_csf.rs:102:66
     |
@@ -5397,9 +5035,9 @@ error[E0308]: mismatched types
     = note: expected reference `&str`
                found reference `&CSFFunctionUpdate`
 note: method defined here
-   --> src/common/types.rs:268:18
+   --> src/common/types.rs:278:18
     |
-268 |     pub async fn log_function_update(&mut self, _function_id: &str, _update: &str) -> Result<(), String> {
+278 |     pub async fn log_function_update(&mut self, _function_id: &str, _update: &str) -> Result<(), String> {
     |                  ^^^^^^^^^^^^^^^^^^^                                -------------
 
 error[E0277]: `?` couldn't convert the error to `nist_csf::ComplianceError`
@@ -5576,6 +5214,27 @@ error[E0277]: can't compare `std::string::String` with `&CSFFunction`
               `std::string::String` implements `PartialEq<Value>`
             and 13 others
     = note: required for `&std::string::String` to implement `PartialEq<&&CSFFunction>`
+
+error[E0004]: non-exhaustive patterns: `types::UpdateType::Policy` not covered
+   --> src/compliance/nist_csf.rs:816:19
+    |
+816 |             match update.update_type {
+    |                   ^^^^^^^^^^^^^^^^^^ pattern `types::UpdateType::Policy` not covered
+    |
+note: `types::UpdateType` defined here
+   --> src/common/types.rs:178:10
+    |
+178 | pub enum UpdateType {
+    |          ^^^^^^^^^^
+...
+183 |     Policy,
+    |     ------ not covered
+    = note: the matched value is of type `types::UpdateType`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+    |
+829 ~                 },
+830 ~                 types::UpdateType::Policy => todo!(),
+    |
 
 error[E0609]: no field `last_assessed` on type `&CSFAssessment`
    --> src/compliance/nist_csf.rs:950:64
@@ -6309,6 +5968,23 @@ error[E0560]: struct `SOC2Stats` has no field named `average_score`
     |
     = note: available fields are: `implemented_controls`, `partially_implemented_controls`, `not_implemented_controls`, `average_compliance_score`, `total_incidents` ... and 3 others
 
+error[E0382]: borrow of moved value: `findings`
+  --> src/compliance/pci_dss.rs:77:64
+   |
+66 |         let findings = self.generate_pci_findings(&requirement_assessments);
+   |             -------- move occurs because `findings` has type `Vec<PCIFinding>`, which does not implement the `Copy` trait
+...
+76 |             findings,
+   |             -------- value moved here
+77 |             recommendations: self.generate_pci_recommendations(&findings),
+   |                                                                ^^^^^^^^^ value borrowed here after move
+   |
+   = note: borrow occurs due to deref coercion to `[PCIFinding]`
+help: consider cloning the value if the performance cost is acceptable
+   |
+76 |             findings: findings.clone(),
+   |                     ++++++++++++++++++
+
 error[E0308]: mismatched types
    --> src/compliance/pci_dss.rs:599:50
     |
@@ -6356,6 +6032,66 @@ error[E0614]: type `PCIMetrics` cannot be dereferenced
     |
 670 |         *db.metrics_store = metrics;
     |         ^^^^^^^^^^^^^^^^^ can't be dereferenced
+
+error[E0004]: non-exhaustive patterns: `types::UpdateType::Policy` not covered
+   --> src/compliance/pci_dss.rs:881:19
+    |
+881 |             match update.update_type {
+    |                   ^^^^^^^^^^^^^^^^^^ pattern `types::UpdateType::Policy` not covered
+    |
+note: `types::UpdateType` defined here
+   --> src/common/types.rs:178:10
+    |
+178 | pub enum UpdateType {
+    |          ^^^^^^^^^^
+...
+183 |     Policy,
+    |     ------ not covered
+    = note: the matched value is of type `types::UpdateType`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+    |
+894 ~                 },
+895 ~                 types::UpdateType::Policy => todo!(),
+    |
+
+error[E0382]: borrow of moved value: `findings`
+  --> src/compliance/risk_management.rs:80:65
+   |
+69 |         let findings = self.generate_risk_findings(&risk_analyses);
+   |             -------- move occurs because `findings` has type `Vec<RiskFinding>`, which does not implement the `Copy` trait
+...
+79 |             findings,
+   |             -------- value moved here
+80 |             recommendations: self.generate_risk_recommendations(&findings),
+   |                                                                 ^^^^^^^^^ value borrowed here after move
+   |
+   = note: borrow occurs due to deref coercion to `[RiskFinding]`
+help: consider cloning the value if the performance cost is acceptable
+   |
+79 |             findings: findings.clone(),
+   |                     ++++++++++++++++++
+
+error[E0382]: use of moved value: `risk_level`
+   --> src/compliance/risk_management.rs:212:13
+    |
+200 |         let risk_level = self.determine_risk_level(risk_score);
+    |             ---------- move occurs because `risk_level` has type `compliance::risk_management::RiskLevel`, which does not implement the `Copy` trait
+...
+203 |         let mitigation_recommendations = self.generate_mitigation_recommendations(risk, risk_level).await?;
+    |                                                                                         ---------- value moved here
+...
+212 |             risk_level,
+    |             ^^^^^^^^^^ value used here after move
+    |
+note: consider changing this parameter type in method `generate_mitigation_recommendations` to borrow instead if owning the value isn't necessary
+   --> src/compliance/risk_management.rs:270:82
+    |
+270 |     async fn generate_mitigation_recommendations(&self, risk: &Risk, risk_level: RiskLevel) -> Result<Vec<MitigationRecommendation>, RiskError> {
+    |              ----------------------------------- in this method                  ^^^^^^^^^ this parameter takes ownership of the value
+help: consider cloning the value if the performance cost is acceptable
+    |
+203 |         let mitigation_recommendations = self.generate_mitigation_recommendations(risk, risk_level.clone()).await?;
+    |                                                                                                   ++++++++
 
 error[E0308]: mismatched types
    --> src/compliance/risk_management.rs:359:46
@@ -6421,6 +6157,24 @@ error[E0614]: type `compliance::risk_management::RiskMetrics` cannot be derefere
 523 |         *db.metrics_store = metrics;
     |         ^^^^^^^^^^^^^^^^^ can't be dereferenced
 
+error[E0382]: borrow of moved value: `policy_compliances`
+   --> src/compliance/policy_management.rs:191:71
+    |
+177 |         let mut policy_compliances = Vec::new();
+    |             ---------------------- move occurs because `policy_compliances` has type `Vec<PolicyComplianceStatus>`, which does not implement the `Copy` trait
+...
+189 |             policy_compliances,
+    |             ------------------ value moved here
+190 |             overall_compliance,
+191 |             recommendations: self.generate_compliance_recommendations(&policy_compliances),
+    |                                                                       ^^^^^^^^^^^^^^^^^^^ value borrowed here after move
+    |
+    = note: borrow occurs due to deref coercion to `[PolicyComplianceStatus]`
+help: consider cloning the value if the performance cost is acceptable
+    |
+189 |             policy_compliances: policy_compliances.clone(),
+    |                               ++++++++++++++++++++++++++++
+
 error[E0308]: mismatched types
    --> src/compliance/policy_management.rs:335:32
     |
@@ -6476,6 +6230,41 @@ note: function defined here
     |
  73 | pub fn interval(period: Duration) -> Interval {
     |        ^^^^^^^^
+
+error[E0382]: borrow of moved value: `risk_level`
+   --> src/compliance/vendor_risk.rs:100:93
+    |
+ 85 |         let risk_level = self.determine_vendor_risk_level(overall_risk_score);
+    |             ---------- move occurs because `risk_level` has type `VendorRiskLevel`, which does not implement the `Copy` trait
+...
+ 98 |             risk_level,
+    |             ---------- value moved here
+ 99 |             recommendations,
+100 |             next_assessment_date: Utc::now() + Duration::days(self.get_assessment_frequency(&risk_level) as i64),
+    |                                                                                             ^^^^^^^^^^^ value borrowed here after move
+    |
+help: consider cloning the value if the performance cost is acceptable
+    |
+ 98 |             risk_level: risk_level.clone(),
+    |                       ++++++++++++++++++++
+
+error[E0382]: borrow of moved value: `vendor_assessments`
+   --> src/compliance/vendor_risk.rs:176:70
+    |
+158 |         let mut vendor_assessments = Vec::new();
+    |             ---------------------- move occurs because `vendor_assessments` has type `Vec<(Vendor, VendorAssessment)>`, which does not implement the `Copy` trait
+...
+173 |             vendor_assessments,
+    |             ------------------ value moved here
+...
+176 |             recommendations: self.generate_portfolio_recommendations(&vendor_assessments),
+    |                                                                      ^^^^^^^^^^^^^^^^^^^ value borrowed here after move
+    |
+    = note: borrow occurs due to deref coercion to `[(Vendor, VendorAssessment)]`
+help: consider cloning the value if the performance cost is acceptable
+    |
+173 |             vendor_assessments: vendor_assessments.clone(),
+    |                               ++++++++++++++++++++++++++++
 
 error[E0521]: borrowed data escapes outside of method
    --> src/compliance/vendor_risk.rs:526:9
@@ -6602,6 +6391,22 @@ note: the trait `std::fmt::Display` must be implemented
     = note: the following trait defines an item `to_string`, perhaps you need to implement it:
             candidate #1: `ToString`
 
+error[E0596]: cannot borrow `siem_event.enrichment_data` as mutable, as `siem_event` is not declared as mutable
+   --> src/monitoring/siem_integration.rs:625:13
+    |
+625 |         let siem_event = self.convert_system_event(event);
+    |             ^^^^^^^^^^ not mutable
+...
+628 |         siem_event.enrichment_data.insert("hostname".to_string(), event.hostname.clone());
+    |         -------------------------- cannot borrow as mutable
+629 |         siem_event.enrichment_data.insert("process_id".to_string(), event.process_id.to_string());
+    |         -------------------------- cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+625 |         let mut siem_event = self.convert_system_event(event);
+    |             +++
+
 error[E0308]: mismatched types
    --> src/monitoring/alerting.rs:284:50
     |
@@ -6643,6 +6448,14 @@ note: function defined here
     |
  73 | pub fn interval(period: Duration) -> Interval {
     |        ^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> src/monitoring/alerting.rs:319:35
+    |
+319 |     async fn process_alert(&self, mut alert: Alert) -> Result<(), AlertingError> {
+    |                                   ----^^^^^
+    |                                   |
+    |                                   help: remove this `mut`
 
 error[E0369]: binary operation `==` cannot be applied to type `alerting::ResolutionType`
    --> src/monitoring/alerting.rs:401:71
@@ -6976,78 +6789,6 @@ error[E0592]: duplicate definitions with name `get_soc2_stats`
 661 |     async fn get_soc2_stats(&self) -> Result<SOC2Stats, ComplianceError> {
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ duplicate definitions for `get_soc2_stats`
 
-error[E0609]: no field `complexity` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:352:9
-    |
-352 |     pub complexity: InterfaceComplexity,
-    |         ^^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
-
-error[E0609]: no field `layout` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:353:9
-    |
-353 |     pub layout: LayoutType,
-    |         ^^^^^^ unknown field
-    |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
-
-error[E0609]: no field `theme` on type `&types::InterfaceAdaptation`
-   --> src/common/types.rs:354:9
-    |
-354 |     pub theme: ThemeType,
-    |         ^^^^^ unknown field
-    |
-    = note: available fields are: `user_id`, `adaptation_type`, `parameters`, `created_at`, `expires_at`
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `complexity`
-   --> src/common/types.rs:352:5
-    |
-352 |     pub complexity: InterfaceComplexity,
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `layout`
-   --> src/common/types.rs:353:5
-    |
-353 |     pub layout: LayoutType,
-    |     ^^^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `theme`
-   --> src/common/types.rs:354:5
-    |
-354 |     pub theme: ThemeType,
-    |     ^^^^^^^^^^^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `complexity`
-   --> src/common/types.rs:352:9
-    |
-352 |     pub complexity: InterfaceComplexity,
-    |         ^^^^^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `layout`
-   --> src/common/types.rs:353:9
-    |
-353 |     pub layout: LayoutType,
-    |         ^^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
-error[E0560]: struct `types::InterfaceAdaptation` has no field named `theme`
-   --> src/common/types.rs:354:9
-    |
-354 |     pub theme: ThemeType,
-    |         ^^^^^ `types::InterfaceAdaptation` does not have this field
-    |
-    = note: all struct fields are already assigned
-
 error[E0277]: can't compare `DashboardUpdateType` with `DashboardUpdateType`
    --> src/gui/dashboard.rs:679:27
     |
@@ -7224,9 +6965,9 @@ error[E0308]: mismatched types
     = note: expected reference `&types::AnalyticsConfig`
                found reference `&AnalyticsGUIConfig`
 note: associated function defined here
-   --> src/common/types.rs:312:12
+   --> src/common/types.rs:322:12
     |
-312 |     pub fn new(_config: &AnalyticsConfig) -> Self {
+322 |     pub fn new(_config: &AnalyticsConfig) -> Self {
     |            ^^^ -------------------------
 
 error[E0308]: mismatched types
@@ -7240,9 +6981,9 @@ error[E0308]: mismatched types
     = note: expected reference `&SettingsConfig`
                found reference `&SettingsGUIConfig`
 note: associated function defined here
-   --> src/common/types.rs:384:12
+   --> src/common/types.rs:366:12
     |
-384 |     pub fn new(_config: &SettingsConfig) -> Self {
+366 |     pub fn new(_config: &SettingsConfig) -> Self {
     |            ^^^ ------------------------
 
 error[E0599]: no method named `has_risk_access` found for enum `UserRole` in the current scope
@@ -7251,9 +6992,9 @@ error[E0599]: no method named `has_risk_access` found for enum `UserRole` in the
 317 |             GUIUpdateType::RiskAssessment => session.user.role.has_risk_access(),
     |                                                                ^^^^^^^^^^^^^^^
     |
-   ::: src/common/types.rs:22:1
+   ::: src/common/types.rs:21:1
     |
- 22 | pub enum UserRole {
+ 21 | pub enum UserRole {
     | ----------------- method `has_risk_access` not found for this enum
     |
 help: there is a method `has_system_access` with a similar name
@@ -7268,9 +7009,9 @@ error[E0599]: no method named `has_agent_access` found for enum `UserRole` in th
 318 |             GUIUpdateType::AgentInteraction => session.user.role.has_agent_access(),
     |                                                                  ^^^^^^^^^^^^^^^^ method not found in `UserRole`
     |
-   ::: src/common/types.rs:22:1
+   ::: src/common/types.rs:21:1
     |
- 22 | pub enum UserRole {
+ 21 | pub enum UserRole {
     | ----------------- method `has_agent_access` not found for this enum
 
 error[E0560]: struct `ClassificationPattern` has no field named `patterns`
@@ -7426,14 +7167,14 @@ note: `nist_csf::RiskConfig` is defined in module `crate::compliance::nist_csf` 
 1002 | pub struct RiskConfig {
      | ^^^^^^^^^^^^^^^^^^^^^
 note: `types::RiskConfig` is defined in module `crate::common::types` of the current crate
-    --> src/common/types.rs:237:1
+    --> src/common/types.rs:247:1
      |
- 237 | pub struct RiskConfig {
+ 247 | pub struct RiskConfig {
      | ^^^^^^^^^^^^^^^^^^^^^
 note: associated function defined here
-    --> src/common/types.rs:290:12
+    --> src/common/types.rs:300:12
      |
- 290 |     pub fn new(_config: &RiskConfig) -> Self {
+ 300 |     pub fn new(_config: &RiskConfig) -> Self {
      |            ^^^ --------------------
 
 error[E0609]: no field `request_type` on type `&DataSubjectRequest`
@@ -7459,14 +7200,14 @@ note: `soc2::MonitoringConfig` is defined in module `crate::compliance::soc2` of
 1005 | pub struct MonitoringConfig {
      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 note: `types::MonitoringConfig` is defined in module `crate::common::types` of the current crate
-    --> src/common/types.rs:227:1
+    --> src/common/types.rs:237:1
      |
- 227 | pub struct MonitoringConfig {
+ 237 | pub struct MonitoringConfig {
      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 note: associated function defined here
-    --> src/common/types.rs:253:12
+    --> src/common/types.rs:263:12
      |
- 253 |     pub fn new(_config: &MonitoringConfig) -> Self {
+ 263 |     pub fn new(_config: &MonitoringConfig) -> Self {
      |            ^^^ --------------------------
 
 error[E0599]: no variant or associated item named `Technical` found for enum `SOC2ControlCategory` in the current scope
@@ -7594,7 +7335,7 @@ error[E0277]: the trait bound `tokio::sync::RwLock<Vec<SOC2Assessment>>: serde::
                (T0, T1, T2)
                (T0, T1, T2, T3)
                (T0, T1, T2, T3, T4)
-             and 1366 others
+             and 1359 others
      = note: required for `Arc<tokio::sync::RwLock<Vec<SOC2Assessment>>>` to implement `Serialize`
 note: required by a bound in `gui::_::_serde::ser::SerializeStruct::serialize_field`
     --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.228/src/ser/mod.rs:1917:21
@@ -7626,7 +7367,7 @@ error[E0277]: the trait bound `tokio::sync::RwLock<HashMap<std::string::String, 
                (T0, T1, T2)
                (T0, T1, T2, T3)
                (T0, T1, T2, T3, T4)
-             and 1366 others
+             and 1359 others
      = note: required for `Arc<tokio::sync::RwLock<HashMap<std::string::String, SOC2Report>>>` to implement `Serialize`
 note: required by a bound in `gui::_::_serde::ser::SerializeStruct::serialize_field`
     --> /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.228/src/ser/mod.rs:1917:21
@@ -7810,17 +7551,11 @@ warning: unused variable: `content`
 190 |     pub fn classify_data(&self, content: &str) -> DataClassification {
     |                                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_content`
 
-warning: unused variable: `public_key`
-   --> src/security/cryptography.rs:227:45
+warning: unused variable: `keys`
+   --> src/security/cryptography.rs:486:27
     |
-227 |     async fn encrypt_with_public_key(&self, public_key: &str, data: &[u8]) -> Result<Vec<u8>, CryptoError> {
-    |                                             ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_public_key`
-
-warning: unused variable: `key`
-   --> src/security/cryptography.rs:233:48
-    |
-233 |     async fn encrypt_with_symmetric_key(&self, key: &[u8], data: &[u8]) -> Result<Vec<u8>, CryptoError> {
-    |                                                ^^^ help: if this is intentional, prefix it with an underscore: `_key`
+486 |     async fn start(&self, keys: Arc<RwLock<HashMap<String, EncryptionKey>>>) -> Result<(), CryptoError> {
+    |                           ^^^^ help: if this is intentional, prefix it with an underscore: `_keys`
 
 warning: unused variable: `private_key`
    --> src/security/cryptography.rs:239:46
@@ -7832,6 +7567,18 @@ warning: unused variable: `key`
    --> src/security/cryptography.rs:245:48
     |
 245 |     async fn decrypt_with_symmetric_key(&self, key: &[u8], encrypted_data: &[u8]) -> Result<Vec<u8>, CryptoError> {
+    |                                                ^^^ help: if this is intentional, prefix it with an underscore: `_key`
+
+warning: unused variable: `public_key`
+   --> src/security/cryptography.rs:227:45
+    |
+227 |     async fn encrypt_with_public_key(&self, public_key: &str, data: &[u8]) -> Result<Vec<u8>, CryptoError> {
+    |                                             ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_public_key`
+
+warning: unused variable: `key`
+   --> src/security/cryptography.rs:233:48
+    |
+233 |     async fn encrypt_with_symmetric_key(&self, key: &[u8], data: &[u8]) -> Result<Vec<u8>, CryptoError> {
     |                                                ^^^ help: if this is intentional, prefix it with an underscore: `_key`
 
 warning: unused variable: `private_key`
@@ -7894,12 +7641,6 @@ warning: unused variable: `key`
 422 |     async fn archive_key(&self, key_id: &str, key: &EncryptionKey) -> Result<(), CryptoError> {
     |                                               ^^^ help: if this is intentional, prefix it with an underscore: `_key`
 
-warning: unused variable: `keys`
-   --> src/security/cryptography.rs:486:27
-    |
-486 |     async fn start(&self, keys: Arc<RwLock<HashMap<String, EncryptionKey>>>) -> Result<(), CryptoError> {
-    |                           ^^^^ help: if this is intentional, prefix it with an underscore: `_keys`
-
 warning: unused variable: `config`
   --> src/security/rasp.rs:23:16
    |
@@ -7930,6 +7671,18 @@ warning: unused variable: `request`
 597 |     async fn detect_threat(&self, request: &SecurityRequest) -> Result<Option<Threat>, RASPError> {
     |                                   ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_request`
 
+warning: unused variable: `traffic`
+   --> src/security/network_security.rs:685:43
+    |
+685 |     pub async fn check_request(&mut self, traffic: &NetworkTraffic) -> Result<DDoSDecision, NetworkSecurityError> {
+    |                                           ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_traffic`
+
+warning: unused variable: `segment`
+   --> src/security/network_security.rs:422:49
+    |
+422 |     async fn update_firewall_for_segment(&self, segment: &NetworkSegment) -> Result<(), NetworkSecurityError> {
+    |                                                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_segment`
+
 warning: unused variable: `segment_id`
    --> src/security/network_security.rs:427:49
     |
@@ -7942,18 +7695,6 @@ warning: unused variable: `mask`
 390 |             if let Some(mask) = subnet_parts.next() {
     |                         ^^^^ help: if this is intentional, prefix it with an underscore: `_mask`
 
-warning: unused variable: `segment`
-   --> src/security/network_security.rs:422:49
-    |
-422 |     async fn update_firewall_for_segment(&self, segment: &NetworkSegment) -> Result<(), NetworkSecurityError> {
-    |                                                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_segment`
-
-warning: unused variable: `traffic`
-   --> src/security/network_security.rs:685:43
-    |
-685 |     pub async fn check_request(&mut self, traffic: &NetworkTraffic) -> Result<DDoSDecision, NetworkSecurityError> {
-    |                                           ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_traffic`
-
 warning: unused variable: `ipv4`
    --> src/security/network_security.rs:930:24
     |
@@ -7965,6 +7706,18 @@ warning: unused variable: `request`
     |
 619 |     fn is_within_retention_period(&self, request: &DataSubjectRequest) -> bool {
     |                                          ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_request`
+
+warning: unused variable: `control_id`
+   --> src/compliance/soc2.rs:933:44
+    |
+933 |     pub async fn log_control_update(&self, control_id: &str, update: &SOC2ControlUpdate) -> Result<(), ComplianceError> {
+    |                                            ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_control_id`
+
+warning: unused variable: `update`
+   --> src/compliance/soc2.rs:933:62
+    |
+933 |     pub async fn log_control_update(&self, control_id: &str, update: &SOC2ControlUpdate) -> Result<(), ComplianceError> {
+    |                                                              ^^^^^^ help: if this is intentional, prefix it with an underscore: `_update`
 
 error[E0382]: use of moved value: `findings`
    --> src/compliance/soc2.rs:476:9
@@ -7990,18 +7743,6 @@ warning: unused variable: `findings`
     |
 469 |     fn generate_soc2_findings(&self, findings: &[SOC2Finding]) -> Vec<SOC2Finding> {
     |                                      ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_findings`
-
-warning: unused variable: `control_id`
-   --> src/compliance/soc2.rs:933:44
-    |
-933 |     pub async fn log_control_update(&self, control_id: &str, update: &SOC2ControlUpdate) -> Result<(), ComplianceError> {
-    |                                            ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_control_id`
-
-warning: unused variable: `update`
-   --> src/compliance/soc2.rs:933:62
-    |
-933 |     pub async fn log_control_update(&self, control_id: &str, update: &SOC2ControlUpdate) -> Result<(), ComplianceError> {
-    |                                                              ^^^^^^ help: if this is intentional, prefix it with an underscore: `_update`
 
 warning: unused variable: `requirement_id`
    --> src/compliance/pci_dss.rs:953:48
@@ -8129,6 +7870,30 @@ warning: unused variable: `resolution`
 813 |     pub async fn handle_resolution(&self, alert: &Alert, resolution: &AlertResolution) -> Result<(), AlertingError> {
     |                                                          ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_resolution`
 
+warning: unused variable: `metrics`
+   --> src/monitoring/advanced_monitoring.rs:647:48
+    |
+647 |     pub async fn update_system_patterns(&self, metrics: &SystemMetrics) -> Result<(), MonitoringError> {
+    |                                                ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
+
+warning: unused variable: `metrics`
+   --> src/monitoring/advanced_monitoring.rs:707:41
+    |
+707 |     pub async fn update_baseline(&self, metrics: &SystemMetrics) -> Result<(), MonitoringError> {
+    |                                         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
+
+warning: unused variable: `metrics`
+   --> src/monitoring/advanced_monitoring.rs:652:53
+    |
+652 |     pub async fn update_application_patterns(&self, metrics: &ApplicationMetrics) -> Result<(), MonitoringError> {
+    |                                                     ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
+
+warning: unused variable: `metrics`
+   --> src/monitoring/advanced_monitoring.rs:657:49
+    |
+657 |     pub async fn update_network_patterns(&self, metrics: &NetworkMetrics) -> Result<(), MonitoringError> {
+    |                                                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
+
 warning: unused variable: `data`
    --> src/monitoring/advanced_monitoring.rs:667:43
     |
@@ -8212,30 +7977,6 @@ warning: unused variable: `data`
     |
 622 |     async fn batch_analyze(&self, data: &MonitoringData) -> Result<Option<Vec<Anomaly>>, MonitoringError> {
     |                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
-
-warning: unused variable: `metrics`
-   --> src/monitoring/advanced_monitoring.rs:647:48
-    |
-647 |     pub async fn update_system_patterns(&self, metrics: &SystemMetrics) -> Result<(), MonitoringError> {
-    |                                                ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
-
-warning: unused variable: `metrics`
-   --> src/monitoring/advanced_monitoring.rs:652:53
-    |
-652 |     pub async fn update_application_patterns(&self, metrics: &ApplicationMetrics) -> Result<(), MonitoringError> {
-    |                                                     ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
-
-warning: unused variable: `metrics`
-   --> src/monitoring/advanced_monitoring.rs:657:49
-    |
-657 |     pub async fn update_network_patterns(&self, metrics: &NetworkMetrics) -> Result<(), MonitoringError> {
-    |                                                 ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
-
-warning: unused variable: `metrics`
-   --> src/monitoring/advanced_monitoring.rs:707:41
-    |
-707 |     pub async fn update_baseline(&self, metrics: &SystemMetrics) -> Result<(), MonitoringError> {
-    |                                         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metrics`
 
 warning: unused variable: `data`
    --> src/monitoring/advanced_monitoring.rs:782:39
@@ -8345,6 +8086,18 @@ warning: unused variable: `update`
 572 |     pub async fn update_incident(&self, incident_id: &str, update: &IncidentUpdate) -> Result<Incident, IncidentError> {
     |                                                            ^^^^^^ help: if this is intentional, prefix it with an underscore: `_update`
 
+warning: unused variable: `incident_id`
+   --> src/monitoring/incident_response.rs:595:38
+    |
+595 |     pub async fn add_evidence(&self, incident_id: &str, evidence: &Evidence) -> Result<(), IncidentError> {
+    |                                      ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_incident_id`
+
+warning: unused variable: `evidence`
+   --> src/monitoring/incident_response.rs:595:57
+    |
+595 |     pub async fn add_evidence(&self, incident_id: &str, evidence: &Evidence) -> Result<(), IncidentError> {
+    |                                                         ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_evidence`
+
 warning: unused variable: `incident`
    --> src/monitoring/incident_response.rs:387:50
     |
@@ -8362,18 +8115,6 @@ warning: unused variable: `incident`
     |
 416 |     async fn generate_recommendations(&self, incident: &Incident) -> Result<Vec<Recommendation>, IncidentError> {
     |                                              ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_incident`
-
-warning: unused variable: `incident_id`
-   --> src/monitoring/incident_response.rs:595:38
-    |
-595 |     pub async fn add_evidence(&self, incident_id: &str, evidence: &Evidence) -> Result<(), IncidentError> {
-    |                                      ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_incident_id`
-
-warning: unused variable: `evidence`
-   --> src/monitoring/incident_response.rs:595:57
-    |
-595 |     pub async fn add_evidence(&self, incident_id: &str, evidence: &Evidence) -> Result<(), IncidentError> {
-    |                                                         ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_evidence`
 
 warning: unused variable: `severity`
     --> src/monitoring/incident_response.rs:1246:21
@@ -8399,7 +8140,7 @@ warning: unused variable: `status`
 1253 |             if !matches!(&incident.status, status) {
      |                                            ^^^^^^ help: if this is intentional, prefix it with an underscore: `_status`
 
-Some errors have detailed explanations: E0004, E0061, E0107, E0119, E0255, E0277, E0282, E0308, E0369...
+Some errors have detailed explanations: E0004, E0061, E0107, E0255, E0277, E0282, E0308, E0369, E0382...
 For more information about an error, try `rustc --explain E0004`.
-warning: `barca-strategos` (lib) generated 195 warnings
-error: could not compile `barca-strategos` (lib) due to 482 previous errors; 195 warnings emitted
+warning: `barca-strategos` (lib) generated 199 warnings
+error: could not compile `barca-strategos` (lib) due to 478 previous errors; 199 warnings emitted

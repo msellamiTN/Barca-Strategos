@@ -1,7 +1,7 @@
 // use crate::core::*;
 // use crate::security::*;
 // use crate::monitoring::*;
-use crate::common::{MonitoringConfig};
+use crate::common::MonitoringConfig;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -977,22 +977,13 @@ pub struct AssessmentConfig {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MitigationConfig {
     pub automatic_mitigation_planning: bool,
-    pub mitigation_tracking_enabled: bool,
-    pub effectiveness_monitoring: bool,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct MonitoringConfig {
-    pub continuous_monitoring: bool,
-    pub real_time_alerts: bool,
-    pub risk_threshold: f64,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ReportingConfig {
-    pub automated_reporting: bool,
-    pub report_frequency_days: u32,
-    pub executive_dashboard: bool,
+pub automated_reporting: bool,
+pub report_frequency_days: u32,
+pub executive_dashboard: bool,
 }
 
 // Error types

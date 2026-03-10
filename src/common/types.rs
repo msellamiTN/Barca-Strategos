@@ -129,6 +129,27 @@ pub enum AdaptationType {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
+pub enum InterfaceComplexity {
+    Simplified,
+    Standard,
+    Advanced,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
+pub enum LayoutType {
+    Default,
+    Compact,
+    Detailed,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
+pub enum ThemeType {
+    Light,
+    Dark,
+    Auto,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
 pub enum AdaptiveFeature {
     SimplifiedInterface,
     CriticalInformationHighlighting,
