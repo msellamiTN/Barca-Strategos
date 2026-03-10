@@ -643,7 +643,6 @@ impl SOC2Compliance {
                 crate::monitoring::alerting::AlertAction::ImmediateNotification,
                 crate::monitoring::AlertAction::EscalateToLevel(2),
             ],
-            ],
             escalation_level: 0,
             acknowledged_by: None,
             acknowledged_at: None,
