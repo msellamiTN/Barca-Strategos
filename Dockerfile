@@ -11,7 +11,12 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /phoenix-api ./cmd/api
 # Final stage
 FROM alpine:latest
 
-RUN apk --no-cache add ca-certificates tzdata curl
+# Fix TLS issues and update package indexes
+RUN apk update && \
+    apk upgrade && \
+    apk --no-cache add ca-certificates tzdata curl wget && \
+    update-ca-certificates
+
 WORKDIR /root/
 
 # Create directories for compliance reports and logs
@@ -25,9 +30,10 @@ COPY --from=builder /app/.env .env
 COPY scripts/* /app/scripts/
 RUN chmod +x /app/scripts/*.sh
 
-# Health check
+# Health check using wget as fallback
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:8080/api/system/health || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/api/system/health || \
+      curl -f http://localhost:8080/api/system/health || exit 1
 
 # Create non-root user for security
 RUN addgroup -g 1000 -S phoenix && \
