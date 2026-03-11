@@ -163,7 +163,7 @@ run_migrations() {
     local attempt=1
     
     while [ $attempt -le $max_attempts ]; do
-        if docker exec phoenix-api-postgres-1 pg_isready -U phoenix &>/dev/null; then
+        if docker exec barca-strategos-postgres-1 pg_isready -h localhost -U phoenix &>/dev/null; then
             log_success "Database is ready"
             break
         fi
@@ -179,11 +179,11 @@ run_migrations() {
     fi
     
     # Run initialization script if needed
-    if docker exec phoenix-api-postgres-1 psql -U phoenix -c "\dt compliance_statistics;" &>/dev/null; then
+    if docker exec barca-strategos-postgres-1 psql -U phoenix -d phoenix -c "\dt compliance_statistics;" &>/dev/null; then
         log_info "Database already initialized"
     else
         log_info "Initializing database..."
-        docker exec phoenix-api-postgres-1 psql -U phoenix -f /docker-entrypoint-initdb.d/init-db.sql
+        docker exec barca-strategos-postgres-1 psql -U phoenix -d phoenix -f /docker-entrypoint-initdb.d/init-db.sql
         log_success "Database initialized successfully"
     fi
 }
