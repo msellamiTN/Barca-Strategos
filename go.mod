@@ -12,4 +12,5 @@ require (
 	github.com/jung-kurt/gofpdf/v2 v2.2.3
 	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/prometheus/client_golang v1.19.1
+	github.com/stretchr/testify v1.9.0
 )

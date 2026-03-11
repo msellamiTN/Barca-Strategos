@@ -4,6 +4,13 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/barca-strategos/phoenix/internal/routes/api/v1"
 	"github.com/barca-strategos/phoenix/internal/websocket"
+	"github.com/barca-strategos/phoenix/internal/compliance/iso27001"
+	"github.com/barca-strategos/phoenix/internal/compliance/nist"
+	"github.com/barca-strategos/phoenix/internal/compliance/gdpr"
+	"github.com/barca-strategos/phoenix/internal/compliance/policy"
+	"github.com/barca-strategos/phoenix/internal/compliance/vendor"
+	"github.com/barca-strategos/phoenix/internal/compliance/soc2"
+	"github.com/barca-strategos/phoenix/internal/compliance/pci_dss"
 	"github.com/barca-strategos/phoenix/internal/risk"
 	"github.com/barca-strategos/phoenix/internal/compliance/evidence"
 	"github.com/barca-strategos/phoenix/internal/chat"
@@ -35,7 +42,16 @@ func Register(app *fiber.App) {
 	assetSvc := asset.New()
 	tiSvc := threatintel.New()
 	tenantSvc := tenant.New()
-
+	
+	// Compliance services
+	iso27001Svc := iso27001.New()
+	nistSvc := nist.New()
+	gdprSvc := gdpr.New()
+	policySvc := policy.New()
+	vendorSvc := vendor.New()
+	soc2Svc := soc2.New()
+	pciDssSvc := pci_dss.New()
+	
 	brk := broker.New()
 	brk.RegisterTool(broker.Tool{
 		Name:        "resolve_alert",
@@ -108,6 +124,13 @@ func Register(app *fiber.App) {
 	v1.RegisterTenantRoutes(app, tenantSvc, hub.Broadcast)
 	v1.RegisterReportingRoutes(app, reporting.New(caseSvc, riskSvc, assetSvc))
 	v1.RegisterIntegrationRoutes(app, serviceNow, jira)
+	v1.RegisterISO27001Routes(app, iso27001Svc, hub.Broadcast)
+	v1.RegisterNISTRoutes(app, nistSvc, hub.Broadcast)
+	v1.RegisterGDPRRoutes(app, gdprSvc, hub.Broadcast)
+	v1.RegisterPolicyRoutes(app, policySvc, hub.Broadcast)
+	v1.RegisterVendorRoutes(app, vendorSvc, hub.Broadcast)
+	v1.RegisterSOC2Routes(app, soc2Svc, hub.Broadcast)
+	v1.RegisterPCIDSSRoutes(app, pciDssSvc, hub.Broadcast)
 
 	// Health check (no auth required)
 	app.Get("/api/system/health", func(c *fiber.Ctx) error {
