@@ -36,9 +36,14 @@ case "$1" in
         # Start HTTP server using busybox httpd
         cd /app
         
-        # Create a simple index file for httpd
-        mkdir -p /tmp/www
-        cat > /tmp/www/index.html <<'EOF'
+        # Create web directory structure
+        mkdir -p /tmp/www/api/system /tmp/www/api/v1/compliance/soc2 /tmp/www/api/v1/compliance/pci-dss
+        
+        # Copy web GUI files if they exist, otherwise create basic index
+        if [ -d "/app/web" ]; then
+            cp -r /app/web/* /tmp/www/
+        else
+            cat > /tmp/www/index.html <<'EOF'
 <!DOCTYPE html>
 <html>
 <head><title>Phoenix API</title></head>
@@ -53,9 +58,19 @@ case "$1" in
 </body>
 </html>
 EOF
-
+        fi
+        
+        # Create API mock responses
         cat > /tmp/www/api/system/health <<'EOF'
 {"status":"healthy","service":"phoenix-api","version":"1.0.0","frameworks":["SOC2 Type II","PCI DSS v4.0"],"timestamp":"2026-03-11T22:00:00Z"}
+EOF
+
+        cat > /tmp/www/api/v1/compliance/soc2/stats <<'EOF'
+{"compliance_score":85.5,"total_controls":45,"compliant_controls":38,"non_compliant_controls":5,"partial_controls":2,"total_findings":7,"critical_findings":1,"high_findings":2,"medium_findings":3,"low_findings":1}
+EOF
+
+        cat > /tmp/www/api/v1/compliance/pci-dss/stats <<'EOF'
+{"compliance_score":78.3,"total_requirements":12,"compliant_requirements":9,"non_compliant_requirements":2,"partial_requirements":1,"total_findings":5,"critical_findings":0,"high_findings":1,"medium_findings":2,"low_findings":2}
 EOF
 
         # Start busybox httpd

@@ -9,6 +9,9 @@ RUN mkdir -p /app/reports /app/logs /app/scripts
 COPY phoenix-api-static /app/phoenix-api
 RUN chmod +x /app/phoenix-api
 
+# Copy web GUI files
+COPY web/ /app/web/
+
 # Copy scripts
 COPY scripts/*.sh /app/scripts/
 RUN chmod +x /app/scripts/*.sh 2>/dev/null || true

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix API - Compliance Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Phoenix API</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="#dashboard" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#soc2" class="nav-item" data-page="soc2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>SOC 2 Compliance</span>
+                </a>
+                <a href="#pci-dss" class="nav-item" data-page="pci-dss">
+                    <i class="fas fa-credit-card"></i>
+                    <span>PCI DSS Compliance</span>
+                </a>
+                <a href="#reports" class="nav-item" data-page="reports">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#settings" class="nav-item" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span>System Online</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h2 id="page-title">Compliance Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <button class="btn-icon" id="refresh-btn" title="Refresh Data">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button class="btn-icon" id="notifications-btn" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="content-area">
+                <!-- Dashboard Page -->
+                <div id="dashboard-page" class="page active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="soc2-score">--</h3>
+                                <p>SOC 2 Compliance Score</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="pci-score">--</h3>
+                                <p>PCI DSS Compliance Score</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon orange">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="total-findings">--</h3>
+                                <p>Active Findings</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon purple">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="total-controls">--</h3>
+                                <p>Total Controls</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="chart-card">
+                            <h3>Compliance Trends</h3>
+                            <div id="compliance-chart" class="chart-placeholder">
+                                <canvas id="trendChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-card">
+                            <h3>Recent Activity</h3>
+                            <div id="activity-list" class="activity-list">
+                                <div class="activity-item">
+                                    <i class="fas fa-check text-success"></i>
+                                    <div>
+                                        <p><strong>SOC 2 Assessment Completed</strong></p>
+                                        <span class="text-muted">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <i class="fas fa-exclamation-triangle text-warning"></i>
+                                    <div>
+                                        <p><strong>New Finding Detected</strong></p>
+                                        <span class="text-muted">5 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <i class="fas fa-file-alt text-info"></i>
+                                    <div>
+                                        <p><strong>Report Generated</strong></p>
+                                        <span class="text-muted">1 day ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOC 2 Page -->
+                <div id="soc2-page" class="page">
+                    <div class="page-header">
+                        <h3>SOC 2 Type II Compliance</h3>
+                        <button class="btn btn-primary" id="run-soc2-assessment">
+                            <i class="fas fa-play"></i> Run Assessment
+                        </button>
+                    </div>
+                    
+                    <div class="controls-grid" id="soc2-controls">
+                        <div class="loading">Loading SOC 2 controls...</div>
+                    </div>
+                </div>
+
+                <!-- PCI DSS Page -->
+                <div id="pci-dss-page" class="page">
+                    <div class="page-header">
+                        <h3>PCI DSS v4.0 Compliance</h3>
+                        <button class="btn btn-primary" id="run-pci-assessment">
+                            <i class="fas fa-play"></i> Run Assessment
+                        </button>
+                    </div>
+                    
+                    <div class="controls-grid" id="pci-controls">
+                        <div class="loading">Loading PCI DSS requirements...</div>
+                    </div>
+                </div>
+
+                <!-- Reports Page -->
+                <div id="reports-page" class="page">
+                    <div class="page-header">
+                        <h3>Compliance Reports</h3>
+                        <button class="btn btn-primary" id="generate-report">
+                            <i class="fas fa-file-pdf"></i> Generate Report
+                        </button>
+                    </div>
+                    
+                    <div class="reports-list" id="reports-list">
+                        <div class="loading">Loading reports...</div>
+                    </div>
+                </div>
+
+                <!-- Settings Page -->
+                <div id="settings-page" class="page">
+                    <div class="page-header">
+                        <h3>System Settings</h3>
+                    </div>
+                    
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <h4>API Configuration</h4>
+                            <div class="form-group">
+                                <label>API Endpoint</label>
+                                <input type="text" id="api-endpoint" value="http://localhost:8080" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Monitoring Interval (hours)</label>
+                                <input type="number" id="monitoring-interval" value="6" class="form-control">
+                            </div>
+                            <button class="btn btn-primary" id="save-settings">
+                                <i class="fas fa-save"></i> Save Settings
+                            </button>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <h4>System Information</h4>
+                            <div class="info-list">
+                                <div class="info-item">
+                                    <span>Version:</span>
+                                    <strong>1.0.0</strong>
+                                </div>
+                                <div class="info-item">
+                                    <span>Environment:</span>
+                                    <strong id="environment">Development</strong>
+                                </div>
+                                <div class="info-item">
+                                    <span>Status:</span>
+                                    <strong class="text-success">Online</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
