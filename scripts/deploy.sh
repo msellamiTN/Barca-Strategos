@@ -91,8 +91,8 @@ backup_data() {
 # Function to build Docker image
 build_image() {
     log_info "Building Docker image..."
-    # Use simple Dockerfile to avoid network connectivity issues
-    docker build -f Dockerfile.simple -t "$DOCKER_IMAGE" .
+    # Use minimal Dockerfile for restricted network environments
+    docker build -f Dockerfile.minimal -t "$DOCKER_IMAGE" .
     log_success "Docker image built successfully"
 }
 

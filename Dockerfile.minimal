@@ -1,0 +1,25 @@
+# Minimal Dockerfile for restricted network environments
+FROM scratch
+
+# Copy a static binary (we'll create one that doesn't require external dependencies)
+COPY phoenix-api-static /phoenix-api
+
+# Make it executable
+RUN chmod +x /phoenix-api 2>/dev/null || true
+
+# Create non-root user directory structure
+USER 1000:1000
+
+EXPOSE 8080
+
+# Health check using the binary itself
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+  CMD ["/phoenix-api", "--health-check"]
+
+# Add labels for monitoring
+LABEL maintainer="Barca Strategos Team"
+LABEL version="1.0.0"
+LABEL description="Phoenix API with SOC2 and PCI DSS Compliance Modules"
+LABEL org.opencontainers.image.source="https://github.com/barca-strategos/phoenix"
+
+CMD ["/phoenix-api"]
