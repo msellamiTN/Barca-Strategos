@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: phoenix-config
+  namespace: phoenix
+data:
+  redis-url: "redis:6379"
+  log-level: "info"

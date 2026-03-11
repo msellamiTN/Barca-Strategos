@@ -2,7 +2,9 @@ version: '3.9'
 
 services:
   phoenix-api:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
@@ -13,6 +15,18 @@ services:
     depends_on:
       - postgres
       - redis
+    restart: unless-stopped
+
+  phoenix-frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    depends_on:
+      - phoenix-api
     restart: unless-stopped
 
   postgres:

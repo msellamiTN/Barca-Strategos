@@ -1,8 +1,10 @@
 version: '3.9'
 
 services:
-  phoenix-api:
-    build: .
+  phoenix:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
@@ -14,6 +16,8 @@ services:
       - postgres
       - redis
     restart: unless-stopped
+    volumes:
+      - .:/app
 
   postgres:
     image: postgres:15-alpine
