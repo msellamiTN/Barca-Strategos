@@ -226,7 +226,7 @@ impl ComplianceManagementCenter {
     }
 
     async fn compliance_monitoring_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(300)); // Every 5 minutes
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(300)); // Every 5 minutes
         
         loop {
             interval.tick().await;
@@ -238,7 +238,7 @@ impl ComplianceManagementCenter {
     }
 
     async fn analytics_processing_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30 * 60));
         
         loop {
             interval.tick().await;
@@ -250,7 +250,7 @@ impl ComplianceManagementCenter {
     }
 
     async fn alert_processing_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(60));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(60));
         
         loop {
             interval.tick().await;

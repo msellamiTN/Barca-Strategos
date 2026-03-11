@@ -191,7 +191,7 @@ impl MainDashboard {
     }
 
     async fn real_time_update_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5));
         
         loop {
             interval.tick().await;
@@ -203,7 +203,7 @@ impl MainDashboard {
     }
 
     async fn performance_monitoring_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30));
         
         loop {
             interval.tick().await;
@@ -215,7 +215,7 @@ impl MainDashboard {
     }
 
     async fn layout_optimization_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5 * 60));
         
         loop {
             interval.tick().await;

@@ -248,7 +248,7 @@ impl ThreatIntelligence {
     }
     
     async fn background_feed_updater(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(15));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(15 * 60));
         
         loop {
             interval.tick().await;
@@ -260,7 +260,7 @@ impl ThreatIntelligence {
     }
     
     async fn background_ioc_cleaner(&self) {
-        let mut interval = tokio::time::interval(Duration::hours(1));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(3600));
         
         loop {
             interval.tick().await;
@@ -272,7 +272,7 @@ impl ThreatIntelligence {
     }
     
     async fn background_threat_analyzer(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5 * 60));
         
         loop {
             interval.tick().await;

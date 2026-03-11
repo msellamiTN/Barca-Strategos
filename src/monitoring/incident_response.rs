@@ -165,7 +165,7 @@ impl IncidentResponse {
     }
     
     async fn background_incident_monitor(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5 * 60));
         
         loop {
             interval.tick().await;

@@ -2,7 +2,6 @@
 // use crate::security::*;
 // use crate::monitoring::*;
 use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig, UpdateType};
-use crate::compliance::pci_dss::ComplianceError;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
@@ -956,19 +955,6 @@ impl AuditManager {
 }
 
 #[derive(Debug, Clone)]
-pub struct ComplianceMonitor;
-
-impl ComplianceMonitor {
-    pub fn new(_config: &MonitoringConfig) -> Self {
-        Self
-    }
-    
-    pub async fn initialize(&mut self) -> Result<(), ComplianceError> {
-        Ok(())
-    }
-}
-
-#[derive(Debug, Clone)]
 pub struct MetricsCollector;
 
 impl MetricsCollector {
@@ -1048,20 +1034,13 @@ pub struct AuditConfig {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct MonitoringConfig {
-    pub continuous_monitoring: bool,
-    pub alert_threshold: f64,
-    pub metrics_collection_interval_hours: u32,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetricsConfig {
     pub enable_real_time_metrics: bool,
     pub metrics_retention_days: u32,
     pub dashboard_refresh_interval_minutes: u32,
 }
 
-// PCI DSS errors
+// PCI DSS errors (module-specific)
 #[derive(Debug, thiserror::Error)]
 pub enum ComplianceError {
     #[error("PCI DSS requirement not found: {0}")]

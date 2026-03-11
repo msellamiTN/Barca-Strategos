@@ -281,7 +281,7 @@ impl AlertingSystem {
     }
     
     async fn background_alert_processor(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(1));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(1));
         
         loop {
             interval.tick().await;
@@ -293,7 +293,7 @@ impl AlertingSystem {
     }
     
     async fn background_escalation_checker(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30));
         
         loop {
             interval.tick().await;
@@ -305,7 +305,7 @@ impl AlertingSystem {
     }
     
     async fn background_metrics_collector(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(1));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(60));
         
         loop {
             interval.tick().await;

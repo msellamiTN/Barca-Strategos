@@ -720,14 +720,6 @@ pub struct SOC2ControlUpdate {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum UpdateType {
-    Implementation,
-    Assessment,
-    Review,
-    Evidence,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum SOC2TestType {
     PenetrationTest,
     InternalTest,
@@ -1002,13 +994,6 @@ pub struct AuditConfig {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct MonitoringConfig {
-    pub continuous_monitoring: bool,
-    pub alert_threshold: f64,
-    pub metrics_collection_interval_hours: u32,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MetricsConfig {
     pub enable_real_time_metrics: bool,
     pub metrics_retention_days: u32,
@@ -1052,22 +1037,4 @@ pub struct SOC2Report {
     pub next_steps: Vec<String>,
 }
 
-// SOC 2 errors
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum FindingSeverity {
-    Critical,
-    High,
-    Medium,
-    Low,
-}
-
-// SOC 2 errors
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub enum RecommendationPriority {
-    Critical,
-    High,
-    Medium,
-    Low,
-}
+// Use common FindingSeverity and RecommendationPriority (imported)

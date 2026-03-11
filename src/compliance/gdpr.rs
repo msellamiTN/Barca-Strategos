@@ -649,7 +649,7 @@ impl GDPRCompliance {
         let start_time = Utc::now();
         
         // Simulate processing time
-        tokio::time::sleep(Duration::milliseconds(100)).await;
+        tokio::time::sleep(std::time::Duration::from_millis(100)).await;
         
         let processing_time = Utc::now().signed_duration_since(start_time).num_milliseconds();
         

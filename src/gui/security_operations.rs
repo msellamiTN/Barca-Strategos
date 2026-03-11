@@ -156,7 +156,7 @@ impl SecurityOperationsCenter {
     }
 
     async fn threat_monitoring_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30));
         
         loop {
             interval.tick().await;
@@ -168,7 +168,7 @@ impl SecurityOperationsCenter {
     }
 
     async fn incident_processing_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(10));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(10));
         
         loop {
             interval.tick().await;
@@ -180,7 +180,7 @@ impl SecurityOperationsCenter {
     }
 
     async fn vulnerability_scanning_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30 * 60));
         
         loop {
             interval.tick().await;

@@ -159,7 +159,7 @@ impl RiskManagementWorkspace {
     }
 
     async fn risk_monitoring_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(15));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(15 * 60));
         
         loop {
             interval.tick().await;
@@ -171,7 +171,7 @@ impl RiskManagementWorkspace {
     }
 
     async fn assessment_processing_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5 * 60));
         
         loop {
             interval.tick().await;
@@ -183,7 +183,7 @@ impl RiskManagementWorkspace {
     }
 
     async fn mitigation_tracking_loop(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(10));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(10 * 60));
         
         loop {
             interval.tick().await;

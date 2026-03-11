@@ -184,7 +184,7 @@ impl AdvancedMonitoring {
     }
     
     async fn background_metrics_collector(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(30));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(30));
         
         loop {
             interval.tick().await;
@@ -196,7 +196,7 @@ impl AdvancedMonitoring {
     }
     
     async fn background_anomaly_detector(&self) {
-        let mut interval = tokio::time::interval(Duration::seconds(10));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(10));
         
         loop {
             interval.tick().await;
@@ -208,7 +208,7 @@ impl AdvancedMonitoring {
     }
     
     async fn background_predictive_analyzer(&self) {
-        let mut interval = tokio::time::interval(Duration::minutes(5));
+        let mut interval = tokio::time::interval(std::time::Duration::from_secs(5 * 60));
         
         loop {
             interval.tick().await;

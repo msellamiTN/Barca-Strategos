@@ -332,7 +332,7 @@ impl PolicyManagementSystem {
     async fn schedule_policy_publication(&self, policy_id: &str) -> Result<(), PolicyError> {
         // Schedule automatic publication
         tokio::spawn(async move {
-            tokio::time::sleep(Duration::hours(24)).await;
+            tokio::time::sleep(std::time::Duration::from_secs(24 * 3600)).await;
             // Auto-publish after approval period
             println!("Auto-publishing policy: {}", policy_id);
         });
