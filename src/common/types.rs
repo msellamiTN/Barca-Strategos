@@ -3,10 +3,11 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use chrono::{DateTime, Utc};
 use uuid::Uuid;
+use crate::gui::{InterfaceComplexity, LayoutType, ThemeType};
 
 // User and session management types
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, Hash)]
-pub struct UserId(String);
+pub struct UserId(pub String);
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct User {

@@ -4,7 +4,6 @@
 use crate::common::{RiskLevel, FindingSeverity, RecommendationPriority, ComplianceMonitor, MonitoringConfig, UpdateType};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
-use thiserror::Error;
 use std::collections::{HashMap, VecDeque};
 use std::sync::Arc;
 use tokio::sync::RwLock;
@@ -1041,8 +1040,8 @@ pub struct MetricsConfig {
 }
 
 // PCI DSS errors (module-specific)
-#[derive(Debug, thiserror::Error)]
-pub enum ComplianceError {
+#[derive(Debug, Error)]
+pub enum PCIComplianceError {
     #[error("PCI DSS requirement not found: {0}")]
     RequirementNotFound(String),
     #[error("PCI DSS assessment failed: {0}")]

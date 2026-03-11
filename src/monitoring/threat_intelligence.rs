@@ -1,5 +1,6 @@
 // use crate::core::*;
-// use crate::security::*;
+use crate::security::{ThreatType, ThreatSeverity};
+use crate::monitoring::siem_integration::ThreatLevel;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};

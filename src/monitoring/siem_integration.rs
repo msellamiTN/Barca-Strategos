@@ -1,8 +1,8 @@
 // use crate::core::*;
-// use crate::security::*;
+use crate::security::{SecurityEvent, NetworkSecurityEvent, ThreatType};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
+use std::collections::{HashMap, VecDeque};
 use std::sync::Arc;
 use tokio::sync::RwLock;
 use chrono::{DateTime, Utc, Duration};
@@ -54,7 +54,7 @@ impl SIEMIntegration {
     }
     
     /// Send security event to SIEM
-    pub async fn send_security_event(&self, event: &SecurityEvent) -> Result<(), SIEMError> {
+    pub async fn send_security_event(&self, event: &SecurityEventData) -> Result<(), SIEMError> {
         // Enrich event with additional context
         let enriched_event = self.enrichment_engine.enrich_security_event(event).await?;
         
@@ -583,7 +583,7 @@ impl EnrichmentEngine {
         Ok(())
     }
     
-    pub async fn enrich_security_event(&self, event: &SecurityEvent) -> Result<SIEMEvent, SIEMError> {
+    pub async fn enrich_security_event(&self, event: &SecurityEventData) -> Result<SIEMEvent, SIEMError> {
         let mut siem_event = self.convert_security_event(event);
         
         // Add GeoIP enrichment
@@ -631,7 +631,7 @@ impl EnrichmentEngine {
         Ok(siem_event)
     }
     
-    fn convert_security_event(&self, event: &SecurityEvent) -> SIEMEvent {
+    fn convert_security_event(&self, event: &SecurityEventData) -> SIEMEvent {
         SIEMEvent {
             id: uuid::Uuid::new_v4(),
             timestamp: Utc::now(),

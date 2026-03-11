@@ -1,5 +1,5 @@
 // use crate::core::*;
-// use crate::security::*;
+use crate::security::SecurityEvent;
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, VecDeque};
@@ -295,8 +295,8 @@ impl AdvancedMonitoring {
         Ok(())
     }
     
-    async fn create_alert_from_anomaly(&self, anomaly: &Anomaly) -> Result<SecurityEvent, MonitoringError> {
-        Ok(SecurityEvent {
+    async fn create_alert_from_anomaly(&self, anomaly: &Anomaly) -> Result<crate::monitoring::siem_integration::SecurityEventData, MonitoringError> {
+        Ok(crate::monitoring::siem_integration::SecurityEventData {
             id: uuid::Uuid::new_v4(),
             timestamp: anomaly.timestamp,
             request_id: uuid::Uuid::new_v4().to_string(),

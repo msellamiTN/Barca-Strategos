@@ -333,7 +333,7 @@ impl SOC2Compliance {
         Ok(())
     }
     
-    async fn assess_soc2_control(&self, control: &SOC2Control) -> Result<SOC2ControlAssessment, ComplianceError> {
+    async fn assess_soc2_control(&self, control: &SOC2Control) -> Result<SOC2Assessment, ComplianceError> {
         // Assess control implementation
         let implementation_score = self.assess_soc2_implementation(control).await?;
         let effectiveness_score = self.assess_soc2_effectiveness(control).await?;
@@ -350,7 +350,7 @@ impl SOC2Compliance {
             SOC2ControlStatus::NotImplemented
         };
         
-        Ok(SOC2ControlAssessment {
+        Ok(SOC2Assessment {
             control_id: control.id.clone(),
             control_title: control.title.clone(),
             category: control.category.clone(),
@@ -426,7 +426,7 @@ impl SOC2Compliance {
         Ok(recommendations)
     }
     
-    fn calculate_soc2_score(&self, assessments: &[SOC2ControlAssessment]) -> f64 {
+    fn calculate_soc2_score(&self, assessments: &[SOC2Assessment]) -> f64 {
         if assessments.is_empty() {
             return 1.0;
         }
@@ -755,7 +755,7 @@ pub struct SOC2Assessment {
     pub version: String,
     pub scope: SOC2Scope,
     pub overall_score: f64,
-    pub control_assessments: Vec<SOC2ControlAssessment>,
+    pub control_assessments: Vec<SOC2Assessment>,
     pub findings: Vec<SOC2Finding>,
     pub recommendations: Vec<SOC2Recommendation>,
     pub last_assessed: DateTime<Utc>,

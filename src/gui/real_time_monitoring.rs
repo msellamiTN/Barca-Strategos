@@ -1,6 +1,6 @@
 // use crate::core::*;
-use crate::gui::*;
-use crate::monitoring::*;
+use crate::gui::{self, alerting::AlertConfig as GuiAlertConfig};
+use crate::monitoring::{self, alerting::AlertConfig as MonitoringAlertConfig};
 use crate::common::{UserId, User, InterfaceAdaptation};
 use async_trait::async_trait;
 use serde::{Deserialize, Serialize};
@@ -917,7 +917,7 @@ impl MetricsCollector {
 pub struct AlertEngine;
 
 impl AlertEngine {
-    pub fn new(_config: &AlertConfig) -> Self { Self }
+    pub fn new(_config: &GuiAlertConfig) -> Self { Self }
     pub async fn initialize(&mut self) -> Result<(), GUIError> { Ok(()) }
     pub async fn check_metrics_for_alerts(&self, _metrics: &MonitoringMetrics) -> Result<Vec<MonitoringAlert>, GUIError> { Ok(Vec::new()) }
     pub async fn process_alert(&self, alert: MonitoringAlert) -> Result<MonitoringAlert, GUIError> { Ok(alert) }
@@ -954,7 +954,7 @@ impl CognitiveOptimizer {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct MonitoringGUIConfig {
     pub metrics: MetricsConfig,
-    pub alerts: AlertConfig,
+    pub alerts: GuiAlertConfig,
     pub visualization: VisualizationConfig,
     pub cognitive: CognitiveConfig,
 }
