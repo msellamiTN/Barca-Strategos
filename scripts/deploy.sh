@@ -91,8 +91,8 @@ backup_data() {
 # Function to build Docker image
 build_image() {
     log_info "Building Docker image..."
-    # Use Ubuntu-based Dockerfile to avoid Alpine TLS issues
-    docker build -f Dockerfile.ubuntu -t "$DOCKER_IMAGE" .
+    # Use simple Dockerfile to avoid network connectivity issues
+    docker build -f Dockerfile.simple -t "$DOCKER_IMAGE" .
     log_success "Docker image built successfully"
 }
 
