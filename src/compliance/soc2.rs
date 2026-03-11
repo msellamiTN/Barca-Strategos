@@ -220,7 +220,7 @@ impl SOC2Compliance {
                 id: "CC5.1".to_string(),
                 title: "Vulnerability Management".to_string(),
                 description: "Identify, assess, and remediate vulnerabilities".to_string(),
-                category: SOC2ControlCategory::Technical,
+                category: SOC2ControlCategory::Operational,
                 subcategories: vec![
                     "Vulnerability scanning".to_string(),
                     "Penetration testing".to_string(),
@@ -292,7 +292,7 @@ impl SOC2Compliance {
                 test_type: SOC2TestType::PenetrationTest,
                 title: "Penetration Testing".to_string(),
                 description: "Conduct regular penetration testing".to_string(),
-                category: SOC2ControlCategory::Technical,
+                category: SOC2ControlCategory::Operational,
                 last_review_date: None,
                 evidence: vec![],
                 owner: "Security Team".to_string(),
@@ -304,7 +304,7 @@ impl SOC2Compliance {
                 id: "CC9.1".to_string(),
                 title: "Network Security Monitoring".to_string(),
                 description: "Monitor network traffic for security events".to_string(),
-                category: SOC2ControlCategory::Technical,
+                category: SOC2ControlCategory::Operational,
                 subcategories: vec![
                     "Network intrusion detection".to_string(),
                     "Malware analysis".to_string(),
@@ -450,7 +450,7 @@ impl SOC2Compliance {
                     gaps.push("Missing authentication evidence".to_string());
                 }
             },
-            SOC2ControlCategory::Technical => {
+            SOC2ControlCategory::Operational => {
                 if !control.evidence.iter().any(|e| e.contains("penetration test")) {
                     gaps.push("Missing penetration test evidence".to_string());
                 }
@@ -467,16 +467,16 @@ impl SOC2Compliance {
     }
     
     fn generate_soc2_findings(&self, findings: &[SOC2Finding]) -> Vec<SOC2Finding> {
-        let mut findings = Vec::new();
+        let mut new_findings = Vec::new();
         
         for finding in findings {
-            findings.push(finding);
+            new_findings.push(finding.clone());
         }
         
-        findings
+        new_findings
     }
     
-    fn generate_soc2_recommendations(&self, findings: &[SOC2Finding]) -> Vec<String> {
+    fn generate_soc2_recommendations(&self, findings: &[SOC2Finding]) -> Vec<SOC2Recommendation> {
         let mut recommendations = Vec::new();
         
         // Group findings by severity
@@ -487,10 +487,10 @@ impl SOC2Compliance {
         
         for finding in findings {
             match finding.severity {
-                FindingSeverity::Critical => critical_priority.push(finding),
-                FindingSeverity::High => high_priority.push(finding),
-                FindingSeverity::Medium => medium_priority.push(finding),
-                FindingSeverity::Low => low_priority.push(finding),
+                FindingSeverity::Critical => critical_priority.push(finding.clone()),
+                FindingSeverity::High => high_priority.push(finding.clone()),
+                FindingSeverity::Medium => medium_priority.push(finding.clone()),
+                FindingSeverity::Low => low_priority.push(finding.clone()),
             }
         }
         
@@ -782,7 +782,7 @@ pub struct SOC2Stats {
     pub last_incident_date: Option<DateTime<Utc>>,
 }
 
-#[derive(Debug, Clone, Serialize, Default)]
+#[derive(Debug, Clone, Default)]
 pub struct SOC2Database {
     assessments: Arc<RwLock<Vec<SOC2Assessment>>>,
     reports: Arc<RwLock<HashMap<String, SOC2Report>>>,

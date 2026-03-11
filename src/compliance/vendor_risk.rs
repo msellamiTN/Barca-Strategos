@@ -457,7 +457,7 @@ impl VendorRiskManagement {
             critical_vendors: critical_count,
             high_risk_vendors: high_count,
             medium_risk_vendors: medium_count,
-            low_rendors: low_count,
+            low_risk_vendors: low_count,
             minimal_risk_vendors: minimal_count,
             risk_distribution,
         }

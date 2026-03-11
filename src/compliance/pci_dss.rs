@@ -532,10 +532,10 @@ impl PCIDSSCompliance {
         
         for finding in findings {
             match finding.severity {
-                FindingSeverity::Critical => critical.push(finding),
-                FindingSeverity::High => high.push(finding),
-                FindingSeverity::Medium => medium.push(finding),
-                FindingSeverity::Low => low.push(finding),
+                FindingSeverity::Critical => critical.push(finding.clone()),
+                FindingSeverity::High => high.push(finding.clone()),
+                FindingSeverity::Medium => medium.push(finding.clone()),
+                FindingSeverity::Low => low.push(finding.clone()),
             }
         }
         

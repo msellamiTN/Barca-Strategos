@@ -493,8 +493,8 @@ impl IncidentResponse {
         // Count affected systems based on incident type
         match incident.incident_type {
             IncidentType::SecurityBreach => 5,
-            IncidentType::DDoSAttack => 3,
-            IncidentType::DataLeakage => 4,
+            IncidentType::ServiceOutage => 3,
+            IncidentType::DataLeak => 4,
             _ => 1,
         }
     }
@@ -502,7 +502,7 @@ impl IncidentResponse {
     fn assess_data_compromise(&self, incident: &Incident) -> bool {
         // Assess if data was compromised
         matches!(incident.incident_type, 
-            IncidentType::DataLeakage | IncidentType::SecurityBreach
+            IncidentType::DataLeak | IncidentType::SecurityBreach
         )
     }
     
@@ -1059,7 +1059,7 @@ pub enum EvidenceType {
     Document,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum EvidenceSeverity {
     Critical,
     High,
