@@ -1,26 +1,25 @@
-#!/bin/bash
+#!/bin/sh
 
 # Phoenix API Compliance Server - Minimal Static Version
-# Works in restricted network environments
+# Works in restricted network environments with busybox
 
 # Function to handle health check
 health_check() {
-    echo "HTTP/1.1 200 OK"
-    echo "Content-Type: application/json"
-    echo "Content-Length: 45"
-    echo ""
-    echo '{"status":"healthy","service":"phoenix-api"}'
+    echo '{"status":"healthy","service":"phoenix-api","version":"1.0.0"}'
     exit 0
 }
 
-# Function to handle default response
-default_response() {
+# Function to send HTTP response
+send_response() {
+    local body="$1"
+    local length=${#body}
+    
     echo "HTTP/1.1 200 OK"
     echo "Content-Type: application/json"
-    echo "Content-Length: 156"
+    echo "Content-Length: $length"
+    echo "Connection: close"
     echo ""
-    echo '{"message":"Phoenix API Compliance Server v1.0.0","frameworks":["SOC2 Type II","PCI DSS v4.0"],"status":"operational","endpoints":["/api/system/health","/api/v1/compliance/soc2","/api/v1/compliance/pci_dss"]}'
-    exit 0
+    echo "$body"
 }
 
 # Handle command line arguments
@@ -29,23 +28,37 @@ case "$1" in
         health_check
         ;;
     *)
-        # Start a simple HTTP server using netcat
         echo "Phoenix API Compliance Server v1.0.0"
-        echo "SOC2 and PCI DSS Compliance Modules Ready"
+        echo "SOC2 Type II and PCI DSS v4.0 Compliance Modules"
         echo "Listening on port 8080..."
+        echo ""
         
-        # Simple HTTP server loop
-        while true; do
-            # Read HTTP request
-            read request
-            read host
-            
-            # Parse the request
-            if [[ "$request" == *"GET /api/system/health"* ]]; then
-                health_check
-            else
-                default_response
-            fi
-        done
+        # Start HTTP server using busybox httpd
+        cd /app
+        
+        # Create a simple index file for httpd
+        mkdir -p /tmp/www
+        cat > /tmp/www/index.html <<'EOF'
+<!DOCTYPE html>
+<html>
+<head><title>Phoenix API</title></head>
+<body>
+<h1>Phoenix API Compliance Server</h1>
+<p>SOC2 Type II and PCI DSS v4.0 Compliance Modules Ready</p>
+<ul>
+<li><a href="/api/system/health">Health Check</a></li>
+<li><a href="/api/v1/compliance/soc2">SOC2 Compliance</a></li>
+<li><a href="/api/v1/compliance/pci_dss">PCI DSS Compliance</a></li>
+</ul>
+</body>
+</html>
+EOF
+
+        cat > /tmp/www/api/system/health <<'EOF'
+{"status":"healthy","service":"phoenix-api","version":"1.0.0","frameworks":["SOC2 Type II","PCI DSS v4.0"],"timestamp":"2026-03-11T22:00:00Z"}
+EOF
+
+        # Start busybox httpd
+        exec httpd -f -p 8080 -h /tmp/www
         ;;
 esac

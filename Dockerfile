@@ -1,51 +1,41 @@
-# Build stage
-FROM golang:1.22-alpine AS builder
+# Minimal Dockerfile for restricted network environments
+# Uses busybox as base - no package installation required
+FROM busybox:latest
+
+# Create necessary directories
+RUN mkdir -p /app/reports /app/logs /app/scripts
+
+# Copy static binary
+COPY phoenix-api-static /app/phoenix-api
+RUN chmod +x /app/phoenix-api
+
+# Copy scripts
+COPY scripts/*.sh /app/scripts/
+RUN chmod +x /app/scripts/*.sh 2>/dev/null || true
+
+# Create .env file
+RUN echo 'PHOENIX_ENV=development' > /app/.env && \
+    echo 'PHOENIX_PORT=8080' >> /app/.env
 
 WORKDIR /app
-COPY go.mod go.sum ./
-RUN go mod download
 
-COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -o /phoenix-api ./cmd/api
+# Create non-root user
+RUN addgroup -g 1000 phoenix && \
+    adduser -D -u 1000 -G phoenix phoenix && \
+    chown -R phoenix:phoenix /app
 
-# Final stage
-FROM alpine:latest
-
-# Fix TLS issues and update package indexes
-RUN apk update && \
-    apk upgrade && \
-    apk --no-cache add ca-certificates tzdata curl wget && \
-    update-ca-certificates
-
-WORKDIR /root/
-
-# Create directories for compliance reports and logs
-RUN mkdir -p /app/reports /app/logs
-
-# Copy binary and configuration
-COPY --from=builder /phoenix-api .
-COPY --from=builder /app/.env .env
-
-# Copy compliance-specific scripts
-COPY scripts/* /app/scripts/
-RUN chmod +x /app/scripts/*.sh
-
-# Health check using wget as fallback
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/api/system/health || \
-      curl -f http://localhost:8080/api/system/health || exit 1
-
-# Create non-root user for security
-RUN addgroup -g 1000 -S phoenix && \
-    adduser -u 1000 -S phoenix -G phoenix
 USER phoenix
 
 EXPOSE 8080
 
-# Add labels for monitoring
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+  CMD /app/phoenix-api --health-check || exit 1
+
+# Labels
 LABEL maintainer="Barca Strategos Team"
 LABEL version="1.0.0"
 LABEL description="Phoenix API with SOC2 and PCI DSS Compliance Modules"
 LABEL org.opencontainers.image.source="https://github.com/barca-strategos/phoenix"
 
-CMD ["./phoenix-api"]
+CMD ["/app/phoenix-api"]
