@@ -36,13 +36,19 @@ case "$1" in
         # Start HTTP server using busybox httpd
         cd /app
         
-        # Create web directory structure
-        mkdir -p /tmp/www/api/system /tmp/www/api/v1/compliance/soc2 /tmp/www/api/v1/compliance/pci-dss
+        # Create all necessary directories first
+        mkdir -p /tmp/www
+        mkdir -p /tmp/www/api/system
+        mkdir -p /tmp/www/api/v1/compliance/soc2
+        mkdir -p /tmp/www/api/v1/compliance/pci-dss
         
         # Copy web GUI files if they exist, otherwise create basic index
         if [ -d "/app/web" ]; then
-            cp -r /app/web/* /tmp/www/
-        else
+            cp -r /app/web/* /tmp/www/ 2>/dev/null || true
+        fi
+        
+        # Create index.html if it doesn't exist
+        if [ ! -f "/tmp/www/index.html" ]; then
             cat > /tmp/www/index.html <<'EOF'
 <!DOCTYPE html>
 <html>
